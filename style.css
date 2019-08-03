@@ -70,6 +70,10 @@ p {
     width: 700px;
 }
 
+.footnote {
+    font-size: 13pt;
+}
+
 .title {
     color: #CCC;
     text-align: center;
