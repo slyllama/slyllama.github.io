@@ -1,0 +1,60 @@
+a, blockquote, h1, h2, h3, h4, h5, h5, hr, li, ol, p, span, ul { background: none; border: none; color: #555; font-family: 'Alegreya', serif; font-weight: normal; font-size: 14pt; line-height: 1.5em; list-style: none; margin: 0; padding: 0; text-align: left; text-decoration: none; text-indent: none; }
+
+a {
+    color: #9B3525;
+    text-decoration: underline;
+}
+
+blockquote {
+    font-style: italic;
+    border-top: 3px solid #EEE;
+    border-bottom: 3px solid #EEE;
+    margin-bottom: 30px;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 25pt;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 21pt;
+    margin-bottom: 20px;
+}
+
+hr {
+    background: #EEE;
+    height: 3px;
+    margin-bottom: 30px;
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 60px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+.container {
+    display: block;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    margin-bottom: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    max-width: 94%;
+    width: 700px;
+}
+
+.title {
+    color: #CCC;
+    text-align: center;
+}
