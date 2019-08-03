@@ -57,4 +57,10 @@ p {
 .title {
     color: #CCC;
     text-align: center;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+}
+
+.title:hover {
+    color: #AAA;
 }
