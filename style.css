@@ -1,4 +1,4 @@
-a, blockquote, h1, h2, h3, h4, h5, h5, hr, img, li, ol, p, span, ul { background: none; border: none; color: #555; font-family: 'Alegreya', serif; font-weight: normal; font-size: 14pt; line-height: 1.5em; list-style: none; margin: 0; padding: 0; text-align: left; text-decoration: none; text-indent: none; }
+a, blockquote, div, h1, h2, h3, h4, h5, h5, hr, img, li, ol, p, span, ul { background: none; border: none; color: #555; font-family: 'Alegreya', serif; font-weight: normal; font-size: 14pt; line-height: 1.5em; list-style: none; margin: 0; padding: 0; text-align: left; text-decoration: none; text-indent: none; }
 
 a {
     color: #9B3525;
@@ -89,4 +89,22 @@ p {
 
 .title_link:hover {
     color: #AAA;
+}
+
+.warn {
+    border-radius: 3px;
+    display: block;
+    background:#F6EBE8;
+    margin-bottom: 10px;
+    padding-top: 12px;
+}
+
+.warn_text {
+    color: #954E3C;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 13pt;
+    line-height: 1.4em;
+    margin-left: 14px;
+    margin-right: 14px;
+    padding-bottom: 12px;
 }
