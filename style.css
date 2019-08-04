@@ -78,10 +78,15 @@ p {
 .title {
     color: #CCC;
     text-align: center;
+}
+
+.title_link {
+    color: #CCC;
+    text-decoration: none;
     -webkit-transition: 0.1s;
     transition: 0.1s;
 }
 
-.title:hover {
+.title_link:hover {
     color: #AAA;
 }
