@@ -57,6 +57,54 @@ p {
     margin-bottom: 20px;
 }
 
+.cell {
+    background: #EEE;
+    display: block;
+    margin-bottom: 4px;
+    padding-bottom: 1px;
+    padding-top: 11px;
+    width: 100%;
+}
+
+.cell_link {
+    font-family: 'Alegreya sans', serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.cell_title {
+    margin-bottom: 0px;
+    margin-left: 10px;
+}
+
+.cell_txt {
+    font-family: 'Alegreya sans', serif;
+    font-size: 13pt;
+    line-height: 1.4em;
+    margin-bottom: 13px;
+    margin-left: 10px;
+    margin-top: 0px;
+}
+
+.cell_hdr {
+    background: #DDD;
+    border-radius: 3px;
+    display: block;
+    margin-bottom: 0;
+    padding-top: 8px;
+    width: 100%;
+}
+
+.cell_hdr_txt {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 15pt;
+    font-weight: bold;
+    line-height: 1.4em;
+    padding-bottom: 6px;
+    margin-left: 10px;
+    text-transform: uppercase;
+}
+
 .caption {
     font-size: 13pt;
     font-style: italic;
@@ -77,6 +125,23 @@ p {
 
 .footnote {
     font-size: 13pt;
+}
+
+.profile {
+    background: none;
+    display: block;
+    height: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 180px;
+}
+
+.subtitle {
+    font-style: italic;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20px;
+    text-align: center;
 }
 
 .title {
