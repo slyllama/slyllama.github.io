@@ -75,6 +75,7 @@ p {
 .cell_title {
     margin-bottom: 0px;
     margin-left: 10px;
+    margin-right: 10px;
 }
 
 .cell_txt {
@@ -83,6 +84,7 @@ p {
     line-height: 1.4em;
     margin-bottom: 13px;
     margin-left: 10px;
+    margin-right: 10px;
     margin-top: 0px;
 }
 
