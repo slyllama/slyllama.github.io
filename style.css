@@ -67,7 +67,7 @@ p {
 }
 
 .cell_link {
-    font-family: 'Alegreya sans', serif;
+    font-family: 'Alegreya sans', sans-serif;
     font-weight: bold;
     text-decoration: none;
 }
@@ -79,7 +79,7 @@ p {
 }
 
 .cell_txt {
-    font-family: 'Alegreya sans', serif;
+    font-family: 'Alegreya sans', sans-serif;
     font-size: 13pt;
     line-height: 1.4em;
     margin-bottom: 13px;
