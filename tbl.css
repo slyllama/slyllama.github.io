@@ -67,3 +67,8 @@
     margin-left: 8px;
     margin-top: 4px;
  }
+
+ .stb_link {
+    font-family: 'Alegreya sans', sans-serif;
+    text-decoration: none;
+}
