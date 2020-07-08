@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FSX Panel Editing</title>
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+    <body>
+        <p style="text-align: right;"><a target="_blank" href="https://twitter.com/slyllama">Sly Llama</a>, July 2020</p>
+        <h1>FSX Panel Editing</h1>
+
+        <h2>Premise</h2>
+        
+        <p>In spite of the almost exclusive use of 3D virtual cockpits in flight simulators these days, I really do love the classic 2D panels, and I think that a lot of rewarding mechanical and cosmetic work could be done to improve the use and look of these utilities. I am proposing two broad modifications:</p>
+        <ol>
+            <li><b>Modularisation.</b> 2D panels in FSX currently feature, for the most part, a single &ldquo;main&rdquo; panel, with interface buttons to instantiate others. Now that dual monitors have become prevalent and layouts can be easily reconfigured, I think that we could experiment with a set of modular panels that can be moved around at will. This would allow the user to add a module of their most used gauges at the bottom of the screen (airspeed, altitude, and so on), and access other utilities such as lights as needed. This modularisation could incorporate hardware gauges sitting on the pilot&rsquo;s desk, so that information isn't repeated.</li>
+            <li><b>Improved cosmetics.</b> Delving into the simulator&rsquo;s image files reveals that the panel textures are only 1024 &times; 768 pixels in size, whereas the monitor is, of course, 1920 &times; 1080 pixels &ndash; which means that a <i>lot</i> of stretching is being done. This isn&rsquo;t to say that the designs aren&rsquo;t good, though: looking at the colour index reveals just how far they have made 256 colours go:</li>
+            <li style="display: inline-block;"><img src="img/ctable.jpg"/></li>
+            <li style="display: inline-block;">But computers have come far since the release of FSX, and now we can afford to have images with larger resolutions and more colours. We can take advantage of this by using tools such as Photoshop and Blender to build new, realistic panel images. </li>
+        </ol>
+        <h2>Some Notes on Modding</h2>
+        <p>There are two variants of gauge in FSX: the original, C/C++-compiled gauges (usually <code>.gau</code> or <code>.dll</code> files), or the newer, non-compiled XML versions (compressed into <code>.cab</code> files). While it is my hope that every gauge could be remade in XML-form (as they are much easier to understand and interact with from a programming point of view), when working with cosmetics to fulfil principle (2) one occasionally needs to delve into executable files.</p>
+        <p>When it comes to extracting files for editing, it is easiest to use <a href="https://7-zip.org">7-Zip</a>; this allows for the opening of the <code>.dll</code> as a directory. However, modifying these executables is another story, and two things should be taken into account:</p>
+        <ol>
+            <li>A proper editor needs to be used to <i>replace</i> bitmaps; I've found <a href="http://angusj.com/resourcehacker">Resource Hacker</a> to be perfectly suitable for this need.</li>
+            <li>A <code>.dll</code> which is edited after being signed (all vanilla gauges are &ldquo;certified&rdquo;) will be blocked by FSX&rsquo; security feature. The best solution I&rsquo;ve found so far is to &ldquo;unsign&rdquo; the file after editing it using Microsoft&rsquo;s <a href="https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk">SignTool utility</a>. (Note that you will need to go hunting for the executable as it is not added to the system&rsquo;s path. You should either add it to your path or write a batch file which will take care of the typing for you.) Once you have removed the certificate, FSX will ask again if whether you want to load the executable, and after saying &ldquo;yes&rdquo; it should add the permissive reference to your configuration file (<code>fsx.cfg</code>).</li>
+            <li style="display: inline-block;">(Just a quick word on that configuration file: notice how all of the file references end in either &ldquo;2&rdquo; or &ldquo;-2&rdquo;; a &ldquo;2&rdquo; denotes that a file was accepted in the past, and a &ldquo;-2&rdquo; tells the system <i>not</i> to load the file.)</li>
+        </ol>
+        <p>I&rsquo;ve found some good examples of XML gauges <a href="http://fs2x.com/Tutorials.htm">here</a> which should be worth investigating.</p>
+    </body>
+</html>
