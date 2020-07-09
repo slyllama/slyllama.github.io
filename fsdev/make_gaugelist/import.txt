@@ -1,8 +1,0 @@
-1000.bmp,ASI,100,100,panel
-1500.bmp,ASI,158,158,panel
-1001.bmp,ASI,42,7,needle
-1003.bmp,ASI,100,100,hi-vis panel
-1004.bmp,[unknown],100,100,[unknown] (unused background?)
-1005.bmp,heading indicator,375,11,strip
-1006.bmp,[unknown],13,9,[unknown] (some kind of control surface?)
-1007.bmp,[unknown],17,17,[unknown](too glossy to be the ASI adjustment&hellip;)
