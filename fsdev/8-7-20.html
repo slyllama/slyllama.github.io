@@ -4,6 +4,11 @@
         <title>FSX Panel Editing</title>
         <meta charset="UTF-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <scriptsrc="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script
+            id="MathJax-script"
+            async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
         <link rel="stylesheet" type="text/css" href="style.css"/>
     </head>
     <body>
@@ -28,5 +33,35 @@
             <li style="display: inline-block;">(Just a quick word on that configuration file: notice how all of the file references end in either &ldquo;2&rdquo; or &ldquo;-2&rdquo;; a &ldquo;2&rdquo; denotes that a file was accepted in the past, and a &ldquo;-2&rdquo; tells the system <i>not</i> to load that file. Occasionally these references need to be purged.)</li>
         </ol>
         <p>I&rsquo;ve found some good examples of XML gauges <a href="http://fs2x.com/Tutorials.htm">here</a> which should be worth investigating.</p>
+        <hr />
+        <h2 id="11-7-20">New Findings for 11.7.20</h2>
+        <p>The adventure continues! I&rsquo;ve started playing with the panel configuration files and textures yesterday and today, and I have a few notes to make on the process. These are messy and un-ordered; once I know a little more I can use these logs to put together a simpler and clearer guide. Please note that I am treating the root folder &ldquo;<code>\</code>&rdquo; as the base for your FSX installation. For example, we would say that the gauge files ware stored under <code>\gauges</code>.</p>
+        <p>All of the components of your aircraft panel are specified in the <code>panel.cfg</code> file; you should be able to find this at <code>\[aircraft]\panel.cfg</code>. To demonstrate, I&rsquo;ll show my progress and the options and files used to get there; then we will discuss the next steps to take!</p>
+        <img src="img/pbase.jpg"/>
+        <p><i>Looking out from my GA parking spot at Auckland Airport!</i></p>
+        <p>As you can see, we are at the very beginning of our panel-building journey; but there were a couple of important discoveries that we made along the way. Let's begin by publishing our bare-bones configuration file (line numbers are just for reference):</p>
+        <pre>
+ 1 [Window Titles]
+ 2 Window00=Primary Controls
+ 3
+ 4 [Window00]
+ 5 ident = MAIN_PANEL
+ 6 file_1024 = primary_controls.bmp
+ 7 visible = 1
+ 8 no_luminous = 1
+ 9 sizeable = 0
+10 window_size = 0.895, 0.224
+11 windowsize_ratio = 1.000
+12
+13 gauge00 = Cessna172!Tachometer, 216, 90, 135, 135
+        </pre>
+        <p>We begin in lines 1&ndash;2 by declaring all of our sub-panels to the system. Other modules such as the GPS or radio stack would also belong here. We start from 00 and work our way sequentially; from line 4 onwards, these modules are then described by their window count (<code>[Window00]</code> etc). It&rsquo;s a strange hybrid of code, but it does the job. Next comes the sub-panel parameters themselves.</p>
+        <p><code>ident</code>, <code>sizeable</code>, and <code>visible</code> are pretty self-explanatory. <code>file_1024</code> specifies the background bitmap which is to be loaded. This is because these files were traditionally 1024 &times; 768 pixels; but I&rsquo;ve found that 1920 &times; 1080 pixel images can be loaded (and, or course, they look far better)! Here is the file that I have loaded:</p>
+        <img src="img/pc_early.jpg"/>
+        <p>(We can see that the lighting of the panel has been adjusted slightly in the final outcome. I later added <code>no_luminous = 1</code> which removed this tint.) The bitmap itself is part of a concept for Cessna 172SP flight controls that run along the sides of the screen, rather than taking up most of the view &ndash; a concept designed to align with the premise described at the top of the page. All of the gauges described are already provided, except for &ldquo;Time/OAT&rdquo;, which I want to re-write to be more compact (it is a full 2" gauge at the moment).</p>
+        <p><code>window_size</code> specifies the panel&rsquo;s <i>actual</i> size relative to the screen. Given that our screen resolution is 1920 &times; 1080 pixels, and the dimensions of the panel are 1718 &times; 242 pixels, I calculated
+        \[\bigg(\frac{1718}{1920},\,\frac{242}{1080}\bigg)\approx(0.895,\,0.224)\]
+        to get the proportional size of the panel. Setting <code>windowsize_ratio</code> ensures this relationship.
+        <p>The last line represents our first attempt at inserting a gauge, and it seems to work just fine! The general layout of these lines is <code>gauge[ID] = [file]![name], [X], [Y], [W], [H]</code>, where we have the x-position, the y-position, the width, and the height respectively. I was able to use the Illustrator file to find all of the dimensions. Upgrading the graphics for the actual gauges will be a case of editing the executable libraries as described above!</p>
     </body>
 </html>
