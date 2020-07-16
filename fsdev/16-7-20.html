@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FSX I/O</title>
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+    <body>
+        <p style="text-align: right;"><a target="_blank" href="https://twitter.com/slyllama">Sly Llama</a>, July 2020</p>
+        <h1>In-Roads to FSX I/O &ndash; 16/7</h1>
+        <p><i>First of all: check out this <a href="https://fsxtimes.wordpress.com/2018/04/05/cockpit-ken-kfrg-usa">insane home cockpit</a>&hellip;</i></p>
+        <img src="img/fsh.jpg"/>
+        <p><i>Hardware/software structure concept for our set-up.</i></p>
+        <p>Well, I may have finally made some progress into getting external programs to communicate with FSX, so that I can send data to fabricated gauges and receive information from hardware switches using the RPi. I&rsquo;d been totally lost on the FSX side of it for a while, so I gave in and <a href="https://www.reddit.com/r/flightsim/comments/hry799/questions_about_handbuilt_flight_hardware_for_fsx">asked a question</a> on a flight simulation forum. A response directed me to the <a href="http://www.fsuipc.com">FSUIPC</a> <b>SDK</b> (that I&rsquo;d totally missed): and this seems to be just right for what I need. It has two main features of importance: (a) &ldquo;FSInterrogate&rdquo;, which allows one to assess all of the memory values and types that FSUIPC stores, and (b) <code>pyuipc</code>, a module for tying FSUIPC integration into Python programs (which also allows us to send and receive data <i>via</i> UDP/TCP). Sounds promising! The <code>pyuipc</code> documentation is very sparse, but I found a <a href="https://git.vacc-ua.org/prox/sim-inflight">simple Git project</a> which shows us most of this functionality. Let&rsquo;s hope that we can get it all working tonight.</p>
+        <p>P.S. I might switch from the Cessna to the <a href="https://www.aopa.org/go-fly/aircraft-and-ownership/aircraft-fact-sheets/mooney-bravo">Mooney Bravo</a> for future flights&hellip;?</p>
+        <img src="img/m20.jpg"/>
+        <p><i>Credit: Flying Magazine.</i></p>
+    </body>
+</html>
