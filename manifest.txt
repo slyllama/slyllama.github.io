@@ -1,0 +1,8 @@
++-----------------------------+
+| MANIFEST - list of contents |
++-----------------------------+
+
+FRAME.HTML
+  Used to "surround" the HTML with formatting tags.
+STYLE.CSS
+  The main stylesheet.
