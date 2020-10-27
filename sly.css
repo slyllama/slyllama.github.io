@@ -21,7 +21,7 @@ h2 {
 	margin-bottom: 15px;
 }
 
-.ct {
+.content {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -30,22 +30,22 @@ h2 {
 	width: 512px;
 }
 
-.m-a {
+.list-link {
 	font-size: inherit;
 }
 
-.m-list {
+.list-entry {
 	font-family: 'IBM Plex Mono', monospace;
 	font-size: 15px;
 	margin-bottom: 14px;
 	text-align: left;
 }
 
-.m-title {
+.title {
 	font-family: 'IBM Plex Mono', monospace;
 	font-weight: 600;
 	margin-bottom: 14px;
 	text-align: right;
 }
 
-.sep { height: 24px; }
+.separator { height: 24px; }
