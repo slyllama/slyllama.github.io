@@ -1,0 +1,51 @@
+a, b, body, div, h1, h2, h3, img, ol, p, ul { color: #000; border: none; margin: 0px; padding: 0px; font-size: 19px; line-height: 1em; list-style: none; text-decoration: none; }
+
+a {
+	text-decoration: underline;
+}
+
+p {
+	font-family: "Baskervville", serif;
+	line-height: 1.3em;
+	hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	-webkit-hyphens: auto;
+	margin-bottom: 9px;
+	text-align: justify;
+}
+
+h2 {
+	font-family: "Baskervville", serif;
+	font-size: 400;
+	margin-bottom: 15px;
+}
+
+.ct {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	max-width: 90%;
+	width: 512px;
+}
+
+.m-a {
+	font-size: inherit;
+}
+
+.m-list {
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: 15px;
+	margin-bottom: 14px;
+	text-align: left;
+}
+
+.m-title {
+	font-family: 'IBM Plex Mono', monospace;
+	font-weight: 600;
+	margin-bottom: 14px;
+	text-align: right;
+}
+
+.sep { height: 24px; }
