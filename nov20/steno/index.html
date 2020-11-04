@@ -30,7 +30,8 @@
 			<p class="list-entry">
 				1. <a class="list-link" href="#1">Thinking and typing</a><br/>
 				2. <a class="list-link" href="#2">Performing words</a><br/>
-				3. <a class="list-link" href="#3">My experience</a>
+				3. <a class="list-link" href="#3">My experience</a><br />
+				&nbsp;&nbsp;3i. <a class="list-link" href="#3i">A small note on NKRO</a><br />
 			</p>
 			<p>&nbsp;</p>
 			<div class="image-line">&nbsp;</div>
@@ -67,10 +68,29 @@
 			<p class="caption"><i>My &lsquo;paper tape&rsquo; from a practice session. The asterisks are where I&rsquo;ve deleted a word.</i></p>
 			<div class="image-line">&nbsp;</div>
 
-			<p>With the technical details aside, we can start to think about this practice in a more abstract sense again. The relationship between stenography and piano performance is (please excuse the pun) striking. The typist &ldquo;plays&rdquo; to the rhythm of the speakers, pressing key combinations to make notes which add up to produce phrases; it seems meaningful that these groups of notes are even called &ldquo;chords&rdquo;! The user no longer has to recall the spelling of words during the brain&rsquo;s cycle of activity in the typing process; they can instead follow along with an internal dialogue, unconsciously converting imagined sounds into typing sequences in much the same way that a musical instrument is played. But there&rsquo;s a major caveat that stems from this comparison. Much like learning an instrument, the evidence and practitioners&rsquo; anecdotes point to the sheer amount of time needed to get to this level; there&rsquo;s a reason that there are professional schools that provide years-long court reporting certification programs!</p>
+			<p>With the technical details aside, we can start to think about this practice in a more abstract sense again. The relationship between stenography and piano performance is (please excuse the pun) striking. The typist &ldquo;plays&rdquo; to the rhythm of the speakers, pressing key combinations to make notes which combine to form phrases; it seems meaningful that these groups of notes are even called &ldquo;chords&rdquo;! The user no longer has to recall the spelling of words during the brain&rsquo;s cycle of activity in the typing process; they can instead follow along with an internal dialogue, unconsciously converting imagined sounds into typing sequences in much the same way that a musical instrument is played. But there&rsquo;s a major caveat that stems from this comparison. Much like learning an instrument, the evidence and practitioners&rsquo; anecdotes point to the sheer amount of time needed to get to this level; there&rsquo;s a reason that there are professional schools that provide years-long court reporting certification programs!</p>
 
 			<div class="separator">&nbsp;</div>
 			<p id="3"><i>3.&nbsp;&nbsp;My experience</i></p>
-		</div>
+
+			<p>The idea was so intriguing and alluring that I thought I&rsquo;d try and investigate it for myself &ndash; and it wasn&rsquo;t long before I stumbled upon the Open Steno Project, an initiative dedicated to &ldquo;freeing stenography in an industry that is locked down, proprietary, and expensive.&rdquo; The main outcome of the initiative is an ingenious piece of software called Plover, an open-source tool which allows the user to emulate the system of stenography described above on their own QWERTY keyboard (&lsquo;T&rsquo; and &lsquo;H&rsquo; both become asterisks, with the stenographic keys rippling out from either side). It includes a full translation language (or &ldquo;theory&rdquo;, as they&rsquo;re known) containing tens of thousands of words and abbreviations, the ability to add words of your own (briefs), and an emulation of the classic paper tape (shown in the image above). I&rsquo;ve used it for about two weeks now and, before getting a few conclusions down, I&rsquo;d thought I&rsquo;d describe my first attempts at learning the system, discussing its striking similarities to taking up a musical instrument.</p>
+
+			<div class="separator">&nbsp;</div>
+
+			<p>Before getting to any linguistic theory, one of the first barriers (and the one I am still overcoming) is committing the positions of each letter on the keyboard to muscle-memory. I ran into exactly the same (self-made) problem as when I&rsquo;d tried the guitar: after a few weak attempts at drilling the finger positions, I assumed that I was &ldquo;just fine&rdquo; and moved onto learning more complex words and vowel-consonant patterns. Bad idea! One hears all of the comments about building solid foundations from every teacher all the time, but for me it takes a failure to internalize that simple mantra. Luckily, we can learn from our mistakes &ndash; and be better off for it.</p>
+
+			<p>The documentation for learning Plover included a list of about a hundred single-syllable words which could all be typed in a single stroke using intuitive keys, like &lsquo;pet&rsquo; (&lsquo;PET&rsquo;) and &lsquo;rough&rsquo; (&lsquo;RUF&rsquo;). I put these into a Python script which would flash up a word at random and time how long it took me to input that word &ndash; and the early results were dismal. Like a piano or guitar, the stenographic keyboard isn&rsquo;t marked in anyway, and you are expected to instinctively know the positions of each letter. To this end I covered the letters on my keyboard with white labels, and I would find myself working out the letters for the exercise, and then having to cross-reference with a diagram printed next to me before placing my finger on each key, one-by-one, and then finally stroking the chord. A lot like starting off on the guitar, huh? The result was that it would often take 8&ndash;10 seconds to stroke a word, and more difficult words could even take 12 or more!</p>
+
+			<img src="graph.jpg"/>
+			<p class="caption"><i>My improvement on the single-syllable exercises over two weeks! You can see quick progress and then a tapering-off; the battle is becoming more and more hard-fought.</i></p>
+			<div class="image-line">&nbsp;</div>
+
+			<p id="3i"><i>3i.&nbsp;&nbsp;A small note on NKRO</i></p>
+			
+			<p><i>One reason for this initial slowness (aside from my incompetence) centers around the technical limitations of many QWERTY keyboards, something that I&rsquo;d never thought about before but which fell into sharp relief when practicing these exercises. Try putting your fingers across a row of keys to make, say, &lsquo;ASDFGHJK&rsquo; and pressing them down all at once: you&rsquo;ll likely find that you only get a subset of letters. (This ten-dollar work keyboard yields me &lsquo;ADGK&rsquo; if I&rsquo;m lucky.) This is called the key rollover: the number of simultaneous keys which will be sent to the operating system on your computer. If a keyboard is not NKRO-enabled (&ldquo;N-Key Roll-Over&rdquo;), then stenographic briefs which require more strokes might not be registered.</i></p>
+
+			<p><i>One of the words I have in my original exercise is &lsquo;several&rsquo;, which is stroked as &lsquo;SEFRL&rsquo;: but this proves to be extraordinarily difficult to type on my current keyboard.  I have to roll my fingers across the keys in an arpeggiated fashion to get them to register pseudo-simultaneously. More comparisons to musical instruments? You bet! Synthesizers have a polyphony count which describes how many pressed keys will sound at once. If you play five keys, then your first sound will drop off. I really do think that the stenographic keyboard has a strong relationship to the musical keyboard.</i></p>
+
+			<div class="separator">&nbsp;</div>
 	</body>
 </html>
