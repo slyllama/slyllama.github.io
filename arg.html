@@ -16,7 +16,8 @@
 				width: 700px;
 			}
 			blockquote { border-left: 2px solid tomato; padding-left: 10px; }
-			code { font-family: 'Consolas' }
+			code { font-family: 'Consolas', monospace }
+			img { display: block; max-width: 100%; }
 			li, p { font-size: 14px; }
 		</style>
 	</head>
@@ -67,12 +68,27 @@
 		<p>Since this document has descended into scrap notes, I thought I&rsquo;d talk about how this all works in practice. Let&rsquo;s turn our attention to the following instance:</p>
 
 		<blockquote>
-			<p style="margin-bottom: -10px;"><b>[<code><a href="#">ISCBD01-P</a></code>]</b></p>
-			<p><b>ScS. Bede (Scout-class)</b></p>
+			<p style="margin-bottom: -10px;"><b>[<code><a href="#">ISCBD01</a></code>]</b></p>
+			<p><b>ScS. Bede (Scout-class pontoon)</b></p>
 			<p style="margin-bottom: -10px;"><i>Properties</i></p>
 			<ul>
-				<li>&sup; top speed of forty-seven knots. <b>[<code><a href="#">ISCBD01-P.SP1</a></code>]</b></li>
-				<li>&sup; owned, staffed, and maintained by the Consulate&rsquo; Maritime Division. <b>[<code><a href="#">ISCBD01-P.CM1</a></code>]</b></li>
+				<li><b>[<code><a href="#">ISCBD01.CM1</a></code>]</b> &sup; owned by the Consulate&rsquo;s Maritime Division.</li>
+				<li><b>[<code><a href="#">ISCBD01.SP1</a></code>]</b> &sup; top speed of forty-seven knots.</li>
+			</ul>
+			<p style="margin-bottom: -10px;"><i>Sub-instances</i></p>
+			<ul>
+				<li><b>[<code><a href="#">ISCBD01(SBCD01)</a></code>]</b> Crystal protective dome.</li>
+				<ul>
+					<li><b>[<code><a href="#">ISCBD01(SBCD01).GD1-I</a></code>]</b> [&sup; general dimensions.]</li>
+					<ul><li><img src="dimtest.png"/></li></ul>
+				</ul>
+			</ul>
+			<p style="margin-bottom: -10px;"><i>Documentation</i></p>
+			<ul>
+				<li><b>[<code><a href="#">DSBAC01</a></code>]</b> (2.5.47) <i>Letter of Apology to the Comm. Sec.</i></li>
+				<ul>
+					<li><b>[<code><a href="#">X</a></code>]</b> (1.5.47) The ScS. Bede was able to re-establish telegraphic contact with the Commerce Radio Board, four days after the events of <b>[<code><a href="#">X</a></code>]</b>.</li>
+				</ul>
 			</ul>
 		</blockquote>
 
