@@ -12,11 +12,12 @@
 				font-family: 'Verdana', sans-serif;
 				margin-left: auto;
 				margin-right: auto;
+				max-width: 90%;
 				width: 700px;
 			}
 			blockquote { border-left: 2px solid tomato; padding-left: 10px; }
 			code { font-family: 'Consolas' }
-			p { font-size: 14px; }
+			li, p { font-size: 14px; }
 		</style>
 	</head>
 	<body>
@@ -24,6 +25,7 @@
 		<p>
 			Started 1/12/20. Last edited 2/12/20.<br />
 			<i>Note: this document is the typological equivalent of a scrap piece of paper, and will likely never be finished.</i>
+			<span style="color: tomato;">It is currently in the process of being structured and clarified.</span>
 		</p>
 		<h2>1. Introduction</h2>
 		<h3>1.1. Preface and Origins</h3>
@@ -39,20 +41,42 @@
 		<p>This is a meticulous and detail-centric concept that I am very curious to see tested in the art of world-building: the recording of a networked, inter-related population of bite-sized factual instances which together make up the sum of our knowledge of this fictional world. Let&rsquo;s take a look at a really simple example:</p>
 
 		<blockquote>
-			<p>[<code><a href="#">F-ISLVOS01-P</a></code>] Vosdence is an island.</p>
+			<p style="margin-bottom: -10px;"><b>[<code><a href="#">F-ISLVOS01-P</a></code>]</b></p>
+			<p>Vosdence is an island.</p>
 		</blockquote>
 
 		<p>First of all, the square brackets indicate the node&rsquo;s ID. A useful tool for linking, relating, and interweaving facts, the code identifies a piece of information and gives it a reference. The &ldquo;<code>F-</code>&rdquo; is a prefix which demarks this code as a fact &ndash; there are other types of code such as documentation codes, which we will cover later. The &ldquo;<code>-P</code>&rdquo; suffix indicates that the node is public knowledge. This is important because some public documents might have dependancies on secret nodes, which are signalled with an &ldquo;<code>-S</code>&rdquo;. Nodes are always given a eight-character internal code, which is split into abbreviations for the two keywords which best describe the fact followed by an instance number. To best describe all of these points, let&rsquo;s say we have a private fact which goes like &ldquo;there is an island that is called Vosdence.&rdquo; I would assign this node the code <code><a href="#">F-ISLVOS02-S</a></code>, which, like what happens in hash tables, is assigned a &lsquo;02&rsquo; to avoid conflicts. But this is a bad example as double-ups should always be avoided!</p>
 
-		<h3>2.2. Relating Nodes to Documentation</h3>
-
-		<p>One of the first letters that will likely appear in the Vosdence Archives is a letter from the Consulate to the explorers who have stumbled upon the island, acknowledging their discovery as a spiritual revelation and directing them to collect as much information about the island as possible. This would be <code><a href="#">D-BLT-001-P</a></code>, the first business letter (<code>BLT</code>) in the Archives; &ldquo;<code>D-</code>&rdquo; is used as a documentation marker, and the private/public distinctions still apply. We can extract from this description of the consulate letter that</p>
-
 		<blockquote>
-			<p>[<code><a href="#">F-CONSPT-P</a></code> &larr; <code><a href="#">D-BLT-001-P</a></code>] the Consulate holds the accidental discovery of Vosdence to be an act of divine revelation.</p>
+			<p style="color: tomato;">There is a lot of re-working I want to do here! First of all, we need to discuss objects (or instances) a little more, and then&hellip; I&rsquo;d like to add a new type: &ldquo;properties&rdquo;. These would be nodes which <i>did not describe a change in events</i>. Appendix I contains a case study of my new system, which should help in writing the next draft of this document.</p>
 		</blockquote>
 
-		<p>Given in the code definition is the full identification of the node, showing its association with the Consulate letter. There are three types of media in the Vosdence, and it is important that their differences and relationships </p>
+		<h3>2.2. Relating Nodes to Documentation</h3>
+
+		<p>One of the first letters that will likely appear in the Vosdence Archives is a letter from the Consulate to the explorers who have stumbled upon the island, acknowledging their discovery as a spiritual revelation and directing them to collect as much information about the island as possible. This would be <code><a href="#">D-BLT-001-P</a></code>, the first business letter (<code>BLT</code>) in the Archives; &ldquo;<code>D-</code>&rdquo; is used as a documentation marker, and the private/public distinctions still apply. We can extract from this description of the consulate letter that:</p>
+
+		<blockquote>
+			<p style="margin-bottom: -10px;"><b>[<code><a href="#">F-CONSPT-P</a></code> &larr; <code><a href="#">D-BLT-001-P</a></code>]</b></p>
+			<p>The Consulate holds the accidental discovery of Vosdence to be an act of divine revelation.</p>
+		</blockquote>
+
+		<p>Given in the code definition is the full identification of the node, showing its association with the Consulate letter. There are three types of media in the Vosdence, and it is important that their differences and relationships are understood. <b>Nodes</b> form the core of the world. They are bare and unadorned pieces of information that are the single source of truth for describing Vosdence, whether they are written sentences or simple drawings*. <b>Objects</b> are instances within the world of Vosdence &ndash; more will be covered on this soon.
+
+		<h2>I. Example: the ScS. Bede</h2>
+
+		<p>Since this document has descended into scrap notes, I thought I&rsquo;d talk about how this all works in practice. Let&rsquo;s turn our attention to the following instance:</p>
+
+		<blockquote>
+			<p style="margin-bottom: -10px;"><b>[<code><a href="#">ISCBD01-P</a></code>]</b></p>
+			<p><b>ScS. Bede (Scout-class)</b></p>
+			<p style="margin-bottom: -10px;"><i>Properties</i></p>
+			<ul>
+				<li>&sup; top speed of forty-seven knots. <b>[<code><a href="#">ISCBD01-P.SP1</a></code>]</b></li>
+				<li>&sup; owned, staffed, and maintained by the Consulate&rsquo; Maritime Division. <b>[<code><a href="#">ISCBD01-P.CM1</a></code>]</b></li>
+			</ul>
+		</blockquote>
+
+		<p style="font-size: 13px;">*It&rsquo;s probably obvious that there is always going to be some subjectivity and interpretation involved in forming and curating these facts!</p>
 
 		<p>&nbsp;</p>
 	</body>
