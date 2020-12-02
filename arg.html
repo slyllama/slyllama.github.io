@@ -20,8 +20,31 @@
 			img { display: block; max-width: 100%; }
 			li, p { font-size: 14px; }
 		</style>
+
+		<script>
+			function InitToggle() {
+				document.getElementById("wrap-doc").style.display = "none";
+				document.getElementById("wrap-prop").style.display = "none";
+				document.getElementById("arr-doc").innerHTML = "&#9654;";
+				document.getElementById("arr-prop").innerHTML = "&#9654;";
+			}
+
+			function Toggle(type) {
+				var wrapElement = document.getElementById("wrap-" + type);
+				var arrElement = document.getElementById("arr-" + type);
+
+				if (wrapElement.style.display == "none") {
+					wrapElement.style.display = "block";
+					arrElement.innerHTML = "&#9660;"
+				} else {
+					wrapElement.style.display = "none";
+					arrElement.innerHTML = "&#9654;"
+				}
+			}
+		</script>
 	</head>
-	<body>
+
+	<body onload="InitToggle();">
 		<h1>The Vosdence ARG: Preliminaries</h1>
 		<p>
 			Started 1/12/20. Last edited 2/12/20.<br />
@@ -46,6 +69,7 @@
 
 			.ins-headexp {
 				color: white;
+				cursor: pointer;
 				text-decoration: underline;
 			}
 
@@ -53,6 +77,7 @@
 				background: #D3D3D3;
 				display: block;
 				height: 1px;
+				margin-top: 7px;
 				width: 50%;
 			}
 
@@ -65,6 +90,7 @@
 				border: 1px solid black;
 				border-radius: 2px;
 				color: #FFF;
+				cursor: pointer;
 				font-family: 'Consolas', monospace;
 				font-size: 13px;
 				font-weight: bold;
@@ -129,28 +155,30 @@
 			<p class="ins-text ins-titlecodes">ISCBD01</p>
 			<p class="ins-text">The speedy <i>Bede</i> gained its fame for being the first scout to follow the merchant cog <i>MhS. Olander</i> through the Eldritch portal it had disappeared into. Aside from its prominent place in the history of Vosdence, the pontoon itself is relatively nondescript, being a simple ScS (scout-class) vessel made by the dozen for patrols and routine missions helmed by the Commerce Chamber.</p>
 
-			<div class="ins-text ins-line">&nbsp;</div>
-			<p class="ins-text ins-header">&#9658; <a class="ins-headexp">Properties</a></p>
-			<ul class="ins-text ins-list">
-				<li><span class="ins-tag tg-prop">ISCBD01.CM1</span>  &sup; owned by the Maritime Division of the Commerce Chamber.</li>
-				<li><span class="ins-tag tg-prop">ISCBD01.SP1</span>  &sup; offers a top speed of forty-seven knots.</li>
-			</ul>
-
-			<div class="ins-text ins-line">&nbsp;</div>
-			<p class="ins-text ins-header">&#9658; <a class="ins-headexp">Documents</a></p>
-			<ul class="ins-text ins-list">
-				<li>
-					<span class="ins-tag tg-doc">DSBAC01</span>
-					<span class="ins-tagdate">2/5/47</span>
-					<i>Letter of Apology to the Comm. Sec.
-				</li>
-				<ul>
-					<li>
-						<span class="ins-tag tg-evt">I000000</span>
-						<span class="ins-tagdate">1/5/47</span>
-						The <i>ScS. Bede</i> was able to re-establish telegraphic contact with the Commerce Radio Board [&hellip;]</li>
+			<p class="ins-text ins-header"><span id="arr-prop">O</span> <a class="ins-headexp" onclick="Toggle('prop');">Properties</a></p>
+			<div id="wrap-prop">
+				<ul class="ins-text ins-list">
+					<li><span class="ins-tag tg-prop">ISCBD01.CM1</span>  &sup; owned by the Maritime Division of the Commerce Chamber.</li>
+					<li><span class="ins-tag tg-prop">ISCBD01.SP1</span>  &sup; offers a top speed of forty-seven knots.</li>
 				</ul>
-			</ul>
+			</div>
+
+			<p class="ins-text ins-header"><span id="arr-doc">O</span>  <a class="ins-headexp" onclick="Toggle('doc');">Documents</a></p>
+			<div id="wrap-doc">
+				<ul class="ins-text ins-list">
+					<li>
+						<span class="ins-tag tg-doc">DSBAC01</span>
+						<span class="ins-tagdate">2/5/47</span>
+						<i>Letter of Apology to the Comm. Sec.
+					</li>
+					<ul>
+						<li>
+							<span class="ins-tag tg-evt">I000000</span>
+							<span class="ins-tagdate">1/5/47</span>
+							The <i>ScS. Bede</i> was able to re-establish telegraphic contact with the Commerce Radio Board [&hellip;]</li>
+					</ul>
+				</ul>
+			</div>
 		</div>
 
 		<h2>1. Introduction</h2>
