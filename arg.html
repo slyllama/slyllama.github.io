@@ -25,8 +25,8 @@
 			function InitToggle() {
 				document.getElementById("wrap-doc").style.display = "none";
 				document.getElementById("wrap-prop").style.display = "none";
-				document.getElementById("arr-doc").innerHTML = "&#9654;";
-				document.getElementById("arr-prop").innerHTML = "&#9654;";
+				document.getElementById("arr-doc").innerHTML = "[+]";
+				document.getElementById("arr-prop").innerHTML = "[+]";
 			}
 
 			function Toggle(type) {
@@ -35,10 +35,10 @@
 
 				if (wrapElement.style.display == "none") {
 					wrapElement.style.display = "block";
-					arrElement.innerHTML = "&#9660;"
+					arrElement.innerHTML = "[&ndash;]"
 				} else {
 					wrapElement.style.display = "none";
-					arrElement.innerHTML = "&#9654;"
+					arrElement.innerHTML = "[+]"
 				}
 			}
 		</script>
@@ -61,7 +61,6 @@
 			}
 
 			.ins-header {
-				font-weight: bold;
 				margin-bottom: 3px;
 				margin-top: 4px;
 				text-transform: uppercase;
@@ -70,7 +69,8 @@
 			.ins-headexp {
 				color: white;
 				cursor: pointer;
-				text-decoration: underline;
+				font-weight: bold;
+				text-decoration: none;
 			}
 
 			.ins-line {
@@ -155,7 +155,7 @@
 			<p class="ins-text ins-titlecodes">ISCBD01</p>
 			<p class="ins-text">The speedy <i>Bede</i> gained its fame for being the first scout to follow the merchant cog <i>MhS. Olander</i> through the Eldritch portal it had disappeared into. Aside from its prominent place in the history of Vosdence, the pontoon itself is relatively nondescript, being a simple ScS (scout-class) vessel made by the dozen for patrols and routine missions helmed by the Commerce Chamber.</p>
 
-			<p class="ins-text ins-header"><span id="arr-prop">O</span> <a class="ins-headexp" onclick="Toggle('prop');">Properties</a></p>
+			<p class="ins-text ins-header"><span id="arr-prop">[&ndash;]</span> <a class="ins-headexp" onclick="Toggle('prop');">Properties</a></p>
 			<div id="wrap-prop">
 				<ul class="ins-text ins-list">
 					<li><span class="ins-tag tg-prop">ISCBD01.CM1</span>  &sup; owned by the Maritime Division of the Commerce Chamber.</li>
@@ -163,7 +163,7 @@
 				</ul>
 			</div>
 
-			<p class="ins-text ins-header"><span id="arr-doc">O</span>  <a class="ins-headexp" onclick="Toggle('doc');">Documents</a></p>
+			<p class="ins-text ins-header"><span id="arr-doc">[&ndash;]</span>  <a class="ins-headexp" onclick="Toggle('doc');">Documents</a></p>
 			<div id="wrap-doc">
 				<ul class="ins-text ins-list">
 					<li>
