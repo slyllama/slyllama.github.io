@@ -21,9 +21,10 @@
 		<style>
 			/* Styles for demonstration portion */
 			.ins-container {
-				background: #303030;
+				background: #540C15;
 				border: 1px solid black;
 				border-radius: 2px;
+				box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5);
 				padding-bottom: 20px;
 			}
 
@@ -66,10 +67,14 @@
 				color: #FFF;
 				cursor: pointer;
 				font-family: 'Consolas', monospace;
-				font-size: 13px;
+				font-size: 14px;
 				font-weight: bold;
+				line-height: 0;
 				padding-left: 3px;
 				padding-right: 3px;
+				padding-top: 1px;
+				text-shadow:  0px 1px 0px #000;
+				vertical-align: center;
 			}
 
 			.ins-tagdate {
@@ -103,6 +108,7 @@
 			}
 
 			.ins-title {
+				text-shadow:  0px 1px 0px #000;
 				font-size: 17px;
 				font-weight: bold;
 				margin-bottom: 0px;
@@ -158,7 +164,9 @@
 
 			<img src="bede.png"/>
 
-			<p>But while the real world is unready for a flockchain, I have recently become very curious to try out the scheme in a <b>fictional, fantasy setting</b>. In fact, I think that the system would thrive there! I&rsquo;d like to present a small case study which explains the basics of this scheme (the core rules are really quite simple), but first, the basics. Everything in our world is represented by a <i>node</i>, which is either a piece of information or a container for a group of information. There are only three classes of node which exist in-world: instance nodes (I-class), event nodes (E-class), and document nodes (D-class).</p>
+			<p>But while the real world is unready for a flockchain, I have recently become very curious to try out the scheme in a <b>fictional, fantasy setting</b>. In fact, I think that the system would thrive there! I&rsquo;d like to present a small case study which explains the basics of this scheme (the core rules are really quite simple), but first, the basics. Everything in our fictional world is represented with a <i>node</i>, which is either a piece of information or a container for a group of information. There are only four classes of node which exist in-world: instance nodes (I-class), event nodes (E-class), property nodes (P-class), and document nodes (D-class). In short, instances are people or objects (either individual, collective, or typological), properties define those instances, events connect them with time, and documents are the in-world media that describe all of these things.</p>
+
+			<p>To illustrate these ideas I devised a ship called the <i>ScS. Bede</i>. Let&rsquo;s take a look at its fact sheet below.
 
 			<div class="separator">&nbsp;</div>
 			<div class="ins-container">
@@ -199,6 +207,11 @@
 				</ul>
 			</div>
 			</div>
+			<div class="separator">&nbsp;</div>
+			<p>(Note: these details and codes are not canon to what I am trying to create; this is just a demonstration.) Look familiar? This is the established form of the information exhibited in the diagram at the top of the page! It demonstrates our nodes and their links in a convenient, wiki-style layout. Following a title and descriptive subtitle, we had a unique identifier which is used to register the instance. All nodes, as we will see, have an identifier like this.</p>
+
+			<p>After a short description, we can see the properties of the instance. Properties always belong to an instance, so we use <span class="ins-tag tg-prop">[instance]/[property]</span> to describe their codes in full.</p>
+			
 			<div class="separator">&nbsp;</div>
 			<p class="list-entry">
 				<a class="list-link" style="color: #E8E8E8" href="legacy/arg.html">Shh; here is the old version!</a>
