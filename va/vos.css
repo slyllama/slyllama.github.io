@@ -1,0 +1,165 @@
+/* 
+	The Vosdence Archives
+	Sly Llama, 2020
+	Master CSS file
+*/
+
+/* Formatting reset */
+
+a, blockquote, body, div, h1, h2, h3, img, li, ol, p, span, ul { background: none; border: none; color: #000; font-size: 14px; font-style: none; font-weight: normal; font-family: sans-serif; margin: 0; padding: 0; line-height: 1em; text-decoration: none; }
+
+/* Site structure styles */
+
+body {
+	background: url('assets/bg.jpg') repeat;
+}
+
+.container {
+	background: #2c2123;
+	border: 1px solid #0c0506;
+	box-shadow: inset 0px 1px 0px #6a5155;
+	display: block;
+	margin-bottom: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 95%;
+	padding-bottom: 21px;
+	padding-top: 14px;
+	width: 700px;
+}
+
+.header {
+	background: url('assets/header-bg.jpg') repeat;
+	border-bottom: 1px solid #0c0506;
+	border-top: 3px solid #0c0506;
+	display: block;
+	width: 100%;
+}
+
+.header-title {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 90%;
+	padding-bottom: 17px;
+	padding-top: 14px;
+}
+
+.menu {
+	background: url('assets/menu-bg.jpg') repeat;
+	box-shadow: inset 0px 1px 0px #cb8b38;
+	border-bottom: 1px solid #0c0506;
+	display: block;
+	height: 32px;
+	margin-bottom: 12px;
+	text-align: center;
+	width: 100%;
+}
+
+.menu-flex {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 7px;
+}
+
+.menu-item {
+	color: #dec3c3;
+	cursor: pointer;
+	float: left;
+	font-family: 'verdana', sans-serif;
+	font-weight: bold;
+	text-shadow: 0px 1px 0px #0c0506;
+}
+
+.menu-item:hover {
+	text-decoration: underline;
+}
+
+.menu-sep {
+	float: left;
+	width: 32px;
+}
+
+/* Text */
+
+p, h1, h2 {
+	color: #dec3c3;
+	font-family: 'verdana', sans-serif;
+	line-height: 1.2em;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+h1 {
+	font-size: 19px;
+	font-weight: bold;
+	margin-bottom: 9px;
+}
+
+h2 {
+	margin-bottom: 5px;
+	font-weight: bold;
+	margin-top: 14px;
+}
+
+p {
+	margin-bottom: 7px;
+}
+
+.date {
+	color: #ab9296;
+	font-size: 13px;
+	text-align: right;
+	text-shadow: 0px 1px 0px #0c0506;
+}
+
+/* Tags */
+
+.tg {
+	border: 1px solid #0c0506;
+	border-radius: 999px;
+	color: #FFF;
+	cursor: pointer;
+	font-family: 'Courier', monospace;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 0;
+	padding-left: 3px;
+	padding-right: 3px;
+	text-shadow:  0px 1px 0px #000;
+	vertical-align: center;
+}
+
+.tg-doc { background: #364D0C; }
+.tg-evt { background: #1B5D86; }
+.tg-ins { background: #831F2C; }
+.tg-prop { background: #7E540B; }
+
+/* Objects */
+
+.obj-base {
+	border: 1px solid #0c0506;
+	box-shadow: inset 0px 1px 0px #6a5155;
+	color: #dec3c3;
+	display: block;
+	font-family: 'verdana', sans-serif;
+	font-size: 17px;
+	font-weight: bold;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.obj-container {
+	background: #3f2611;
+	padding-top: 6px;
+}
+
+.obj-header {
+	background: #58381e;
+	margin-bottom: -1px;
+	padding-bottom: 4px;
+	padding-top: 4px;
+	text-align: center;
+	text-shadow:  0px 1px 0px #000;
+}
