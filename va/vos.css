@@ -84,7 +84,14 @@ body {
 
 /* Text */
 
-p, h1, h2 {
+a {
+	color: #dec3c3;
+	font-family: 'verdana', sans-serif;
+	text-decoration: underline;
+}
+
+
+p, h1, h2, li, ul {
 	color: #dec3c3;
 	font-family: 'verdana', sans-serif;
 	line-height: 1.2em;
@@ -102,6 +109,10 @@ h2 {
 	margin-bottom: 5px;
 	font-weight: bold;
 	margin-top: 14px;
+}
+
+li {
+	margin-bottom: 5px;
 }
 
 p {
@@ -153,7 +164,8 @@ p {
 
 .obj-container {
 	background: #3f2611;
-	padding-top: 6px;
+	padding-bottom: 12px;
+	padding-top: 12px;
 }
 
 .obj-header {
