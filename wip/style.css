@@ -1,5 +1,4 @@
 /* 
-	The Vosdence Archives
 	Sly Llama, 2020
 	Master CSS file
 */
@@ -43,7 +42,7 @@ body {
 	max-width: 90%;
 	padding-bottom: 17px;
 	padding-top: 14px;
-	width: 256px;
+	width: 128px;
 }
 
 .menu {
