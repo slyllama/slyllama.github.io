@@ -1,6 +1,9 @@
 ﻿a {
 	color: #000;
 }
+audio {
+	width: 100%;
+}
 body {
 	display: block;
 	font-family: "Courier New", monospace;
