@@ -2,8 +2,7 @@
 	color: #000;
 }
 audio {
-	margin-bottom: 0.75em;
-	width: 50%;
+	width: 100%;
 }
 body {
 	display: block;
@@ -20,7 +19,6 @@ h1 {
 }
 h2 {
 	margin-bottom: 0.75em;
-	text-align: center;
 }
 h3 {
 	margin-bottom: 1em;
