@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap');
+@font-face{ font-family: "Macondo"; src: url("macondo.ttf"); }
+@font-face{ font-family: "Baskervville"; src: url("baskervville.ttf"); }
+@font-face{ font-family: "Basteleur"; src: url("basteleur.ttf"); }
+
+a { border: none; color: rgb(145, 0, 0); text-decoration: none; }
+a:hover { text-decoration: underline; }
+b { font-weight: 500; }
+body { font-family: "Baskervville"; font-size: 16px; line-height: 1.4em; margin: 40px; background: url("img/bg.jpg") repeat;}
+h1, h2, h3 { font-family: "Basteleur"; font-weight: normal; line-height: 0.95em; }
+h1 { font-size: 21pt; }
+img { max-width: 100%; }
+p { text-align: justify; hyphens: auto; }
+
+.content { display: block; margin-bottom: 60px; max-width: 600px; padding: 10px; padding-right: 60px; background: white; }
+.ind-side { display: block; position: fixed; right: 0; bottom: 0; z-index: -1; }
+.index { column-count: 2; padding-bottom: 45px; }
+.index-grid { display: grid; gap: 5px; grid-template-columns: 1fr 1fr; }
+.info { border: 2px solid black; margin: 35px 0; padding: 0 20px; }
+#mobile-header { display: none; margin-bottom: 40px; }
+.sb { list-style: none; padding-left: 0; }
+.sb>li { background: white; width: 90%; padding: 3px; }
+.sb>li:hover { background: #eee; }
+.sidebar { padding: 10px; background: white; }
+.sidebar>h3 { border-bottom: 1px solid #aaa; width: 90%; padding-bottom: 3px; }
+#sb-link { display: block; }
+#sb-icon { width: 90%; margin-bottom: 12pt; }
+.sidebar { display: block; }
+.wrapper { display: grid; gap: 40px; grid-template-columns: 220px auto; }
+.mobile-title { text-align: center; padding: 0; border: 0; padding-bottom: 6px; border-bottom: 1px solid #555; }
+
+@media only screen and (max-width: 700px) {
+    body { background: white; }
+    #mobile-header { display: block; }
+    .index { column-count: 1; }
+    .index-grid { display: block; }
+    .index-grid>a>img { width: 100%; }
+    #sb-link { display: none; }
+    .wrapper { display: flex; flex-direction: column-reverse; }
+    .content { border: 0; padding: 0; }
+    .sb>li { width: 100%; }
+    .sidebar>h3 { width: 100%; }
+    .ind-side { display: none; }
+}
