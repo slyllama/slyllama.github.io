@@ -1,0 +1,18 @@
+a { border: none; color: black; }
+body { font-family: sans-serif; margin: 40px; }
+img { max-width: 100%; }
+p, li { line-height: 1.4em; }
+
+.content { display: block; margin-bottom: 60px; max-width: 600px; }
+.index { column-count: 2; padding-bottom: 45px; }
+.info { border: 2px solid black; margin: 35px 0; padding: 0 20px; }
+.sb { list-style: none; padding-left: 0; }
+.sidebar { display: block; }
+.wrapper { display: grid; grid-template-columns: 250px auto; }
+
+/* Little trick to swap the position of the sidebar and content div when viewing on mobile */
+
+@media only screen and (max-width: 700px) {
+    .index { column-count: 1; }
+    .wrapper { display: flex; flex-direction: column-reverse; }
+}
