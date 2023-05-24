@@ -4,5 +4,6 @@
     { "name": "icons", "title": "Thesis" },
     { "name": "index", "title": "Home" },
     {  "name": "scruffy", "title": "Scruffy" },
-    {  "name": "todo", "title": "Things to Add" }
+    {  "name": "todo", "title": "Things to Add" },
+    {  "name": "threedee", "title": "Three Dee" }
 ]
