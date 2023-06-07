@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="icon" type="image/x-icon" href="favicon.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Console &mdash; Sly</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="sidebar">
+			<a href="index.html"><img src="llama.png" /></a>
+			<ul class="sb">
+				<li><a href="icons.html">Icons in Ink</a></li>
+				<li><a href="threedee.html">Three Dee</a></li>
+				
+			</ul>
+
+			<h3>Ideas</h3>
+			<ul class="sb">
+				<li><a href="scruffy.html">Scruffy</a></li>
+				<li><a href="dreams.html">Dreams</a></li>
+				<li><a href="cascade.html">Cascade</a></li>
+				<li><a href="moenie.html">Moenie</a></li>
+			</ul>
+
+			<h3>Friends</h3>
+			<ul class="sb">
+				<li><a href="bubbles.html">Bubbles (CNC)</a></li>
+			</ul>
+
+			<h3>Stubs</h3>
+			<ul class="sb">
+				<li><a href="console.html">Console</a></li>
+				<li><a href="journal.html">Journal Mapping</a></li>
+			</ul>
+		</div>
+		<div class="content">
+			<h1>Console</h1>
+			
+			<style>
+			#input { font-family: monospace;}
+			#output { background: #333; color: #ccc; display: flex; flex-direction: column-reverse; font-family: monospace; height: 300px; overflow: auto; }
+			#output>* { margin-left: 10px; margin-right: 10px; }
+			</style>
+			
+			<form id="terminal">
+			    <div id="output">
+			        <p>&gt; You've stumbled upon a Console! This primitive device lets you navigate the world it's connected to, though there isn't anything here quite yet. Stay tuned!</p>
+			    </div><br />
+			    <input id="input" autocomplete="off"></input>
+			    <input type="submit" hidden />
+			</form>
+			
+			<script>
+			    var input = document.getElementById("input");
+			    var output = document.getElementById("output");
+			    var terminal = document.getElementById("terminal");
+			    function cmd(e) {
+			        if (input.value == "") {
+			            e.preventDefault();
+			            return(false);
+			        }
+			        output.insertAdjacentHTML("afterbegin",
+			            "<p style='color: #ffd050;'>&gt; " + input.value + "</p>");
+			        output.insertAdjacentHTML    ("afterbegin",
+			            "<p>Huh?</p>");
+			        input.value = "";
+			        e.preventDefault();
+			    }
+			    terminal.addEventListener("submit", cmd);
+			</script>
+		</div>
+	</div>
+</body>
+</html>
