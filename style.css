@@ -5,6 +5,7 @@ p, li { line-height: 1.4em; }
 
 .content { display: block; margin-bottom: 60px; max-width: 600px; }
 .index { column-count: 2; padding-bottom: 45px; }
+.index-grid { display: grid; gap: 5px; grid-template-columns: 1fr 1fr; }
 .info { border: 2px solid black; margin: 35px 0; padding: 0 20px; }
 .sb { list-style: none; padding-left: 0; }
 .sidebar { display: block; }
@@ -12,11 +13,5 @@ p, li { line-height: 1.4em; }
 
 @media only screen and (max-width: 700px) {
     .index { column-count: 1; }
+    .index-grid { display: initial; }
     .wrapper { display: flex; flex-direction: column-reverse; } }
-
-/* Index grid */
-.index-grid {
-    display: grid;
-    gap: 5px;
-    grid-template-columns: 1fr 1fr;
-}

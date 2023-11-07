@@ -8,5 +8,6 @@
     { "name": "index", "title": "Home" },
     { "name": "moenie", "title": "Moenie" },
     { "name": "scruffy", "title": "Scruffy" },
-    { "name": "threedee", "title": "Three Dee" }
+    { "name": "threedee", "title": "Three Dee" },
+    { "name": "art", "title": "Art and Illustration" }
 ]
