@@ -8,6 +8,7 @@ p, li { line-height: 1.4em; }
 .index-grid { display: grid; gap: 5px; grid-template-columns: 1fr 1fr; }
 .info { border: 2px solid black; margin: 35px 0; padding: 0 20px; }
 .sb { list-style: none; padding-left: 0; }
+#sb-icon { width: 70%; margin-bottom: 12pt; }
 .sidebar { display: block; }
 .wrapper { display: grid; grid-template-columns: 250px auto; }
 
