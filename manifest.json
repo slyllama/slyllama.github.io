@@ -3,11 +3,11 @@
     { "name": "cascade", "title": "Cascade" },
     { "name": "dreams", "title": "Dream Spaces" },
     { "name": "dwelt", "title": "Dwelt" },
-    { "name": "journal", "title": "Journal Mapping" },
     { "name": "icons", "title": "Thesis" },
     { "name": "index", "title": "Home" },
     { "name": "moenie", "title": "Moenie" },
     { "name": "scruffy", "title": "Scruffy" },
     { "name": "threedee", "title": "Three Dee" },
-    { "name": "art", "title": "Art and Illustration" }
+    { "name": "art", "title": "Art and Illustration" },
+    { "name": "ceres", "title": "CERES" }
 ]

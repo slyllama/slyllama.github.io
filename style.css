@@ -1,21 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap');
 
 a { border: none; color: rgb(145, 0, 0); text-decoration: none; }
+a:hover { text-decoration: underline; }
 b { font-weight: 500; }
-body { font-family: "EB Garamond"; font-size: 18px; margin: 40px; }
+body { font-family: "EB Garamond"; font-size: 18px; line-height: 1.12em; margin: 40px; }
 img { max-width: 100%; }
+p { text-align: justify; hyphens: auto; }
 /*p, li { line-height: 1.4em; }*/
 
 .content { display: block; margin-bottom: 60px; max-width: 600px; }
 .index { column-count: 2; padding-bottom: 45px; }
 .index-grid { display: grid; gap: 5px; grid-template-columns: 1fr 1fr; }
 .info { border: 2px solid black; margin: 35px 0; padding: 0 20px; }
+#mobile-header { display: none; }
 .sb { list-style: none; padding-left: 0; }
 #sb-icon { width: 70%; margin-bottom: 12pt; }
 .sidebar { display: block; }
 .wrapper { display: grid; grid-template-columns: 250px auto; }
 
 @media only screen and (max-width: 700px) {
+    #mobile-header { display: block; }
     .index { column-count: 1; }
     .index-grid { display: initial; }
     .wrapper { display: flex; flex-direction: column-reverse; } }
