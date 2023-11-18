@@ -12,8 +12,9 @@ p { text-align: justify; hyphens: auto; }
 .index { column-count: 2; padding-bottom: 45px; }
 .index-grid { display: grid; gap: 5px; grid-template-columns: 1fr 1fr; }
 .info { border: 2px solid black; margin: 35px 0; padding: 0 20px; }
-#mobile-header { display: none; }
+#mobile-header { display: none; margin-bottom: 40px; }
 .sb { list-style: none; padding-left: 0; }
+#sb-link { display: block; }
 #sb-icon { width: 70%; margin-bottom: 12pt; }
 .sidebar { display: block; }
 .wrapper { display: grid; grid-template-columns: 250px auto; }
@@ -21,5 +22,7 @@ p { text-align: justify; hyphens: auto; }
 @media only screen and (max-width: 700px) {
     #mobile-header { display: block; }
     .index { column-count: 1; }
-    .index-grid { display: initial; }
+    .index-grid { display: block; }
+    .index-grid>a>img { width: 100%; }
+    #sb-link { display: none; }
     .wrapper { display: flex; flex-direction: column-reverse; } }
