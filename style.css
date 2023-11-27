@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap');
+@font-face{ font-family: "Macondo"; src: url("macondo.ttf"); }
 
 a { border: none; color: rgb(145, 0, 0); text-decoration: none; }
 a:hover { text-decoration: underline; }
 b { font-weight: 500; }
-body { font-family: "EB Garamond"; font-size: 18px; line-height: 1.12em; margin: 40px; }
+body { font-family: "EB Garamond"; font-size: 17px; line-height: 1.25em; margin: 40px; }
+h1, h2, h3 { font-family: "Macondo"; font-weight: normal; line-height: 0.95em; }
+h1 { font-size: 21pt; }
 img { max-width: 100%; }
-p { text-align: justify; hyphens: auto; }
-/*p, li { line-height: 1.4em; }*/
 
 .content { display: block; margin-bottom: 60px; max-width: 600px; }
 .index { column-count: 2; padding-bottom: 45px; }
