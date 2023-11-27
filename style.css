@@ -6,8 +6,9 @@ a:hover { text-decoration: underline; }
 b { font-weight: 500; }
 body { font-family: "EB Garamond"; font-size: 17px; line-height: 1.25em; margin: 40px; }
 h1, h2, h3 { font-family: "Macondo"; font-weight: normal; line-height: 0.95em; }
-h1 { font-size: 21pt; }
+h1 { border-top: 1px solid black; padding-top: 20px; font-size: 21pt; }
 img { max-width: 100%; }
+p { text-align: justify; hyphens: auto; }
 
 .content { display: block; margin-bottom: 60px; max-width: 600px; }
 .index { column-count: 2; padding-bottom: 45px; }
