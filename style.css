@@ -11,7 +11,7 @@ h1 { font-size: 21pt; }
 img { max-width: 100%; }
 p { text-align: justify; hyphens: auto; }
 
-.content { display: block; margin-bottom: 60px; max-width: 600px; border-right: 1px solid #555; padding-right: 40px; }
+.content { display: block; margin-bottom: 60px; max-width: 600px; border-right: 1px solid #aaa; padding-right: 60px; }
 .index { column-count: 2; padding-bottom: 45px; }
 .index-grid { display: grid; gap: 5px; grid-template-columns: 1fr 1fr; }
 .info { border: 2px solid black; margin: 35px 0; padding: 0 20px; }
