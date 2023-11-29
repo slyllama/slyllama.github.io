@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap');
 @font-face{ font-family: "Macondo"; src: url("macondo.ttf"); }
 
+body { background: url("img/bg.webp") repeat; }
 a { border: none; color: rgb(145, 0, 0); text-decoration: none; }
 a:hover { text-decoration: underline; }
 b { font-weight: 500; }
@@ -16,9 +17,9 @@ p { text-align: justify; hyphens: auto; }
 .info { border: 2px solid black; margin: 35px 0; padding: 0 20px; }
 #mobile-header { display: none; margin-bottom: 40px; }
 .sb { list-style: none; padding-left: 0; }
-.sb>li { border-bottom: 1px solid #ccc; width: 70%; padding: 3px 0; }
+.sb>li { border-bottom: 1px dashed #aaa; width: 70%; padding: 3px 0; }
 .sb>li:hover { background: #eee; }
-.sidebar>h3 {border-bottom: 1px solid #555; width: 70%; padding-bottom: 3px; }
+.sidebar>h3 {border-bottom: 1px solid #aaa; width: 70%; padding-bottom: 3px; }
 #sb-link { display: block; }
 #sb-icon { width: 70%; margin-bottom: 12pt; }
 .sidebar { display: block; }
