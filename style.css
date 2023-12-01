@@ -12,6 +12,7 @@ img { max-width: 100%; }
 p { text-align: justify; hyphens: auto; }
 
 .content { display: block; margin-bottom: 60px; max-width: 600px; border-right: 1px solid #aaa; padding-right: 60px; }
+.ind-side { display: block; position: fixed; right: 0; bottom: 0; z-index: -1; opacity: 100%; }
 .index { column-count: 2; padding-bottom: 45px; }
 .index-grid { display: grid; gap: 5px; grid-template-columns: 1fr 1fr; }
 .info { border: 2px solid black; margin: 35px 0; padding: 0 20px; }
@@ -25,6 +26,10 @@ p { text-align: justify; hyphens: auto; }
 .sidebar { display: block; }
 .wrapper { display: grid; grid-template-columns: 250px auto; }
 .mobile-title { text-align: center; padding: 0; border: 0; padding-bottom: 6px; border-bottom: 1px solid #555; }
+
+@media only screen and (max-width: 1500px) {
+    .ind-side { opacity: 10%; }
+}
 
 @media only screen and (max-width: 700px) {
     #mobile-header { display: block; }
