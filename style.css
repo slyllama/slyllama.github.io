@@ -11,16 +11,16 @@ h1 { font-size: 21pt; }
 img { max-width: 100%; }
 p { text-align: justify; hyphens: auto; }
 
-.content { display: block; margin-bottom: 60px; max-width: 600px; border-right: 1px solid #aaa; padding-right: 60px; }
+.content { display: block; margin-bottom: 60px; max-width: 600px; padding-right: 60px; }
 .ind-side { display: block; position: fixed; right: 0; bottom: 0; z-index: -1; opacity: 100%; }
 .index { column-count: 2; padding-bottom: 45px; }
 .index-grid { display: grid; gap: 5px; grid-template-columns: 1fr 1fr; }
 .info { border: 2px solid black; margin: 35px 0; padding: 0 20px; }
 #mobile-header { display: none; margin-bottom: 40px; }
 .sb { list-style: none; padding-left: 0; }
-.sb>li { border-bottom: 1px dashed #aaa; width: 70%; padding: 3px 0; }
+.sb>li { background: white; font-family: "Macondo"; border-radius: 2px; border: 1px solid #222; width: 70%; padding: 3px; margin-bottom: 2px; }
 .sb>li:hover { background: #eee; }
-.sidebar>h3 {border-bottom: 1px solid #aaa; width: 70%; padding-bottom: 3px; }
+.sidebar>h3 { border-bottom: 1px solid #aaa; width: 70%; padding-bottom: 3px; }
 #sb-link { display: block; }
 #sb-icon { width: 70%; margin-bottom: 12pt; }
 .sidebar { display: block; }
