@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap');
 @font-face{ font-family: "Macondo"; src: url("macondo.ttf"); }
+@font-face{ font-family: "Baskervville"; src: url("baskervville.ttf"); }
+@font-face{ font-family: "Basteleur"; src: url("basteleur.ttf"); }
 
-body { background: url("img/bg.webp") repeat; }
 a { border: none; color: rgb(145, 0, 0); text-decoration: none; }
 a:hover { text-decoration: underline; }
 b { font-weight: 500; }
-body { font-family: "EB Garamond"; font-size: 17px; line-height: 1.25em; margin: 40px; }
-h1, h2, h3 { font-family: "Macondo"; font-weight: normal; line-height: 0.95em; }
+body { font-family: "Baskervville"; font-size: 16px; line-height: 1.4em; margin: 40px; }
+h1, h2, h3 { font-family: "Basteleur"; font-weight: normal; line-height: 0.95em; }
 h1 { font-size: 21pt; }
 img { max-width: 100%; }
 p { text-align: justify; hyphens: auto; }
@@ -18,17 +19,17 @@ p { text-align: justify; hyphens: auto; }
 .info { border: 2px solid black; margin: 35px 0; padding: 0 20px; }
 #mobile-header { display: none; margin-bottom: 40px; }
 .sb { list-style: none; padding-left: 0; }
-.sb>li { background: white; font-family: "Macondo"; border-radius: 2px; border: 1px solid #222; width: 70%; padding: 3px; margin-bottom: 2px; }
+.sb>li { background: white; width: 90%; padding: 3px; }
 .sb>li:hover { background: #eee; }
-.sidebar>h3 { border-bottom: 1px solid #aaa; width: 70%; padding-bottom: 3px; }
+.sidebar>h3 { border-bottom: 1px solid #aaa; width: 90%; padding-bottom: 3px; }
 #sb-link { display: block; }
-#sb-icon { width: 70%; margin-bottom: 12pt; }
+#sb-icon { width: 90%; margin-bottom: 12pt; }
 .sidebar { display: block; }
-.wrapper { display: grid; grid-template-columns: 250px auto; }
+.wrapper { display: grid; gap: 40px; grid-template-columns: 220px auto; }
 .mobile-title { text-align: center; padding: 0; border: 0; padding-bottom: 6px; border-bottom: 1px solid #555; }
 
 @media only screen and (max-width: 1500px) {
-    .ind-side { opacity: 10%; }
+    .ind-side { opacity: 20%; }
 }
 
 @media only screen and (max-width: 700px) {
@@ -41,4 +42,5 @@ p { text-align: justify; hyphens: auto; }
     .content { border: 0; padding: 0; }
     .sb>li { width: 100%; }
     .sidebar>h3 { width: 100%; }
+    .ind-side { display: none; }
 }
