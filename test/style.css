@@ -1,0 +1,84 @@
+body, html {
+  height: 2000px;
+}
+
+p {
+  color: #333;
+  font-family: "Cabin", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 14pt;
+  line-height: 1.16em;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+#body-title {
+  margin-bottom: 35px;
+  margin-left: -2px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.clear {
+  clear: both;
+}
+
+#content {
+  margin: 0 27px;
+  position: relative;
+  z-index: 1;
+}
+
+#header-buildings {
+  clip-path: 0;
+  display: block;
+  position: relative;
+  width: 100%;
+  z-index: -1;
+}
+
+#header-logo {
+  height: 40px;
+  width: auto;
+}
+
+#header-overlay {
+  display: block;
+  height: auto;
+  margin-top: initial;
+  position: relative;
+  width: 100%;
+}
+
+#header-menu-btn {
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0px 2px 27px rgba(0, 0, 0, 0.7);
+  height: 40px;
+  float: right;
+  width: 40px;
+}
+#header-menu-btn img {
+  height: 100%;
+  width: 100%;
+}
+
+#mobile-top-bar {
+  opacity: 1;
+  position: fixed;
+  transition: opacity 0.1s;
+  width: 100%;
+  z-index: 2;
+}
+#mobile-top-bar > div {
+  margin: 27px;
+  margin-bottom: initial;
+}
+#mobile-top-bar > div:first-child {
+  float: left;
+}
+#mobile-top-bar > div:nth-child(2) {
+  float: right;
+}
+
+/*# sourceMappingURL=style.css.map */
