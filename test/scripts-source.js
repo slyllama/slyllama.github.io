@@ -19,10 +19,7 @@ function loadDOM() {
 
     // Change the colour of the title when hovered
     headerLogo.addEventListener("mouseover", (e) => {
-        if (mobileMenu.display == none) {
-            // These only work when not on mobile
-            headerLogo.src = "$ROOT/assets/logo-hover.svg";
-        }
+        headerLogo.src = "$ROOT/assets/logo-hover.svg";
     });
     headerLogo.addEventListener("mouseout", (e) => {
         headerLogo.src = "$ROOT/assets/logo.svg";
@@ -30,10 +27,7 @@ function loadDOM() {
 
     // Change the colour of the mobile menu when hovered
     mobileMenuBtn.addEventListener("mouseover", (e) => {
-        if (mobileMenu.display == none) {
-            mobileMenuBtnImg.src = "$ROOT/assets/mobile-menu-btn-hover.svg";
-        }
-        
+        mobileMenuBtnImg.src = "$ROOT/assets/mobile-menu-btn-hover.svg";  
     });
     mobileMenuBtn.addEventListener("mouseout", (e) => {
         mobileMenuBtnImg.src = "$ROOT/assets/mobile-menu-btn.svg";
