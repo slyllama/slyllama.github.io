@@ -1,16 +1,42 @@
 @use "variables" as *;
 
+$gap: 16px;
+$hero-height: 480px;
+
 #hero-container {
     display: grid;
-    gap: 10px;
+    gap: $gap;
     grid-template-columns: 1fr 3fr 3fr;
+    height: $hero-height;
+
+    @media (max-width: $mobile-width) {
+        grid-template-columns: 2fr 5fr;
+    }
+}
+
+.hero-img {
+    height: 100%;
+    margin: 0 !important;
+    object-fit: cover;
+    padding: 0 !important;
+}
+
+#hero-rocket {
+    display: block;
+
+    @media (max-width: $mobile-width) {
+        display: none !important;
+    }
+}
+
+#hero-vertical {
+    display: grid;
+    gap: $gap;
+    grid-template-rows: 1fr 1fr;
+    height: inherit;
 
     div {
-        background: #ddd;
-        border: 1px solid #000;
-        border-bottom: 2px solid #000;
-        border-radius: 3px;
-        height: 200px;
-        width: 100%;
+        display: inline-block;
+        overflow: hidden;
     }
 }

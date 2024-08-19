@@ -56,11 +56,6 @@ p, ul, h3 {
     line-height: $copy-line-height;
     hyphens: auto;
     margin-bottom: $copy-para-margin;
-    margin-right: 30px;
-
-    @media (max-width: $mobile-width) {
-        margin-right: 2px;
-    }
 }
 
 p > code {
