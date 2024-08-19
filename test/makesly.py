@@ -2,7 +2,7 @@
 # Generates journals and pages for Slyllama
 
 JPATH = "journal/" # journal path
-TITLE = "$ &ndash; Slyllama"
+TITLE = "$ &mdash; Slyllama"
 PROG_TITLE = "This is Slyllama CMS"
 URL = "https://slyllama.net/test"
 DESC = "Illustrative graphics for a modern age."
@@ -53,23 +53,36 @@ else:
 
 # Generate scripts with proper paths
 print(" * Generating pathed scripts...")
-with open("scripts-source.js") as file:
+with open("source/scripts.js") as file:
     scripts = file.read()
 scripts = scripts.replace("$ROOT", root_prefix)
 with open("scripts.js", "w") as file:
     file.write(scripts)
 
-with open("template.html") as file: # get template
+with open("source/template.html") as file: # get template
     template = file.read()
 indent = "" # used for pretty formatting of HTML
 for line in template.split("\n"):
     if "$CONTENT" in line:
         indent = line.strip("$CONTENT")
 
-with open("journal.json") as file: # get list of journal entries
+# Format home page
+print(" * Generating home page...")
+home_content = ""
+with open("source/home.html") as file:
+    home_content = file.read()
+fmt_home_content = indent_content(home_content)
+hem = template
+hem = hem.replace("$CONTENT", fmt_home_content)
+hem = hem.replace("$ROOT", root_prefix)
+hem = hem.replace("$TITLE", "Slyllama")
+with open("index.html", "w") as file:
+    file.write(hem)
+with open("source/journal.json") as file: # get list of journal entries
     journal_list = json.load(file)
 
 # Build master list
+print(" * Building journal list...")
 master_content = ""
 master_content += "<h2>Design Journal</h2>"
 
@@ -89,9 +102,9 @@ for entry in journal_list:
     master_content += "<p>" + entry["desc"] + "</p>"
     master_content += "<div class=\"journal-list-pad\"></div>"
 
-formatted_master_content = indent_content(master_content)
+fmt_master_content = indent_content(master_content)
 em = template
-em = em.replace("$CONTENT", formatted_master_content)
+em = em.replace("$CONTENT", fmt_master_content)
 em = em.replace("$ROOT", root_prefix)
 em = em.replace("$TITLE", TITLE.replace("$", "Journal"))
 
@@ -121,10 +134,10 @@ for entry in journal_list:
             content += file.read()
         
         # Add indentation to match template file
-        formatted_content = indent_content(content)
+        fmt_content = indent_content(content)
 
         # Content substitutions
-        e = e.replace("$CONTENT", formatted_content)
+        e = e.replace("$CONTENT", fmt_content)
         e = e.replace("$ROOT", root_prefix)
         e = e.replace("$PAGEROOT", page_root)
         e = e.replace("$TITLE", TITLE.replace("$", entry["title"]))

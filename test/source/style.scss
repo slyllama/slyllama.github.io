@@ -1,20 +1,5 @@
-// Colours
-$accent-blue: #1C3C83;
-$accent-ochre: #C93E30;
-$copy-color: #555;
-$separator-color: #CCC;
-
-// Type parameters
-$copy-font-size: 13.5pt;
-$copy-title-size: 27pt;
-$copy-line-height: 23px;
-$copy-para-margin: 16px;
-
-// Dimensions
-$desktop-width: 830px;
-$headlink-padding: 14px;
-$headlink-margin: 10px; // additional spacing for header links
-$mobile-width: 700px; // mobile styling below this width
+@use "scss/variables" as *;
+@use "scss/home-page";
 
 @font-face {
     font-family: 'Cabin';
