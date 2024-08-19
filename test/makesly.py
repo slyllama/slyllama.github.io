@@ -100,17 +100,19 @@ for entry in journal_list:
     master_content += "<a href=\"" + page_root + "\">\n"
     master_content += ind(1) + "<p class=\"date\">" + entry["date"] + "</p>\n"
     master_content += "</a>"
-    master_content += "<h2 class=\"journal-list-title\">"
-    master_content += ind(1) + "<a href=\"" + page_root + "\">" + entry["title"] + "</a>"
+    master_content += "<h2 class=\"journal-list-title\">\n"
+    master_content += ind(1) + "<a href=\"" + page_root + "\">" + entry["title"] + "</a>\n"
     master_content += "</h2>\n"
-    master_content += "<p>" + entry["desc"] + "</p>"
+    master_content += "<p>" + entry["desc"] + "</p>\n"
     master_content += "<div class=\"journal-list-pad\"></div>"
 
 fmt_master_content = indent_content(master_content)
 em = template
 em = em.replace("$CONTENT", fmt_master_content)
 em = em.replace("$ROOT", root_prefix)
-em = em.replace("$TITLE", TITLE.replace("$", "Journal"))
+em = em.replace("$PAGEROOT", root_prefix + "/journal")
+em = em.replace("$DESC", "A casual collection of writing on design and illustration!")
+em = em.replace("$TITLE", TITLE.replace("$", "Design Journal"))
 
 with open(JPATH + "index.html", "w") as file:
     file.write(em)
