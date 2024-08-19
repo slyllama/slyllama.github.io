@@ -2,16 +2,22 @@
 # Generates journals and pages for Slyllama
 
 JPATH = "journal/" # journal path
-#LOCAL_ROOT = "file://C:/Users/alaing/Desktop/web" # debug
-LOCAL_ROOT = "https://slyllama.net/test"
 TITLE = "$ &ndash; Slyllama"
+URL = "https://slyllama.net/test"
 DESC = "Illustrative graphics for a modern age."
 INDENT = "    "
 
 import json
 import os
 import shutil
+import sys
 from pathlib import Path
+
+def print_usage_and_quit():
+    print("Usage:")
+    print(" -local   use local path (usually for testing).")
+    print(" -live    use live URLs.")
+    quit()
 
 def ind(c): # generate indent of size `c`
     indent = ""
@@ -21,11 +27,22 @@ def ind(c): # generate indent of size `c`
 
 print("This is Slyllama CMS.")
 
+if len(sys.argv) != 2:
+    print_usage_and_quit()
+
+if sys.argv[1] == "-local":
+    root_prefix = "file:///" + os.path.abspath(".").replace("\\", "/")
+    quit()
+elif sys.argv[1] == "-live":
+    root_prefix = URL
+else:
+    print_usage_and_quit()
+
 # Generate scripts with proper paths
 print(" * Generating pathed scripts...")
 with open("scripts-source.js") as file:
     scripts = file.read()
-scripts = scripts.replace("$ROOT", LOCAL_ROOT)
+scripts = scripts.replace("$ROOT", root_prefix)
 with open("scripts.js", "w") as file:
     file.write(scripts)
 
@@ -38,7 +55,7 @@ with open("journal.json") as file: # get list of journal entries
 for entry in journal_list:
     name = entry["name"]
     entry_path = Path(JPATH + name + "/source.html")
-    page_root = LOCAL_ROOT + "/" + JPATH + name
+    page_root = root_prefix + "/" + JPATH + name
     
     if entry_path.exists():
         print(" * Creating entry for '" + name + "'...")
@@ -72,7 +89,7 @@ for entry in journal_list:
 
         # Content substitutions
         e = e.replace("$CONTENT", indented_content)
-        e = e.replace("$ROOT", LOCAL_ROOT)
+        e = e.replace("$ROOT", root_prefix)
         e = e.replace("$PAGEROOT", page_root)
         e = e.replace("$TITLE", TITLE.replace("$", entry["title"]))
         if "desc" in entry:
