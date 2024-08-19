@@ -47,7 +47,7 @@ h3 {
 
 p, ul, h3 {
   color: #555;
-  line-height: 1.25em;
+  line-height: 23px;
   hyphens: auto;
   margin-bottom: 16px;
   margin-right: 30px;
@@ -65,7 +65,7 @@ p > code {
 #container {
   display: block;
   margin: 90px auto;
-  width: 900px;
+  width: 830px;
   max-width: 80%;
 }
 @media (max-width: 700px) {
