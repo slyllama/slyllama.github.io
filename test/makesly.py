@@ -26,6 +26,17 @@ def ind(c): # generate indent of size `c`
         indent += INDENT
     return(indent)
 
+def indent_content(c):
+    indented_content = ""
+    i = 0
+    for line in c.split("\n"):
+        if i > 0: indented_content += indent + line
+        else: indented_content += line
+        indented_content += "\n"
+        i += 1
+    indented_content = indented_content.rstrip("\n")
+    return(indented_content)
+
 # Process local/live arguments and display program messages
 if len(sys.argv) != 2:
     print(PROG_TITLE + ".")
@@ -50,10 +61,45 @@ with open("scripts.js", "w") as file:
 
 with open("template.html") as file: # get template
     template = file.read()
+indent = "" # used for pretty formatting of HTML
+for line in template.split("\n"):
+    if "$CONTENT" in line:
+        indent = line.strip("$CONTENT")
 
 with open("journal.json") as file: # get list of journal entries
     journal_list = json.load(file)
 
+# Build master list
+master_content = ""
+master_content += "<h2>Design Journal</h2>"
+
+for entry in journal_list:
+    name = entry["name"]
+    entry_path = Path(JPATH + name + "/source.html")
+    page_root = root_prefix + "/" + JPATH + name
+    if not entry_path.exists():
+        continue
+    
+    master_content += "<a href=\"" + page_root + "\">\n"
+    master_content += ind(1) + "<p class=\"date\">" + entry["date"] + "</p>\n"
+    master_content += "</a>"
+    master_content += "<h2 class=\"journal-list-title\">"
+    master_content += ind(1) + "<a href=\"" + page_root + "\">" + entry["title"] + "</a>"
+    master_content += "</h2>\n"
+    master_content += "<p>" + entry["desc"] + "</p>"
+    master_content += "<div class=\"journal-list-pad\"></div>"
+
+formatted_master_content = indent_content(master_content)
+em = template
+em = em.replace("$CONTENT", formatted_master_content)
+em = em.replace("$ROOT", root_prefix)
+em = em.replace("$TITLE", TITLE.replace("$", "Journal"))
+
+with open(JPATH + "index.html", "w") as file:
+    file.write(em)
+    pass
+
+# Process each individual journal entry
 for entry in journal_list:
     name = entry["name"]
     entry_path = Path(JPATH + name + "/source.html")
@@ -73,24 +119,12 @@ for entry in journal_list:
 
         with open(output_path + "/source.html") as file:
             content += file.read()
-
-        indent = ""
-        for line in e.split("\n"):
-            if "$CONTENT" in line:
-                indent = line.strip("$CONTENT")
         
         # Add indentation to match template file
-        indented_content = ""
-        i = 0
-        for line in content.split("\n"):
-            if i > 0: indented_content += indent + line
-            else: indented_content += line
-            indented_content += "\n"
-            i += 1
-        indented_content = indented_content.rstrip("\n")
+        formatted_content = indent_content(content)
 
         # Content substitutions
-        e = e.replace("$CONTENT", indented_content)
+        e = e.replace("$CONTENT", formatted_content)
         e = e.replace("$ROOT", root_prefix)
         e = e.replace("$PAGEROOT", page_root)
         e = e.replace("$TITLE", TITLE.replace("$", entry["title"]))

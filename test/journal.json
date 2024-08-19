@@ -2,7 +2,13 @@
     {
         "name": "test-entry",
         "title": "Knuth&rsquo;s Metafont: Computer as Apprentice",
-        "desc": "Test entry.",
+        "desc": "Let&rsquo;s take a look at Metafont, Don Knuth&rsquo;s type founding software from the &lsquo;80s which elegantly expresses a meeting-point between art and science.",
+        "date": "19.8.24"
+    },
+    {
+        "name": "another-entry",
+        "title": "This is another test entry.",
+        "desc": "Another entry.",
         "date": "19.8.24"
     }
 ]

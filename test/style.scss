@@ -2,9 +2,11 @@
 $accent-blue: #1C3C83;
 $accent-ochre: #C93E30;
 $copy-color: #555;
+$separator-color: #CCC;
 
 // Type parameters
 $copy-font-size: 13.5pt;
+$copy-title-size: 27pt;
 $copy-line-height: 1.25em;
 $copy-para-margin: 16px;
 
@@ -55,7 +57,7 @@ code, pre {
 h2 {
     font-size: 27pt;
     color: $accent-blue;
-    margin-bottom: 27px;
+    margin-bottom: $copy-title-size;
 }
 
 h3 {
@@ -178,15 +180,28 @@ p > code {
     width: auto;
 }
 
+.journal-list-pad {
+    border-top: 1px solid $separator-color;
+    display: block;
+    height: 29px;
+    margin-top: 29px;
+    width: 100%;
+}
+
+.journal-list-title {
+    font-size: $copy-title-size - 7pt;
+    margin-bottom: 12px;
+}
+
 #mobile-menu {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid $separator-color;
     display: none;
     margin-top: 34px;
 }
 
 #mobile-menu > li {
     background: #fff;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid $separator-color;
     padding: 15px 0;
 }
 

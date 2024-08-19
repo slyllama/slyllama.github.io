@@ -36,7 +36,7 @@ code, pre {
 h2 {
   font-size: 27pt;
   color: #1C3C83;
-  margin-bottom: 27px;
+  margin-bottom: 27pt;
 }
 
 h3 {
@@ -161,15 +161,28 @@ p > code {
   width: auto;
 }
 
+.journal-list-pad {
+  border-top: 1px solid #CCC;
+  display: block;
+  height: 29px;
+  margin-top: 29px;
+  width: 100%;
+}
+
+.journal-list-title {
+  font-size: 20pt;
+  margin-bottom: 12px;
+}
+
 #mobile-menu {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #CCC;
   display: none;
   margin-top: 34px;
 }
 
 #mobile-menu > li {
   background: #fff;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #CCC;
   padding: 15px 0;
 }
 
