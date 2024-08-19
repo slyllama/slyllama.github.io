@@ -3,6 +3,7 @@
 
 JPATH = "journal/" # journal path
 TITLE = "$ &ndash; Slyllama"
+PROG_TITLE = "This is Slyllama CMS"
 URL = "https://slyllama.net/test"
 DESC = "Illustrative graphics for a modern age."
 INDENT = "    "
@@ -25,17 +26,18 @@ def ind(c): # generate indent of size `c`
         indent += INDENT
     return(indent)
 
-print("This is Slyllama CMS.")
-
+# Process local/live arguments and display program messages
 if len(sys.argv) != 2:
+    print(PROG_TITLE + ".")
     print_usage_and_quit()
-
 if sys.argv[1] == "-local":
+    print(PROG_TITLE + " (working locally).")
     root_prefix = "file:///" + os.path.abspath(".").replace("\\", "/")
-    quit()
 elif sys.argv[1] == "-live":
+    print(PROG_TITLE + " (working live).")
     root_prefix = URL
 else:
+    print(PROG_TITLE + ".")
     print_usage_and_quit()
 
 # Generate scripts with proper paths
