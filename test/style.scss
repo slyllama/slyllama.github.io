@@ -166,7 +166,7 @@ p > code {
 #header-menu-btn {
     cursor: pointer;
     display: none;
-    padding: 2px 0 !important;
+    padding: 7px 0 !important;
     
     @media (max-width: $mobile-width) {
         display: block;
@@ -174,7 +174,7 @@ p > code {
 }
 
 #header-menu-btn-img {
-    height: 36px;
+    height: 30px;
     width: auto;
 }
 
