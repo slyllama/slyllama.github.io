@@ -72,10 +72,14 @@ home_content = ""
 with open("source/home.html") as file:
     home_content = file.read()
 fmt_home_content = indent_content(home_content)
+
 hem = template
 hem = hem.replace("$CONTENT", fmt_home_content)
 hem = hem.replace("$ROOT", root_prefix)
 hem = hem.replace("$TITLE", "Slyllama")
+hem = hem.replace("$PAGEROOT", root_prefix)
+hem = hem.replace("$DESC", "Illustrative graphics for a modern age.")
+
 with open("index.html", "w") as file:
     file.write(hem)
 with open("source/journal.json") as file: # get list of journal entries
