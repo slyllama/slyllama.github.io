@@ -19,7 +19,10 @@ function loadDOM() {
 }
 
 addEventListener("resize", (e) => {
-    mobileMenu.style.display = "none";
+    // Resize won't close the menu unless it passes the threshold
+    if (window.outerWidth > 700) {
+        mobileMenu.style.display = "none";
+    }
 });
 
 // Use the hamburger to show and hide the mobile menu

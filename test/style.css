@@ -251,11 +251,13 @@ p > code {
   display: none;
   margin-top: 34px;
 }
-
-#mobile-menu > li {
+#mobile-menu a > div {
   background: #fff;
   border-top: 1px solid #CCC;
-  padding: 15px 0;
+  padding: 15px 8px;
+}
+#mobile-menu a > div:hover {
+  background: #eee;
 }
 
 .sep {

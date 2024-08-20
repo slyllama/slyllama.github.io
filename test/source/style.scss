@@ -202,12 +202,16 @@ p > code {
     border-bottom: 1px solid $separator-color;
     display: none;
     margin-top: 34px;
-}
 
-#mobile-menu > li {
-    background: #fff;
-    border-top: 1px solid $separator-color;
-    padding: 15px 0;
+    a > div {
+        background: #fff;
+        border-top: 1px solid $separator-color;
+        padding: 15px 8px;
+    }
+
+    a > div:hover {
+        background: #eee;
+    }
 }
 
 .sep {
