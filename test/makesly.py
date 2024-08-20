@@ -88,7 +88,7 @@ with open("source/journal.json") as file: # get list of journal entries
 # Build master list
 print(" * Building journal list...")
 master_content = ""
-master_content += "<h2>Design Journal</h2>"
+master_content += "<h1><span>Design Journal</span></h1>"
 
 for entry in journal_list:
     name = entry["name"]

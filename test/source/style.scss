@@ -39,6 +39,20 @@ code, pre {
     letter-spacing: -0.05em;
 }
 
+h1 {
+    background: $accent-blue;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 25pt;
+    margin-bottom: $copy-title-size + 8px;
+    margin-left: -17px;
+    padding: 20px 0;
+
+    span {
+        margin: 0 21px;
+    }
+}
+
 h2 {
     font-size: 27pt;
     color: $accent-blue;

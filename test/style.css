@@ -1,7 +1,7 @@
 #hero-container {
   display: grid;
   gap: 16px;
-  grid-template-columns: 1fr 3fr 3fr;
+  grid-template-columns: 1fr 3fr 4fr;
   height: 480px;
 }
 @media (max-width: 700px) {
@@ -70,6 +70,19 @@ code, pre {
   color: #C93E30;
   font-family: "Intel One Mono", monospace;
   letter-spacing: -0.05em;
+}
+
+h1 {
+  background: #1C3C83;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 25pt;
+  margin-bottom: 33pt;
+  margin-left: -17px;
+  padding: 20px 0;
+}
+h1 span {
+  margin: 0 21px;
 }
 
 h2 {
