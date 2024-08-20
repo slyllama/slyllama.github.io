@@ -3,10 +3,12 @@
   gap: 16px;
   grid-template-columns: 1fr 3fr 4fr;
   height: 540px;
+  margin-bottom: 37px;
 }
 @media (max-width: 700px) {
   #hero-container {
     display: block;
+    height: fit-content;
   }
 }
 
@@ -15,6 +17,11 @@
   margin: 0 !important;
   object-fit: cover;
   padding: 0 !important;
+}
+@media (max-width: 700px) {
+  .hero-img {
+    height: auto;
+  }
 }
 
 #hero-hide-mobile {
@@ -39,6 +46,11 @@
 #hero-vertical div {
   display: inline-block;
   overflow: hidden;
+}
+@media (max-width: 700px) {
+  #hero-vertical {
+    grid-template-rows: auto auto;
+  }
 }
 
 @font-face {
@@ -80,19 +92,20 @@ h1 {
   background: #1C3C83;
   border-radius: 3px;
   color: #fff;
-  font-size: 25pt;
-  margin-bottom: 33pt;
+  font-size: 15.5pt;
+  margin-bottom: 31pt;
   margin-left: -17px;
-  padding: 20px 0;
+  padding: 18px 0 22px;
+  text-transform: uppercase;
 }
 h1 span {
   margin: 0 21px;
 }
 
 h2 {
-  font-size: 27pt;
+  font-size: 25pt;
   color: #1C3C83;
-  margin-bottom: 27pt;
+  margin-bottom: 25pt;
 }
 
 h3 {
@@ -121,13 +134,13 @@ p > code {
 @media (max-width: 700px) {
   #container {
     margin: 60px auto;
+    max-width: 84%;
   }
 }
 
 #copy img {
   display: block;
   border-radius: 3px;
-  box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.15);
   margin-bottom: 30px;
   width: 100%;
 }
@@ -220,7 +233,7 @@ p > code {
 }
 
 .journal-list-title {
-  font-size: 20pt;
+  font-size: 18pt;
   margin-bottom: 12px;
 }
 

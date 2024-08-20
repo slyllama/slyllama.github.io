@@ -43,10 +43,11 @@ h1 {
     background: $accent-blue;
     border-radius: 3px;
     color: #fff;
-    font-size: 25pt;
+    font-size: $copy-font-size + 2pt;
     margin-bottom: $copy-title-size + 8px;
     margin-left: -17px;
-    padding: 20px 0;
+    padding: 18px 0 22px;
+    text-transform: uppercase;
 
     span {
         margin: 0 21px;
@@ -54,7 +55,7 @@ h1 {
 }
 
 h2 {
-    font-size: 27pt;
+    font-size: $copy-title-size;
     color: $accent-blue;
     margin-bottom: $copy-title-size;
 }
@@ -84,6 +85,7 @@ p > code {
 
     @media (max-width: $mobile-width) {
         margin: 60px auto;
+        max-width: 84%;
     }
 }
 
@@ -91,7 +93,6 @@ p > code {
     img {
         display: block;
         border-radius: 3px;
-        box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.15);
         margin-bottom: 30px;
         width: 100%;
     }

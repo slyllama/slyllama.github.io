@@ -8,9 +8,11 @@ $hero-height: 540px;
     gap: $gap;
     grid-template-columns: 1fr 3fr 4fr;
     height: $hero-height;
+    margin-bottom: 37px;
 
     @media (max-width: $mobile-width) {
         display: block;
+        height: fit-content;
     }
 }
 
@@ -19,6 +21,10 @@ $hero-height: 540px;
     margin: 0 !important;
     object-fit: cover;
     padding: 0 !important;
+
+    @media (max-width: $mobile-width) {
+        height: auto;
+    }
 }
 
 #hero-hide-mobile {
@@ -42,5 +48,9 @@ $hero-height: 540px;
     div {
         display: inline-block;
         overflow: hidden;
+    }
+
+    @media (max-width: $mobile-width) {
+        grid-template-rows: auto auto;
     }
 }
