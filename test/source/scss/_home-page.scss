@@ -1,16 +1,16 @@
 @use "variables" as *;
 
 $gap: 16px;
-$hero-height: 480px;
+$hero-height: 540px;
 
 #hero-container {
     display: grid;
     gap: $gap;
-    grid-template-columns: 1fr 3fr 5fr;
+    grid-template-columns: 1fr 3fr 4fr;
     height: $hero-height;
 
     @media (max-width: $mobile-width) {
-        grid-template-columns: 2fr 5fr;
+        display: block;
     }
 }
 
@@ -21,7 +21,7 @@ $hero-height: 480px;
     padding: 0 !important;
 }
 
-#hero-rocket {
+#hero-hide-mobile {
     display: block;
 
     @media (max-width: $mobile-width) {
