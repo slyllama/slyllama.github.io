@@ -92,10 +92,10 @@ h1 {
   background: #1C3C83;
   border-radius: 3px;
   color: #fff;
-  font-size: 15.5pt;
+  font-size: 14.5pt;
   margin-bottom: 31pt;
-  margin-left: -17px;
-  padding: 18px 0 22px;
+  margin-left: -14px;
+  padding: 17px 0 18px;
   text-transform: uppercase;
 }
 h1 span {
@@ -160,6 +160,15 @@ p > code {
   background: #C93E30;
   border-color: #C93E30;
   color: #fff;
+}
+
+#footer-container {
+  margin-top: 90px;
+}
+#footer-container p {
+  color: #777;
+  font-size: 11.5pt;
+  text-align: right;
 }
 
 #header {
@@ -247,6 +256,11 @@ p > code {
   background: #fff;
   border-top: 1px solid #CCC;
   padding: 15px 0;
+}
+
+.sep {
+  display: block;
+  height: 32px;
 }
 
 .two-column {
