@@ -227,6 +227,9 @@ p > code {
 #header-desktop-links {
   display: block;
 }
+#header-desktop-links a {
+  cursor: pointer;
+}
 @media (max-width: 700px) {
   #header-desktop-links {
     display: none;

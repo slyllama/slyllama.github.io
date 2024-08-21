@@ -151,6 +151,10 @@ p > code {
 #header-desktop-links {
     display: block;
 
+    a {
+        cursor: pointer;
+    }
+
     @media (max-width: $mobile-width) {
         display: none;
     }
