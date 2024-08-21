@@ -68,9 +68,10 @@ $hero-height: 540px;
     grid-template-columns: repeat(3, 1fr);
 
     div {
-        background: none;
+        background: #f7f7f7;
         border-radius: 3px;
         margin-bottom: 0;
+        padding: 6px 0;
 
         @media (max-width: $mobile-width) {
             margin-bottom: 10px;

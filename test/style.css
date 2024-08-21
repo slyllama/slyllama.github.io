@@ -65,9 +65,10 @@
   grid-template-columns: repeat(3, 1fr);
 }
 #ob-logos div {
-  background: none;
+  background: #f7f7f7;
   border-radius: 3px;
   margin-bottom: 0;
+  padding: 6px 0;
 }
 @media (max-width: 700px) {
   #ob-logos div {
@@ -119,17 +120,9 @@ code, pre {
 }
 
 h1 {
-  background: #1C3C83;
-  border-radius: 3px;
-  color: #fff;
-  font-size: 14.5pt;
-  margin-bottom: 31pt;
-  margin-left: -14px;
-  padding: 17px 0 18px;
-  text-transform: uppercase;
-}
-h1 span {
-  margin: 0 21px;
+  font-size: 26pt;
+  color: #1C3C83;
+  margin-bottom: 37.75pt;
 }
 
 h2 {
@@ -192,11 +185,17 @@ p > code {
 }
 
 #footer-container {
+  border-radius: 3px;
+  background: #f7f7f7;
   margin-top: 90px;
+  padding: 14px 0;
+  width: 100%;
 }
 #footer-container p {
   color: #777;
   font-size: 11.5pt;
+  margin: 0 !important;
+  padding: 0 14px !important;
   text-align: right;
 }
 

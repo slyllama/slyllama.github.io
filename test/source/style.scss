@@ -40,18 +40,9 @@ code, pre {
 }
 
 h1 {
-    background: $accent-blue;
-    border-radius: 3px;
-    color: #fff;
-    font-size: $copy-font-size + 1pt;
-    margin-bottom: $copy-title-size + 8px;
-    margin-left: -14px;
-    padding: 17px 0 18px;
-    text-transform: uppercase;
-
-    span {
-        margin: 0 21px;
-    }
+    font-size: $copy-title-size + 1pt;
+    color: $accent-blue;
+    margin-bottom: $copy-title-size + 17px;
 }
 
 h2 {
@@ -115,11 +106,17 @@ p > code {
 }
 
 #footer-container {
+    border-radius: 3px;
+    background: #f7f7f7;
     margin-top: 90px;
+    padding: 14px 0;
+    width: 100%;
 
     p {
         color: #777;
         font-size: $copy-font-size - 2pt;
+        margin: 0 !important;
+        padding: 0 14px !important;
         text-align: right;
     }
 }
