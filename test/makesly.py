@@ -103,6 +103,11 @@ generate_page("contact", {
     "$DESC": "Contact information for Slyllama (Alex)."
 })
 
+generate_page("portfolio", {
+    "$TITLE": TITLE.replace("$", "Portfolio"),
+    "$DESC": "A collection of my past work, including illustrations, 3D models, and more!"
+})
+
 with open("source/journal.json") as file: # get list of journal entries
     journal_list = json.load(file)
 

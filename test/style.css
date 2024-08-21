@@ -122,7 +122,7 @@ code, pre {
 h1 {
   font-size: 26pt;
   color: #1C3C83;
-  margin-bottom: 37.75pt;
+  margin-bottom: 35px;
 }
 
 h2 {
@@ -273,8 +273,8 @@ p > code {
 }
 
 .journal-list-title {
-  font-size: 18pt;
-  margin-bottom: 12px;
+  font-size: 20pt;
+  margin-bottom: 16px;
 }
 
 #mobile-menu {
