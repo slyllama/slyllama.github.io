@@ -65,8 +65,7 @@
   grid-template-columns: repeat(3, 1fr);
 }
 #ob-logos div {
-  background: #f0f0f0;
-  border: 1px solid #CCC;
+  background: none;
   border-radius: 3px;
   margin-bottom: 0;
 }
@@ -77,7 +76,6 @@
 }
 #ob-logos div:hover {
   background: #efefef;
-  border: 1px solid #C93E30;
 }
 @media (max-width: 700px) {
   #ob-logos {
@@ -293,7 +291,7 @@ p > code {
 
 .sep {
   display: block;
-  height: 32px;
+  height: 37px;
 }
 
 .two-column {

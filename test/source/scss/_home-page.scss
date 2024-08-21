@@ -68,8 +68,7 @@ $hero-height: 540px;
     grid-template-columns: repeat(3, 1fr);
 
     div {
-        background: #f0f0f0;
-        border: 1px solid $separator-color;
+        background: none;
         border-radius: 3px;
         margin-bottom: 0;
 
@@ -80,7 +79,6 @@ $hero-height: 540px;
 
     div:hover {
         background: #efefef;
-        border: 1px solid $accent-ochre;
     }
 
     @media (max-width: $mobile-width) {
