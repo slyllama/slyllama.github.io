@@ -54,3 +54,36 @@ $hero-height: 540px;
         grid-template-rows: auto auto;
     }
 }
+
+/* Outbound logos */
+
+.ob-logo-img {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#ob-logos {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+
+    div {
+        background: #f0f0f0;
+        border: 1px solid $separator-color;
+        border-radius: 3px;
+        margin-bottom: 0;
+
+        @media (max-width: $mobile-width) {
+            margin-bottom: 10px;
+        }
+    }
+
+    div:hover {
+        background: #efefef;
+        border: 1px solid $accent-ochre;
+    }
+
+    @media (max-width: $mobile-width) {
+        display: block;
+    }
+}

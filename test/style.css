@@ -53,6 +53,38 @@
   }
 }
 
+/* Outbound logos */
+.ob-logo-img {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#ob-logos {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, 1fr);
+}
+#ob-logos div {
+  background: #f0f0f0;
+  border: 1px solid #CCC;
+  border-radius: 3px;
+  margin-bottom: 0;
+}
+@media (max-width: 700px) {
+  #ob-logos div {
+    margin-bottom: 10px;
+  }
+}
+#ob-logos div:hover {
+  background: #efefef;
+  border: 1px solid #C93E30;
+}
+@media (max-width: 700px) {
+  #ob-logos {
+    display: block;
+  }
+}
+
 @font-face {
   font-family: "Cabin";
   src: url("assets/cabin-regular.ttf");
@@ -134,7 +166,6 @@ p > code {
 @media (max-width: 700px) {
   #container {
     margin: 60px auto;
-    max-width: 84%;
   }
 }
 
