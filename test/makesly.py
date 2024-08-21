@@ -67,8 +67,7 @@ for line in template.split("\n"):
         indent = line.strip("$CONTENT")
 
 def generate_page(name, data, custom_path = "!"):
-    print(" * generating page '" + name + "'...")
-    print(root_prefix)
+    print(" * Generating page '" + name + "'...")
     cnt = ""
     if custom_path != "!":
         output_path = custom_path
