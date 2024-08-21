@@ -66,22 +66,44 @@ for line in template.split("\n"):
     if "$CONTENT" in line:
         indent = line.strip("$CONTENT")
 
-# Format home page
-print(" * Generating home page...")
-home_content = ""
-with open("source/home.html") as file:
-    home_content = file.read()
-fmt_home_content = indent_content(home_content)
+def generate_page(name, data, custom_path = "!"):
+    print(" * generating page '" + name + "'...")
+    print(root_prefix)
+    cnt = ""
+    if custom_path != "!":
+        output_path = custom_path
+    else:
+        output_path = root_prefix + "/" + name
+    with open("source/" + name + ".html") as file:
+        cnt = file.read()
+    fmt_cnt = indent_content(cnt)
 
-hem = template
-hem = hem.replace("$CONTENT", fmt_home_content)
-hem = hem.replace("$ROOT", root_prefix)
-hem = hem.replace("$TITLE", "Slyllama")
-hem = hem.replace("$PAGEROOT", root_prefix)
-hem = hem.replace("$DESC", "Illustrative graphics for a modern age.")
+    t = template
+    t = t.replace("$CONTENT", fmt_cnt)
+    t = t.replace("$ROOT", root_prefix)
+    t = t.replace("$PAGEROOT", root_prefix + output_path)
+    for tag in data:
+        t = t.replace(tag, data[tag])
+    
+    if custom_path != "!":
+        with open(output_path + "index.html", "w") as file:
+            file.write(t)
+    else:
+        if not Path(name).exists():
+            os.makedirs(name)
+        with open(name + "/index.html", "w") as file:
+            file.write(t)
 
-with open("index.html", "w") as file:
-    file.write(hem)
+generate_page("home", {
+    "$TITLE": "Slyllama",
+    "$DESC": "Illustrative graphics for a modern age." 
+}, "")
+
+generate_page("contact", {
+    "$TITLE": TITLE.replace("$", "Contact"),
+    "$DESC": "Contact information for Slyllama (Alex)."
+})
+
 with open("source/journal.json") as file: # get list of journal entries
     journal_list = json.load(file)
 
