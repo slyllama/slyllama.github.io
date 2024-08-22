@@ -134,15 +134,26 @@ p > code {
     border-radius: 999px;
     color: white;
     font-weight: bold;
+    float: right;
     margin-left: $headlink-margin + 10px !important;
+    padding: 11px 16px 8px;
+
+    @media (max-width: $desktop-width) {
+        margin-left: $headlink-margin !important;
+    }
 }
 
 .header-btn:hover {
     background: $accent-ochre;
 }
 
-.header-btn > a {
-    color: white !important;
+.header-btn-bsky {
+    background: none;
+    margin-right: 20px !important;
+}
+
+.header-btn-bsky:hover {
+    background: #efefef;
 }
 
 #header-desktop-links {
@@ -161,6 +172,11 @@ p > code {
     float: right;
     margin-left: $headlink-margin;
     padding: $headlink-padding $headlink-padding * 2;
+
+    @media (max-width: $desktop-width) {
+        margin-left: 0px;
+        padding: $headlink-padding 20px;
+    }
 }
 
 #header-logo {

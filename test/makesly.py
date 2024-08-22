@@ -98,15 +98,15 @@ generate_page("home", {
     "$DESC": "Illustrative graphics for a modern age." 
 }, "")
 
-generate_page("contact", {
-    "$TITLE": TITLE.replace("$", "Contact"),
-    "$DESC": "Contact information for Slyllama (Alex)."
-})
+#generate_page("contact", {
+#    "$TITLE": TITLE.replace("$", "Contact"),
+#    "$DESC": "Contact information for Slyllama (Alex)."
+#})
 
-generate_page("portfolio", {
-    "$TITLE": TITLE.replace("$", "Portfolio"),
-    "$DESC": "A collection of my past work, including illustrations, 3D models, and more!"
-})
+#generate_page("portfolio", {
+#    "$TITLE": TITLE.replace("$", "Portfolio"),
+#    "$DESC": "A collection of my past work, including illustrations, 3D models, and more!"
+#})
 
 with open("source/journal.json") as file: # get list of journal entries
     journal_list = json.load(file)

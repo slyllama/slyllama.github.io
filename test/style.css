@@ -212,15 +212,27 @@ p > code {
   border-radius: 999px;
   color: white;
   font-weight: bold;
+  float: right;
   margin-left: 20px !important;
+  padding: 11px 16px 8px;
+}
+@media (max-width: 910px) {
+  .header-btn {
+    margin-left: 10px !important;
+  }
 }
 
 .header-btn:hover {
   background: #C93E30;
 }
 
-.header-btn > a {
-  color: white !important;
+.header-btn-bsky {
+  background: none;
+  margin-right: 20px !important;
+}
+
+.header-btn-bsky:hover {
+  background: #efefef;
 }
 
 #header-desktop-links {
@@ -239,6 +251,12 @@ p > code {
   float: right;
   margin-left: 10px;
   padding: 14px 28px;
+}
+@media (max-width: 910px) {
+  .header-link {
+    margin-left: 0px;
+    padding: 14px 20px;
+  }
 }
 
 #header-logo {
