@@ -184,6 +184,14 @@ p > code {
   color: #fff;
 }
 
+.external-icon {
+  display: inline-block;
+  height: 21px;
+  margin-left: 1px;
+  margin-bottom: -5px;
+  margin-top: -16px;
+}
+
 #footer-container {
   border-radius: 3px;
   background: #f7f7f7;
