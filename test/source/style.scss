@@ -107,16 +107,16 @@ p > code {
 
 .external-icon {
     display: inline-block;
-    height: 21px;
+    height: 19px;
     margin-left: 1px;
-    margin-bottom: -5px; 
+    margin-bottom: -4px; 
     margin-top: -16px;
 }
 
 #footer-container {
     border-radius: 3px;
     background: #f7f7f7;
-    margin-top: 90px;
+    margin-top: 150px;
     padding: 14px 0;
     width: 100%;
 
@@ -235,6 +235,22 @@ p > code {
 
     a > div:hover {
         background: #eee;
+    }
+}
+
+#mobile-top-ribbon {
+    display: none;
+    height: 36px;
+    overflow: hidden;
+
+    img {
+        object-fit: cover;
+        object-position: center center;
+        width: 100%;
+    }
+
+    @media (max-width: $mobile-width) {
+        display: block;
     }
 }
 

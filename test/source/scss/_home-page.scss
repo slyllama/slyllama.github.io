@@ -64,25 +64,18 @@ $hero-height: 540px;
 
 #ob-logos {
     display: grid;
-    gap: 12px;
+    gap: 14px;
     grid-template-columns: repeat(3, 1fr);
 
     div {
-        background: #f7f7f7;
+        background: $accent-blue;
         border-radius: 3px;
         margin-bottom: 0;
-        padding: 6px 0;
-
-        @media (max-width: $mobile-width) {
-            margin-bottom: 10px;
-        }
-    }
-
-    div:hover {
-        background: #efefef;
+        padding: 0;
     }
 
     @media (max-width: $mobile-width) {
-        display: block;
+        gap: 4px;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
