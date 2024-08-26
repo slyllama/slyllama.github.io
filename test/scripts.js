@@ -35,19 +35,25 @@ addEventListener("resize", (e) => {
 });
 
 // Use the hamburger to show and hide the mobile menu
+// We also add/remove `tabindex`es so accessibility order works properly
 function toggleMobileMenu() {
     if (domLoaded == false) { return; }
     var menuElements = mobileMenu.getElementsByTagName("a");
+    var mCount = 0;
 
     if (mobileMenu.style.display == "none") {
         mobileMenu.style.display = "block";
         for (var m = 0; m < menuElements.length; m++) {
             menuElements[m].removeAttribute('tabindex');
+            ++mCount;
         }
+        console.log("Adding tabindex to " + mCount + " element(s).");
     } else {
         mobileMenu.style.display = "none";
         for (var m = 0; m < menuElements.length; m++) {
             menuElements[m].tabIndex = -1;
+            ++mCount;
         }
+        console.log("Removing tabindex from " + mCount + " element(s).");
     }
 }

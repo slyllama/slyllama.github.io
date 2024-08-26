@@ -134,16 +134,16 @@ h3 {
   margin-top: 40px;
 }
 
-p, ul, h3 {
+p, #copy > ul, h3 {
   color: #555;
   line-height: 24px;
   hyphens: auto;
   margin-bottom: 16px;
 }
-p a, ul a, h3 a {
+p a, #copy > ul a, h3 a {
   border-bottom: 1px solid #1C3C83;
 }
-p a:hover, ul a:hover, h3 a:hover {
+p a:hover, #copy > ul a:hover, h3 a:hover {
   border-bottom: 1px solid #C93E30;
 }
 
@@ -335,12 +335,12 @@ p > code {
   display: none;
   margin-top: 34px;
 }
-#mobile-menu a > div {
+#mobile-menu li > a > div {
   background: #fff;
   border-top: 1px solid #CCC;
   padding: 15px 8px;
 }
-#mobile-menu a > div:hover {
+#mobile-menu li > a > div:hover {
   background: #eee;
 }
 

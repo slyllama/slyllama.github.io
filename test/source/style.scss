@@ -61,7 +61,7 @@ h3 {
     margin-top: 40px;
 }
 
-p, ul, h3 {
+p, #copy > ul, h3 {
     color: $copy-color;
     line-height: $copy-line-height;
     hyphens: auto;
@@ -264,13 +264,13 @@ p > code {
     display: none;
     margin-top: 34px;
 
-    a > div {
+    li > a > div {
         background: #fff;
         border-top: 1px solid $separator-color;
         padding: 15px 8px;
     }
 
-    a > div:hover {
+    li > a > div:hover {
         background: #eee;
     }
 }
