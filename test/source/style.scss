@@ -153,18 +153,22 @@ p > code {
     background: $accent-blue;
     border-radius: 999px;
     color: white;
+    display: block;
     font-weight: bold;
-    float: left;
-    margin-left: $headlink-margin + 10px !important;
     padding: 11px 16px 8px;
-
-    @media (max-width: $desktop-width) {
-        margin-left: $headlink-margin !important;
-    }
 }
 
 .header-btn:hover {
     background: $accent-ochre;
+}
+
+.header-btn-container {
+    float: left;
+    margin-left: $headlink-margin + 10px !important;
+
+    @media (max-width: $desktop-width) {
+        margin-left: $headlink-margin !important;
+    }
 }
 
 .header-btn-bsky {
@@ -207,22 +211,23 @@ p > code {
 }
 
 #header-logo {
-    cursor: pointer;
     display: block;
-    float: left;
-    height: 48px;
+    height: 100%;
     width: auto;
-}
-
-#header-logo-link:focus-visible {
-    outline: none;
-    border: 1px solid $accent-ochre;
 }
 
 #header-logo:hover {
     border-bottom: 1px solid $accent-blue;
     margin-bottom: -4px;
     padding-bottom: 4px;
+}
+
+#header-logo-container {
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 48px;
+    width: fit-content;
 }
 
 #header-menu-btn {

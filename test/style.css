@@ -222,19 +222,23 @@ p > code {
   background: #1C3C83;
   border-radius: 999px;
   color: white;
+  display: block;
   font-weight: bold;
-  float: left;
-  margin-left: 20px !important;
   padding: 11px 16px 8px;
-}
-@media (max-width: 910px) {
-  .header-btn {
-    margin-left: 10px !important;
-  }
 }
 
 .header-btn:hover {
   background: #C93E30;
+}
+
+.header-btn-container {
+  float: left;
+  margin-left: 20px !important;
+}
+@media (max-width: 910px) {
+  .header-btn-container {
+    margin-left: 10px !important;
+  }
 }
 
 .header-btn-bsky {
@@ -277,22 +281,23 @@ p > code {
 }
 
 #header-logo {
-  cursor: pointer;
   display: block;
-  float: left;
-  height: 48px;
+  height: 100%;
   width: auto;
-}
-
-#header-logo-link:focus-visible {
-  outline: none;
-  border: 1px solid #C93E30;
 }
 
 #header-logo:hover {
   border-bottom: 1px solid #1C3C83;
   margin-bottom: -4px;
   padding-bottom: 4px;
+}
+
+#header-logo-container {
+  cursor: pointer;
+  display: block;
+  float: left;
+  height: 48px;
+  width: fit-content;
 }
 
 #header-menu-btn {

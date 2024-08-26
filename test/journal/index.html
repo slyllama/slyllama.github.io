@@ -23,13 +23,16 @@
 
     <body onload="loadDOM();">
         <div id="mobile-top-ribbon">
-            <img src="https://slyllama.net/test/img/ceres-arms-90deg.jpg" alt="Narrow monochrome pen-and-ink illustration of two 'cyberpunk' arms featuring ornate armour, reaching symmetrically toward a white central orb." />
+            <img src="https://slyllama.net/test/img/ceres-arms-90deg.jpg" alt="Narrow monochrome pen-and-ink illustration of two cyberpunk arms bearing ornate armour, reaching symmetrically in toward a white central orb." />
         </div>
         <div id="container">
             <div id="header">
-                <a href="https://slyllama.net/test" id="header-logo-link">
-                    <img id="header-logo" src="https://slyllama.net/test/assets/logo.svg" alt="Stylised logo which says 'Slyllama'." />
-                </a>
+                <div id="header-logo-container">
+                    <a href="https://slyllama.net/test">
+                        <img id="header-logo" src="https://slyllama.net/test/assets/logo.svg" alt="Stylised logo which says 'Slyllama'." />
+                    </a>
+                </div>
+                
                 <span id="header-menu-btn" class="header-link" onclick="toggleMobileMenu();">
                     <img id="header-menu-btn-img" src="https://slyllama.net/test/assets/mobile-menu-btn.svg" alt="Hamburger image for the mobile menu." />
                 </span>
@@ -40,16 +43,21 @@
                         </a>
                     </span>
                     <span class="header-link"><a href="https://slyllama.net/test/journal">Journal</a></span>
-                    <a href="https://bsky.app/profile/slyllama.bsky.social" target="_tab">
-                        <span class="header-btn header-btn-bsky">
-                            <img style="height: 28px;" src="https://slyllama.net/test/assets/logo-bluesky.svg" alt="Bluesky logo."/>
-                        </span>
-                    </a>
-                    <a href="mailto:slyllama@outlook.com">
-                        <span class="header-btn">
-                            <img style="height: 26px;" src="https://slyllama.net/test/assets/logo-email.svg" alt="Email logo." />
-                        </span>
-                    </a>
+                    <div class="header-btn-container">
+                        <a href="https://bsky.app/profile/slyllama.bsky.social" target="_tab">
+                            <span class="header-btn header-btn-bsky">
+                                <img style="height: 28px;" src="https://slyllama.net/test/assets/logo-bluesky.svg" alt="Bluesky logo."/>
+                            </span>
+                        </a>
+                    </div>
+                    
+                    <div class="header-btn-container">
+                        <a href="mailto:slyllama@outlook.com">
+                            <span class="header-btn">
+                                <img style="height: 26px;" src="https://slyllama.net/test/assets/logo-email.svg" alt="Email logo." />
+                            </span>
+                        </a>
+                    </div>
                 </div>
                 <div style="clear: both;"></div>
 
