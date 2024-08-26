@@ -99,7 +99,7 @@ a:hover {
   color: #C93E30;
 }
 
-a:focus-visible {
+a:focus-visible, .focus-outline:focus-visible {
   outline: 1px solid #C93E30;
 }
 
