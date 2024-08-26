@@ -26,6 +26,10 @@ a:hover {
     color: $accent-ochre;
 }
 
+a:focus-visible {
+    outline: 1px solid $accent-ochre;
+}
+
 body {
     font-family: 'Cabin', 'Trebuchet MS', sans-serif;
     font-size: $copy-font-size;
@@ -62,6 +66,14 @@ p, ul, h3 {
     line-height: $copy-line-height;
     hyphens: auto;
     margin-bottom: $copy-para-margin;
+
+    a {
+        border-bottom: 1px solid $accent-blue;
+    }
+
+    a:hover {
+        border-bottom: 1px solid $accent-ochre;
+    }
 }
 
 p > code {
@@ -142,7 +154,7 @@ p > code {
     border-radius: 999px;
     color: white;
     font-weight: bold;
-    float: right;
+    float: left;
     margin-left: $headlink-margin + 10px !important;
     padding: 11px 16px 8px;
 
@@ -162,10 +174,13 @@ p > code {
 
 .header-btn-bsky:hover {
     background: #efefef;
+    border: 1px solid $accent-ochre;
+    padding: 10px 15px 7px !important;
 }
 
 #header-desktop-links {
     display: block;
+    float: right;
 
     a {
         cursor: pointer;
@@ -177,7 +192,7 @@ p > code {
 }
 
 .header-link {
-    float: right;
+    float: left;
     margin-left: $headlink-margin;
     padding: $headlink-padding $headlink-padding * 2;
 
@@ -185,18 +200,35 @@ p > code {
         margin-left: 0px;
         padding: $headlink-padding 20px;
     }
+
+    a:hover {
+        border-bottom: 1px solid $accent-ochre;
+    }
 }
 
 #header-logo {
     cursor: pointer;
+    display: block;
     float: left;
     height: 48px;
     width: auto;
 }
 
+#header-logo-link:focus-visible {
+    outline: none;
+    border: 1px solid $accent-ochre;
+}
+
+#header-logo:hover {
+    border-bottom: 1px solid $accent-blue;
+    margin-bottom: -4px;
+    padding-bottom: 4px;
+}
+
 #header-menu-btn {
     cursor: pointer;
     display: none;
+    float: right;
     padding: 7px 0 !important;
     
     @media (max-width: $mobile-width) {

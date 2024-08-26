@@ -99,6 +99,10 @@ a:hover {
   color: #C93E30;
 }
 
+a:focus-visible {
+  outline: 1px solid #C93E30;
+}
+
 body {
   font-family: "Cabin", "Trebuchet MS", sans-serif;
   font-size: 13.5pt;
@@ -135,6 +139,12 @@ p, ul, h3 {
   line-height: 24px;
   hyphens: auto;
   margin-bottom: 16px;
+}
+p a, ul a, h3 a {
+  border-bottom: 1px solid #1C3C83;
+}
+p a:hover, ul a:hover, h3 a:hover {
+  border-bottom: 1px solid #C93E30;
 }
 
 p > code {
@@ -213,7 +223,7 @@ p > code {
   border-radius: 999px;
   color: white;
   font-weight: bold;
-  float: right;
+  float: left;
   margin-left: 20px !important;
   padding: 11px 16px 8px;
 }
@@ -234,10 +244,13 @@ p > code {
 
 .header-btn-bsky:hover {
   background: #efefef;
+  border: 1px solid #C93E30;
+  padding: 10px 15px 7px !important;
 }
 
 #header-desktop-links {
   display: block;
+  float: right;
 }
 #header-desktop-links a {
   cursor: pointer;
@@ -249,7 +262,7 @@ p > code {
 }
 
 .header-link {
-  float: right;
+  float: left;
   margin-left: 10px;
   padding: 14px 28px;
 }
@@ -259,17 +272,33 @@ p > code {
     padding: 14px 20px;
   }
 }
+.header-link a:hover {
+  border-bottom: 1px solid #C93E30;
+}
 
 #header-logo {
   cursor: pointer;
+  display: block;
   float: left;
   height: 48px;
   width: auto;
 }
 
+#header-logo-link:focus-visible {
+  outline: none;
+  border: 1px solid #C93E30;
+}
+
+#header-logo:hover {
+  border-bottom: 1px solid #1C3C83;
+  margin-bottom: -4px;
+  padding-bottom: 4px;
+}
+
 #header-menu-btn {
   cursor: pointer;
   display: none;
+  float: right;
   padding: 7px 0 !important;
 }
 @media (max-width: 700px) {
