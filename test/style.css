@@ -24,11 +24,11 @@
   }
 }
 
-#hero-hide-mobile {
+.hero-hide-mobile {
   display: block;
 }
 @media (max-width: 700px) {
-  #hero-hide-mobile {
+  .hero-hide-mobile {
     display: none !important;
   }
 }
