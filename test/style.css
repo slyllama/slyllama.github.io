@@ -65,7 +65,7 @@
   grid-template-columns: repeat(3, 1fr);
 }
 #ob-logos div {
-  background: #1C3C83;
+  background: url("assets/words-bg.jpg") repeat;
   border-radius: 3px;
   margin-bottom: 0;
   padding: 0;
@@ -100,7 +100,7 @@ a:hover {
 }
 
 a:focus-visible, .focus-outline:focus-visible {
-  outline: 1px solid #C93E30;
+  outline: 3px solid #C93E30;
 }
 
 body {
@@ -248,8 +248,7 @@ p > code {
 
 .header-btn-bsky:hover {
   background: #efefef;
-  border: 1px solid #C93E30;
-  padding: 10px 15px 7px !important;
+  outline: 1px solid #C93E30;
 }
 
 #header-desktop-links {
@@ -287,7 +286,7 @@ p > code {
 }
 
 #header-logo:hover {
-  border-bottom: 1px solid #1C3C83;
+  border-bottom: 1px solid #C93E30;
   margin-bottom: -4px;
   padding-bottom: 4px;
 }
@@ -299,12 +298,24 @@ p > code {
   height: 48px;
   width: fit-content;
 }
+@media (max-width: 910px) {
+  #header-logo-container {
+    height: 37px;
+    margin-top: 7px;
+  }
+}
+@media (max-width: 700px) {
+  #header-logo-container {
+    height: 37px;
+    margin-top: 0;
+  }
+}
 
 #header-menu-btn {
   cursor: pointer;
   display: none;
   float: right;
-  padding: 7px 0 !important;
+  padding: 4px 0 !important;
 }
 @media (max-width: 700px) {
   #header-menu-btn {
@@ -313,7 +324,7 @@ p > code {
 }
 
 #header-menu-btn-img {
-  height: 30px;
+  height: 26px;
   width: auto;
 }
 
@@ -342,22 +353,6 @@ p > code {
 }
 #mobile-menu li > a > div:hover {
   background: #eee;
-}
-
-#mobile-top-ribbon {
-  display: none;
-  height: 36px;
-  overflow: hidden;
-}
-#mobile-top-ribbon img {
-  object-fit: cover;
-  object-position: center center;
-  width: 100%;
-}
-@media (max-width: 700px) {
-  #mobile-top-ribbon {
-    display: block;
-  }
 }
 
 .sep {

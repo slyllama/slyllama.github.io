@@ -68,7 +68,7 @@ $hero-height: 540px;
     grid-template-columns: repeat(3, 1fr);
 
     div {
-        background: $accent-blue;
+        background: url("assets/words-bg.jpg") repeat;
         border-radius: 3px;
         margin-bottom: 0;
         padding: 0;

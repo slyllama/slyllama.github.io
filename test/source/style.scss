@@ -27,7 +27,7 @@ a:hover {
 }
 
 a:focus-visible, .focus-outline:focus-visible {
-    outline: 1px solid $accent-ochre;
+    outline: 3px solid $accent-ochre;
 }
 
 body {
@@ -178,8 +178,7 @@ p > code {
 
 .header-btn-bsky:hover {
     background: #efefef;
-    border: 1px solid $accent-ochre;
-    padding: 10px 15px 7px !important;
+    outline: 1px solid $accent-ochre;
 }
 
 #header-desktop-links {
@@ -217,7 +216,7 @@ p > code {
 }
 
 #header-logo:hover {
-    border-bottom: 1px solid $accent-blue;
+    border-bottom: 1px solid $accent-ochre;
     margin-bottom: -4px;
     padding-bottom: 4px;
 }
@@ -228,13 +227,23 @@ p > code {
     float: left;
     height: 48px;
     width: fit-content;
+
+    @media (max-width: $desktop-width) {
+        height: 37px;
+        margin-top: 7px;
+    }
+
+    @media (max-width: $mobile-width) {
+        height: 37px;
+        margin-top: 0;
+    }
 }
 
 #header-menu-btn {
     cursor: pointer;
     display: none;
     float: right;
-    padding: 7px 0 !important;
+    padding: 4px 0 !important;
     
     @media (max-width: $mobile-width) {
         display: block;
@@ -242,7 +251,7 @@ p > code {
 }
 
 #header-menu-btn-img {
-    height: 30px;
+    height: 26px;
     width: auto;
 }
 
@@ -272,22 +281,6 @@ p > code {
 
     li > a > div:hover {
         background: #eee;
-    }
-}
-
-#mobile-top-ribbon {
-    display: none;
-    height: 36px;
-    overflow: hidden;
-
-    img {
-        object-fit: cover;
-        object-position: center center;
-        width: 100%;
-    }
-
-    @media (max-width: $mobile-width) {
-        display: block;
     }
 }
 
