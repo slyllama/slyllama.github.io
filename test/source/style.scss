@@ -265,7 +265,7 @@ p > code {
 
 .journal-list-title {
     font-size: 20pt;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 
 #mobile-menu {
@@ -298,5 +298,11 @@ p > code {
     @media (max-width: $mobile-width) {
         display: block;
         padding-top: 10px;
+    }
+
+    img {
+        @media (max-width: $mobile-width) {
+            margin-bottom: 14px !important;
+        }
     }
 }

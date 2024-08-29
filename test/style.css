@@ -136,7 +136,7 @@ h3 {
 
 p, #copy > ul, h3 {
   color: #555;
-  line-height: 24px;
+  line-height: 26px;
   hyphens: auto;
   margin-bottom: 16px;
 }
@@ -338,7 +338,7 @@ p > code {
 
 .journal-list-title {
   font-size: 20pt;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 #mobile-menu {
@@ -370,6 +370,11 @@ p > code {
   .two-column {
     display: block;
     padding-top: 10px;
+  }
+}
+@media (max-width: 700px) {
+  .two-column img {
+    margin-bottom: 14px !important;
   }
 }
 
