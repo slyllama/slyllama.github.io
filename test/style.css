@@ -77,6 +77,17 @@
   }
 }
 
+#img-view-container {
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  height: 100%;
+  overflow: hidden;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
 @font-face {
   font-family: "Cabin";
   src: url("assets/cabin-regular.ttf");

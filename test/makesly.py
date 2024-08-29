@@ -52,12 +52,12 @@ else:
     print_usage_and_quit()
 
 # Generate scripts with proper paths
-print(" * Generating pathed scripts...")
-with open("source/scripts.js") as file:
-    scripts = file.read()
-scripts = scripts.replace("$ROOT", root_prefix)
-with open("scripts.js", "w") as file:
-    file.write(scripts)
+#print(" * Generating pathed scripts...")
+#with open("source/scripts.js") as file:
+#    scripts = file.read()
+#scripts = scripts.replace("$ROOT", root_prefix)
+#with open("scripts.js", "w") as file:
+#    file.write(scripts)
 
 with open("source/template.html") as file: # get template
     template = file.read()
@@ -97,16 +97,6 @@ generate_page("home", {
     "$TITLE": "Slyllama",
     "$DESC": "Illustrative graphics for a modern age." 
 }, "")
-
-#generate_page("contact", {
-#    "$TITLE": TITLE.replace("$", "Contact"),
-#    "$DESC": "Contact information for Slyllama (Alex)."
-#})
-
-#generate_page("portfolio", {
-#    "$TITLE": TITLE.replace("$", "Portfolio"),
-#    "$DESC": "A collection of my past work, including illustrations, 3D models, and more!"
-#})
 
 with open("source/journal.json") as file: # get list of journal entries
     journal_list = json.load(file)

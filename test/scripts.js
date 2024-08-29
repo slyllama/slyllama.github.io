@@ -5,17 +5,20 @@
 
 var domLoaded = false;
 var headerLogo;
+var imgViewer;
 var mobileMenu;
 var mobileMenuBtn;
 var mobileMenuBtnImg;
 
 function loadDOM() {
     // Load and configure DOM elements
+    imgViewer = document.getElementById("img-view-container");
     mobileMenu = document.getElementById("mobile-menu");
     mobileMenuBtn = document.getElementById("mobile-menu-btn");
     mobileMenuBtnImg = document.getElementById("header-menu-btn-img");
-    mobileMenu.style.display = "none";
 
+    imgViewer.style.display = "none"; // so its known to the script
+    mobileMenu.style.display = "none";
     domLoaded = true;
 
     mobileMenuBtn.addEventListener("keydown", (e) => {
@@ -47,13 +50,21 @@ function toggleMobileMenu() {
             menuElements[m].removeAttribute('tabindex');
             ++mCount;
         }
-        console.log("Adding tabindex to " + mCount + " element(s).");
     } else {
         mobileMenu.style.display = "none";
         for (var m = 0; m < menuElements.length; m++) {
             menuElements[m].tabIndex = -1;
             ++mCount;
         }
-        console.log("Removing tabindex from " + mCount + " element(s).");
     }
+}
+
+/* Image viewer functions */
+
+function viewImg() {
+    imgViewer.style.display = "block";
+}
+
+function closeImg() {
+    imgViewer.style.display = "none";
 }

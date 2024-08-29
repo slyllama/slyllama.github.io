@@ -21,6 +21,9 @@
     <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
     <body onload="loadDOM();">
+        <div id="img-view-container">
+            <button onclick="closeImg();">Close</button>
+        </div>
         <div id="container">
             <div id="header">
                 <div id="header-logo-container">
@@ -72,7 +75,7 @@
 
             <div id="copy">
                 <div id="hero-container">
-                    <img class="hero-img hero-hide-mobile" src="https://slyllama.net/test/img/ceres-arms.jpg" class="hero-img" alt="Monochrome pen-and-ink illustration of two 'cyberpunk' arms featuring ornate armour, reaching symmetrically toward a white central orb." />
+                    <img class="hero-img hero-hide-mobile" src="https://slyllama.net/test/img/ceres-arms.jpg" class="hero-img" alt="Monochrome pen-and-ink illustration of two 'cyberpunk' arms featuring ornate armour, reaching symmetrically toward a white central orb." onclick="viewImg();" tabindex="-1" style="cursor: pointer;" />
                     <img class="hero-img hero-hide-mobile" src="https://slyllama.net/test/img/rocket.jpg" class="hero-img" alt="3D model of a brass and cloth steampunk-era rocket rendered against a dark background." />
                     <div id="hero-vertical">
                         <div><img src="https://slyllama.net/test/img/ceres-city.jpg" class="hero-img" alt="Monochrome drawing of a run-down cyberpunk city, with the downward perspective of a fisheye lens." /></div>
