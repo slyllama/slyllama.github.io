@@ -81,6 +81,7 @@ def generate_page(name, data, custom_path = "!"):
     t = t.replace("$CONTENT", fmt_cnt)
     t = t.replace("$ROOT", root_prefix)
     t = t.replace("$PAGEROOT", root_prefix + output_path)
+    t = t.replace("$VIEWER", "onclick=\"viewImg();\" tabindex=\"-1\" style=\"cursor: pointer;\"")
     for tag in data:
         t = t.replace(tag, data[tag])
     

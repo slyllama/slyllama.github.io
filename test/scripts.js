@@ -62,9 +62,11 @@ function toggleMobileMenu() {
 /* Image viewer functions */
 
 function viewImg() {
+    document.body.style.overflowY = "hidden";
     imgViewer.style.display = "block";
 }
 
 function closeImg() {
+    document.body.style.overflowY = "initial";
     imgViewer.style.display = "none";
 }
