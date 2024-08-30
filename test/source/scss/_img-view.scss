@@ -31,10 +31,16 @@
         color: #fff;
     }
 
-    img {
+    #img-view-inner {
+        height: 100%;
+        margin: 0 5%;
+        width: 95%;
+    }
+
+    #img-view-inner > img {
         object-fit: contain;
         object-position: 50% 50%;
-        height: 100%;
-        width: 100%;
+        height: inherit;
+        width: inherit;
     }
 }
