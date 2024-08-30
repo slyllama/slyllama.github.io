@@ -21,8 +21,9 @@
     <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
     <body onload="loadDOM();">
-        <div id="img-view-container">
-            <button onclick="closeImg();">Close</button>
+        <div id="img-view-container" onclick="closeImg();">
+            <img id="img-view-img" src="https://slyllama.net/test/img/ceres-arms.jpg" />
+            <div class="close-button" onclick="closeImg();">&times;</div>
         </div>
         <div id="container">
             <div id="header">

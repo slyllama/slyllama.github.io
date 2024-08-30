@@ -7,10 +7,12 @@ PROG_TITLE = "This is Slyllama CMS"
 URL = "https://slyllama.net/test"
 DESC = "Illustrative graphics for a modern age."
 INDENT = "    "
+VIEWER_PATTERN = r'src=\"[^\"]*\"'
+VIEWER_ALT_PATTERN = r'alt=\"[^\"]*\"'
 
 import json
 import os
-import shutil
+import re
 import sys
 from pathlib import Path
 
@@ -51,20 +53,33 @@ else:
     print(PROG_TITLE + ".")
     print_usage_and_quit()
 
-# Generate scripts with proper paths
-#print(" * Generating pathed scripts...")
-#with open("source/scripts.js") as file:
-#    scripts = file.read()
-#scripts = scripts.replace("$ROOT", root_prefix)
-#with open("scripts.js", "w") as file:
-#    file.write(scripts)
-
 with open("source/template.html") as file: # get template
     template = file.read()
 indent = "" # used for pretty formatting of HTML
 for line in template.split("\n"):
     if "$CONTENT" in line:
         indent = line.strip("$CONTENT")
+
+# Identify clickable images using the $VIEWER identifier, extract the image source and use it to apply the function and styles
+def add_viewers(data):
+    t = data
+    u = ""
+    for line in t.split("\n"):
+        if "$VIEWER" in line:
+            src = re.search(VIEWER_PATTERN, line).group()
+            src = src.rstrip("\"")
+            src = src.replace("src=\"", "")
+
+            alt = re.search(VIEWER_ALT_PATTERN, line).group()
+            alt = alt.rstrip("\"")
+            alt = alt.replace("alt=\"", "")
+
+            new_line = line.replace("$VIEWER", "onclick=\"viewImg(\'" + src + "\', \'" + alt + "\');\" tabindex=\"-1\" style=\"cursor: zoom-in;\"")
+            u += new_line
+        else: u += line
+        u += "\n"
+    return(u)
+
 
 def generate_page(name, data, custom_path = "!"):
     print(" * Generating page '" + name + "'...")
@@ -81,18 +96,19 @@ def generate_page(name, data, custom_path = "!"):
     t = t.replace("$CONTENT", fmt_cnt)
     t = t.replace("$ROOT", root_prefix)
     t = t.replace("$PAGEROOT", root_prefix + output_path)
-    t = t.replace("$VIEWER", "onclick=\"viewImg();\" tabindex=\"-1\" style=\"cursor: pointer;\"")
+    u = add_viewers(t)
+    
     for tag in data:
-        t = t.replace(tag, data[tag])
+        u = u.replace(tag, data[tag])
     
     if custom_path != "!":
         with open(output_path + "index.html", "w") as file:
-            file.write(t)
+            file.write(u)
     else:
         if not Path(name).exists():
             os.makedirs(name)
         with open(name + "/index.html", "w") as file:
-            file.write(t)
+            file.write(u)
 
 generate_page("home", {
     "$TITLE": "Slyllama",
@@ -168,6 +184,7 @@ for entry in journal_list:
             e = e.replace("$DESC", entry["desc"])
         else:
             e = e.replace("$DESC", DESC)
+        e = add_viewers(e)
 
         with open(output_path + "/index.html", "w") as file:
             file.write(e)

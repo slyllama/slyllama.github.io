@@ -6,6 +6,7 @@
 var domLoaded = false;
 var headerLogo;
 var imgViewer;
+var imgViewerImg;
 var mobileMenu;
 var mobileMenuBtn;
 var mobileMenuBtnImg;
@@ -13,6 +14,7 @@ var mobileMenuBtnImg;
 function loadDOM() {
     // Load and configure DOM elements
     imgViewer = document.getElementById("img-view-container");
+    imgViewerImg = document.getElementById("img-view-img");
     mobileMenu = document.getElementById("mobile-menu");
     mobileMenuBtn = document.getElementById("mobile-menu-btn");
     mobileMenuBtnImg = document.getElementById("header-menu-btn-img");
@@ -61,7 +63,9 @@ function toggleMobileMenu() {
 
 /* Image viewer functions */
 
-function viewImg() {
+function viewImg(url, alt = "Image.") {
+    imgViewerImg.src = url;
+    imgViewerImg.alt = alt;
     document.body.style.overflowY = "hidden";
     imgViewer.style.display = "block";
 }

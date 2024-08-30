@@ -78,7 +78,8 @@
 }
 
 #img-view-container {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.8);
+  cursor: zoom-out;
   display: none;
   height: 100%;
   overflow: hidden;
@@ -86,6 +87,30 @@
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 999;
+}
+#img-view-container .close-button {
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.2);
+  color: #1C3C83;
+  font-family: "Cabin", sans-serif;
+  font-size: 27pt;
+  padding: 6px 16px;
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  text-align: center;
+}
+#img-view-container .close-button:hover {
+  background: #C93E30;
+  color: #fff;
+}
+#img-view-container img {
+  object-fit: contain;
+  object-position: 50% 50%;
+  height: 100%;
+  width: 100%;
 }
 
 @font-face {
@@ -332,6 +357,10 @@ p > code {
   #header-menu-btn {
     display: block;
   }
+}
+
+#header-menu-btn:hover {
+  margin-bottom: -1px;
 }
 
 #header-menu-btn-img {

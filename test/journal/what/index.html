@@ -21,8 +21,9 @@
     <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
     <body onload="loadDOM();">
-        <div id="img-view-container">
-            <button onclick="closeImg();">Close</button>
+        <div id="img-view-container" onclick="closeImg();">
+            <img id="img-view-img" src="https://slyllama.net/test/img/ceres-arms.jpg" />
+            <div class="close-button" onclick="closeImg();">&times;</div>
         </div>
         <div id="container">
             <div id="header">
@@ -78,7 +79,7 @@
                     <p class="date">8.2024</p>
                 </a><h2>Slyllama Design</h2>
                 <div class="two-column" style="grid-template-columns: 2fr 1fr;">
-                    <img src="https://slyllama.net/test/journal/what/knuth-zapf.jpg" alt="Computer scientist Don Knuth and type designer Hermann Zapf looking over font proofs displayed on a computer." />
+                    <img src="https://slyllama.net/test/journal/what/knuth-zapf.jpg" alt="Computer scientist Don Knuth and type designer Hermann Zapf looking over font proofs displayed on a computer." onclick="viewImg('https://slyllama.net/test/journal/what/knuth-zapf.jpg', 'Computer scientist Don Knuth and type designer Hermann Zapf looking over font proofs displayed on a computer.');" tabindex="-1" style="cursor: zoom-in;" />
                     <img src="https://slyllama.net/test/journal/what/logomark.jpg" alt="Slyllama logomark." />
                 </div>
                 
@@ -98,3 +99,4 @@
         </div>
     </body>
 </html>
+

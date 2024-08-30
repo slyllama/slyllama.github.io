@@ -21,8 +21,9 @@
     <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
     <body onload="loadDOM();">
-        <div id="img-view-container">
-            <button onclick="closeImg();">Close</button>
+        <div id="img-view-container" onclick="closeImg();">
+            <img id="img-view-img" src="https://slyllama.net/test/img/ceres-arms.jpg" />
+            <div class="close-button" onclick="closeImg();">&times;</div>
         </div>
         <div id="container">
             <div id="header">
@@ -75,10 +76,10 @@
 
             <div id="copy">
                 <div id="hero-container">
-                    <img class="hero-img hero-hide-mobile" src="https://slyllama.net/test/img/ceres-arms.jpg" alt="Monochrome pen-and-ink illustration of two 'cyberpunk' arms featuring ornate armour, reaching symmetrically toward a white central orb." onclick="viewImg();" tabindex="-1" style="cursor: pointer;" />
-                    <img class="hero-img hero-hide-mobile" src="https://slyllama.net/test/img/rocket.jpg" alt="3D model of a brass and cloth steampunk-era rocket rendered against a dark background." />
+                    <img class="hero-img hero-hide-mobile" src="https://slyllama.net/test/img/ceres-arms.jpg" alt="Monochrome pen-and-ink illustration of two cyberpunk arms featuring ornate armour, reaching symmetrically toward a white central orb." onclick="viewImg('https://slyllama.net/test/img/ceres-arms.jpg', 'Monochrome pen-and-ink illustration of two cyberpunk arms featuring ornate armour, reaching symmetrically toward a white central orb.');" tabindex="-1" style="cursor: zoom-in;" />
+                    <img class="hero-img hero-hide-mobile" src="https://slyllama.net/test/img/rocket.jpg" alt="3D model of a brass and cloth steampunk-era rocket rendered against a dark background." onclick="viewImg('https://slyllama.net/test/img/rocket.jpg', '3D model of a brass and cloth steampunk-era rocket rendered against a dark background.');" tabindex="-1" style="cursor: zoom-in;" />
                     <div id="hero-vertical">
-                        <div><img src="https://slyllama.net/test/img/ceres-city.jpg" class="hero-img" alt="Monochrome drawing of a run-down cyberpunk city, with the downward perspective of a fisheye lens." /></div>
+                        <div><img src="https://slyllama.net/test/img/ceres-city.jpg" class="hero-img" alt="Monochrome drawing of a run-down cyberpunk city, with the downward perspective of a fisheye lens." onclick="viewImg('https://slyllama.net/test/img/ceres-city.jpg', 'Monochrome drawing of a run-down cyberpunk city, with the downward perspective of a fisheye lens.');" tabindex="-1" style="cursor: zoom-in;" /></div>
                         <div><img src="https://slyllama.net/test/assets/body-title.svg" class="hero-img" style="object-fit: contain; object-position: left top;" alt="Illustrative graphics for a modern age." /></div>
                     </div>
                 </div>
@@ -105,3 +106,4 @@
         </div>
     </body>
 </html>
+
