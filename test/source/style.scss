@@ -31,6 +31,19 @@ a:focus-visible, .focus-outline:focus-visible {
     outline: 3px solid $accent-ochre;
 }
 
+b {
+    font-weight: 700;
+}
+
+blockquote {
+    border-left: 1px solid $accent-blue;
+    padding-left: 20px;
+
+    p {
+        color: #777;
+    }
+}
+
 body {
     font-family: 'Cabin', 'Trebuchet MS', sans-serif;
     font-size: $copy-font-size;
@@ -311,6 +324,7 @@ p > code {
 
     @media (max-width: $mobile-width) {
         display: block;
+        padding-bottom: 20px;
         padding-top: 10px;
     }
 
