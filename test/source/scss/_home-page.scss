@@ -79,3 +79,77 @@ $hero-height: 540px;
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+/* 2-up presentations */
+
+.present {
+    display: grid;
+    gap: 16px;
+
+    div {
+        overflow-y: hidden;
+        margin-bottom: 20px;
+        max-height: 450px;
+
+        @media (max-width: $mobile-width) {
+            max-height: initial;
+        }
+    }
+
+    div > div {
+        display: block;
+        height: inherit;
+        padding: 28px;
+    }
+
+    div > img {
+        display: block;
+        height: 100%;
+        margin: 0 !important;
+        object-fit: cover;
+        object-position: center center;
+        padding: 0;
+        width: inherit;
+    }
+
+    h3 {
+        margin-top: 0;
+    }
+
+    @media (max-width: $mobile-width) {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 0;
+        margin-bottom: 20px;
+    }
+}
+
+.present-left {
+    grid-template-columns: 4fr 3fr;
+
+    div:nth-child(2) {
+        background: #efefef;
+        border-radius: 3px;
+    }
+}
+
+.present-right {
+    grid-template-columns: 3fr 4fr;
+
+    div:first-child {
+        background: #efefef;
+        border-radius: 3px;
+    }
+}
+
+/* Swap orders */
+
+@media (max-width: $mobile-width) {
+    .p2 {
+        order: 1;
+    }
+
+    .p1 {
+        order: 2;
+    }
+}

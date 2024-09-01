@@ -77,6 +77,72 @@
   }
 }
 
+/* 2-up presentations */
+.present {
+  display: grid;
+  gap: 16px;
+}
+.present div {
+  overflow-y: hidden;
+  margin-bottom: 20px;
+  max-height: 450px;
+}
+@media (max-width: 700px) {
+  .present div {
+    max-height: initial;
+  }
+}
+.present div > div {
+  display: block;
+  height: inherit;
+  padding: 28px;
+}
+.present div > img {
+  display: block;
+  height: 100%;
+  margin: 0 !important;
+  object-fit: cover;
+  object-position: center center;
+  padding: 0;
+  width: inherit;
+}
+.present h3 {
+  margin-top: 0;
+}
+@media (max-width: 700px) {
+  .present {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.present-left {
+  grid-template-columns: 4fr 3fr;
+}
+.present-left div:nth-child(2) {
+  background: #efefef;
+  border-radius: 3px;
+}
+
+.present-right {
+  grid-template-columns: 3fr 4fr;
+}
+.present-right div:first-child {
+  background: #efefef;
+  border-radius: 3px;
+}
+
+/* Swap orders */
+@media (max-width: 700px) {
+  .p2 {
+    order: 1;
+  }
+  .p1 {
+    order: 2;
+  }
+}
 #img-view-container {
   background: rgba(0, 0, 0, 0.8);
   cursor: zoom-out;
