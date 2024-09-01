@@ -99,6 +99,15 @@ p > code {
         margin-bottom: 30px;
         width: 100%;
     }
+
+    ul {
+        margin-left: 2.5em;
+
+        li {
+            list-style-type: initial;
+            padding-left: 1em;
+        }
+    }
 }
 
 .date {

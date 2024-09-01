@@ -276,6 +276,13 @@ p > code {
   margin-bottom: 30px;
   width: 100%;
 }
+#copy ul {
+  margin-left: 2.5em;
+}
+#copy ul li {
+  list-style-type: initial;
+  padding-left: 1em;
+}
 
 .date {
   color: #1C3C83;
