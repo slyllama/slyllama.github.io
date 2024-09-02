@@ -4,7 +4,7 @@
 JPATH = "journal/" # journal path
 TITLE = "$ &mdash; Slyllama"
 PROG_TITLE = "This is Slyllama CMS"
-URL = "https://slyllama.net/test"
+URL = "https://slyllama.net"
 DESC = "Illustrative graphics for a modern age."
 INDENT = "    "
 VIEWER_PATTERN = r'src=\"[^\"]*\"'

@@ -1,12 +1,113 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Slyllama</title>
-    </head>
+<html lang="en-NZ">
+    <meta name="viewport" content="width=300, initial-scale=1.0">
+    <meta charset="utf-8" />
 
-    <body>
-        <h1>Slyllama</h1>
-        <p>Currently under maintenance &ndash; but everything is still here!</p>
-        <p><b><a href="alec/index.html">Personal site</a></b></p>
+    <title>Slyllama</title>
+    <meta name="description" content="Illustrative graphics for a modern age.">
+    <meta property="og:title" content="Slyllama" />
+    <meta property="og:description" content="Illustrative graphics for a modern age." />
+    <meta property="og:url" content="https://slyllama.net" />
+    <meta property="og:image" content="https://slyllama.net/assets/thumb.jpg" />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#1C3C83" data-react-helmet="true" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://slyllama.net/assets/apple-icon-180px.png?ver=2">
+
+    <link rel="icon" type="image/png" href="https://slyllama.net/assets/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="https://slyllama.net/reset.css" />
+    <link rel="stylesheet" type="text/css" href="https://slyllama.net/style.css" />
+
+    <script src="https://slyllama.net/scripts.js" type="text/javascript"></script>
+    <script>MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }, svg: { fontCache: 'global' } };</script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+    <body onload="loadDOM();">
+        <div id="img-view-container" onclick="closeImg();">
+            <div class="close-button" onclick="closeImg();">&times;</div>
+            <div id="img-view-inner">
+                <img id="img-view-img" src="https://slyllama.net/img/ceres-arms.jpg" />
+            </div>
+        </div>
+        
+        <div id="container">
+            <div id="header">
+                <div id="header-logo-container">
+                    <a href="https://slyllama.net">
+                        <img id="header-logo" src="https://slyllama.net/assets/logo.svg" alt="Slyllama." />
+                    </a>
+                </div>
+                
+                <span id="header-menu-btn" class="header-link focus-outline">
+                    <a id="mobile-menu-btn" onclick="toggleMobileMenu();" tabindex="0" style="display: block;">
+                        <img id="header-menu-btn-img" src="https://slyllama.net/assets/mobile-menu-btn.svg" alt="Mobile menu." />
+                    </a>
+                </span>
+                <ul id="header-desktop-links">
+                    <li class="header-link">
+                        <a href="https://www.artstation.com/slyllama" target="_tab">
+                            Art <img src="https://slyllama.net/assets/icon-external.svg" class="external-icon" alt="External link." />
+                        </a>
+                    </li>
+                    <li class="header-link"><a href="https://slyllama.net/journal">Journal</a></li>
+                    <li class="header-btn-container">
+                        <a href="https://bsky.app/profile/slyllama.bsky.social" target="_tab" title="Slyllama on Bluesky.">
+                            <span class="header-btn header-btn-bsky">
+                                <img style="height: 28px;" src="https://slyllama.net/assets/logo-bluesky.svg" alt="Slyllama on Bluesky."/>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="header-btn-container">
+                        <a href="mailto:slyllama@outlook.com" title="Email - slyllama@outlook.com.">
+                            <span class="header-btn">
+                                <img style="height: 26px;" src="https://slyllama.net/assets/logo-email.svg" alt="Email - slyllama@outlook.com." />
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <div style="clear: both;"></div>
+
+                <ul id="mobile-menu">
+                    <li><a href="https://www.artstation.com/slyllama" target="_tab">
+                        <div class="mobile-menu-link">Art <img src="https://slyllama.net/assets/icon-external.svg" class="external-icon" alt="External link." /></div>
+                    </a></li>
+                    <li><a href="https://slyllama.net/journal"><div class="mobile-menu-link">Journal</div></a></li>
+                    <li><a href="mailto:slyllama@outlook.com"><div class="mobile-menu-link">Email</div></a></li>
+                    <li><a href="https://bsky.app/profile/slyllama.bsky.social" target="_tab">
+                        <div class="mobile-menu-link">Follow <img src="https://slyllama.net/assets/icon-external.svg" class="external-icon" alt="External link." /></div>
+                    </a></li>
+                </ul>
+            </div>
+
+            <div id="copy">
+                <div id="hero-container">
+                    <img class="hero-img hero-hide-mobile" src="https://slyllama.net/img/ceres-arms.jpg" alt="Monochrome pen-and-ink illustration of two cyberpunk arms featuring ornate armour, reaching symmetrically toward a white central orb." onclick="viewImg('https://slyllama.net/img/ceres-arms.jpg', 'Monochrome pen-and-ink illustration of two cyberpunk arms featuring ornate armour, reaching symmetrically toward a white central orb.');" tabindex="-1" style="cursor: zoom-in;" />
+                    <img class="hero-img hero-hide-mobile" src="https://slyllama.net/img/rocket.jpg" alt="3D model of a brass and cloth steampunk-era rocket rendered against a dark background." onclick="viewImg('https://slyllama.net/img/rocket.jpg', '3D model of a brass and cloth steampunk-era rocket rendered against a dark background.');" tabindex="-1" style="cursor: zoom-in;" />
+                    <div id="hero-vertical">
+                        <div><img src="https://slyllama.net/img/ceres-city.jpg" class="hero-img" alt="Monochrome drawing of a run-down cyberpunk city, with the downward perspective of a fisheye lens." onclick="viewImg('https://slyllama.net/img/ceres-city.jpg', 'Monochrome drawing of a run-down cyberpunk city, with the downward perspective of a fisheye lens.');" tabindex="-1" style="cursor: zoom-in;" /></div>
+                        <div><img src="https://slyllama.net/assets/body-title.svg" class="hero-img" style="object-fit: contain; object-position: left top;" alt="Illustrative graphics for a modern age." /></div>
+                    </div>
+                </div>
+                
+                <p>Heyo! I&rsquo;m <a href="https://bsky.app/profile/slyllama.bsky.social" title="Alec on Bluesky">Alec</a>, a graphic designer from New Zealand currently producing drawings and documentation for <a href="#">Pipeline Industries</a>. I&rsquo;m also a project assistant for <a href="https://kattabolt.com/">Kattabolt</a>, and I illustrate for freelance projects like the <a href="https://tidalwavegames.com/">&lsquo;See You, Space Cowboy&rsquo; rulebook</a>. I focus especially on spatial and mechanical visualisation &ndash; fictional concepting, technical drawing, and maths-heavy typographic setting, as you can see below. If you&rsquo;re interested, I&rsquo;ve got some writing about my design and ideas and processes in the <a href="journal">site journal</a>; and you can find some more art-oriented work over on <a href="https://www.artstation.com/slyllama">Artstation</a>. Thank you so much for taking a look.</p>
+                
+                <div class="sep"></div>
+                
+                <div id="ob-logos">
+                    <div><a href="https://www.artstation.com/artwork/qekPzz"><img class="ob-logo-img" src="https://slyllama.net/assets/logo-cusc.svg" alt="CUSC."/></a></div>
+                    <div><a href="#"><img class="ob-logo-img" src="https://slyllama.net/assets/logo-pipeline.svg" alt="Pipeline."/></a></div>
+                    <div><a href="https://kattabolt.com/"><img class="ob-logo-img" src="https://slyllama.net/assets/logo-kattabolt.svg" alt="Kattabolt." /></a></div>
+                </div>
+                
+            </div>
+
+            <div id="footer-container">
+                <p>
+                    &copy; Slyllama 2024.
+                    <span style="width: 0.5em; display: inline-block;"></span>
+                    <a href="https://slyllama.net/alec">Personal site.</a>
+                </p>
+            </div>
+        </div>
     </body>
 </html>
+
