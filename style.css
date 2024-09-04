@@ -60,7 +60,6 @@
   grid-template-columns: 1fr 1fr 1fr;
 }
 #ob-container div {
-  border-bottom: 2px solid #1C3C83;
   border-top: 4px solid #1C3C83;
   margin-bottom: 34px;
   padding-bottom: 12px;
@@ -73,15 +72,23 @@
 }
 
 .ob-header {
-  border-top: 1px solid #1C3C83;
+  border-top: 2px solid #1C3C83;
   color: #1C3C83;
   font-family: "Work Sans", sans-serif;
   font-size: 14.5pt;
   font-weight: 600;
   letter-spacing: -0.02em;
-  margin: 12px 0;
+  margin-bottom: 12px;
   padding-top: 12px;
   text-transform: uppercase;
+}
+
+.ob-img {
+  height: 96px;
+  margin: 0 !important;
+  object-fit: contain;
+  object-position: left center;
+  width: 100%;
 }
 
 #img-view-container {
@@ -231,7 +238,7 @@ p > code {
   }
 }
 
-#copy img {
+#copy img:not(.external-icon) {
   display: block;
   border-radius: 3px;
   margin-bottom: 30px;
@@ -268,6 +275,7 @@ p > code {
   margin-left: 1px;
   margin-bottom: -4px;
   margin-top: -16px;
+  width: 19px;
 }
 
 #footer-container {

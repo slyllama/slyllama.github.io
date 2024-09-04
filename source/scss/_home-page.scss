@@ -63,7 +63,6 @@ $hero-height: 540px;
     grid-template-columns: 1fr 1fr 1fr;
 
     div {
-        border-bottom: 2px solid $accent-blue;
         border-top: 4px solid $accent-blue;
         margin-bottom: 34px;
         padding-bottom: 12px;
@@ -76,13 +75,21 @@ $hero-height: 540px;
 }
 
 .ob-header {
-    border-top: 1px solid $accent-blue;
+    border-top: 2px solid $accent-blue;
     color: $accent-blue;
     font-family: 'Work Sans', sans-serif;
     font-size: $copy-font-size + 1;
     font-weight: 600;
     letter-spacing: -0.02em;
-    margin: 12px 0;
+    margin-bottom: 12px;
     padding-top: 12px;
     text-transform: uppercase;
+}
+
+.ob-img {
+    height: 96px;
+    margin: 0 !important;
+    object-fit: contain;
+    object-position: left center;
+    width: 100%;
 }
