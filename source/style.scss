@@ -18,6 +18,11 @@
     src: url('assets/intel-one-mono.ttf');
 }
 
+@font-face {
+    font-family: 'Work Sans';
+    src: url('assets/work-sans.ttf');
+}
+
 a {
     color: $accent-blue;
     text-decoration: none;
@@ -58,7 +63,11 @@ code, pre {
 }
 
 h1 {
-    font-size: $copy-title-size + 1pt;
+    font-family: 'Work Sans', sans-serif;
+    font-size: $copy-title-size + 2pt;
+    font-weight: 500;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
     color: $accent-blue;
     margin-bottom: 35px;
 }
