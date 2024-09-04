@@ -54,3 +54,35 @@ $hero-height: 540px;
         grid-template-rows: auto auto;
     }
 }
+
+/* Outbound */
+
+#ob-container {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    div {
+        border-bottom: 2px solid $accent-blue;
+        border-top: 4px solid $accent-blue;
+        margin-bottom: 34px;
+        padding-bottom: 12px;
+        display: inline-block;
+    }
+
+    @media (max-width: $mobile-width) {
+        display: block;
+    }
+}
+
+.ob-header {
+    border-top: 1px solid $accent-blue;
+    color: $accent-blue;
+    font-family: 'Work Sans', sans-serif;
+    font-size: $copy-font-size + 1;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin: 12px 0;
+    padding-top: 12px;
+    text-transform: uppercase;
+}
