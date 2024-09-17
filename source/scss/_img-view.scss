@@ -5,25 +5,27 @@
     cursor: zoom-out;
     display: none;
     height: 100%;
-    overflow: hidden;
     left: 0;
+    overflow: hidden;
+    
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 999;
 
     .close-button {
-        background: #fff;
         border-radius: 3px;
-        box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.2);
-        color: $accent-blue;
-        font-family: "Cabin", sans-serif;
-        font-size: 27pt;
-        padding: 6px 16px;
+        padding: 6px;
         position: absolute;
         right: $headlink-padding;
         top: $headlink-padding;
         text-align: center;
+
+        img {
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 32px;
+        }
     }
 
     .close-button:hover {

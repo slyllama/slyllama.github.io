@@ -102,25 +102,25 @@
   cursor: zoom-out;
   display: none;
   height: 100%;
-  overflow: hidden;
   left: 0;
+  overflow: hidden;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 999;
 }
 #img-view-container .close-button {
-  background: #fff;
   border-radius: 3px;
-  box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.2);
-  color: #1C3C83;
-  font-family: "Cabin", sans-serif;
-  font-size: 27pt;
-  padding: 6px 16px;
+  padding: 6px;
   position: absolute;
   right: 14px;
   top: 14px;
   text-align: center;
+}
+#img-view-container .close-button img {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 32px;
 }
 #img-view-container .close-button:hover {
   background: #C93E30;
