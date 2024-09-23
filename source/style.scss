@@ -340,7 +340,7 @@ p > code {
 .two-column {
     display: grid;
     gap: 10px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     padding: 0;
 
     @media (max-width: $mobile-width) {
@@ -353,5 +353,21 @@ p > code {
         @media (max-width: $mobile-width) {
             margin-bottom: 14px !important;
         }
+    }
+}
+
+.three-column {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0;
+
+    img {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    @media (max-width: $mobile-width) {
+        grid-template-columns: repeat(2, 1fr);
     }
 }

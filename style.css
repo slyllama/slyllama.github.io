@@ -468,7 +468,7 @@ p > code {
 .two-column {
   display: grid;
   gap: 10px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   padding: 0;
 }
 @media (max-width: 700px) {
@@ -481,6 +481,22 @@ p > code {
 @media (max-width: 700px) {
   .two-column img {
     margin-bottom: 14px !important;
+  }
+}
+
+.three-column {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0;
+}
+.three-column img {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+@media (max-width: 700px) {
+  .three-column {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
