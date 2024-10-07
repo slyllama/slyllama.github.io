@@ -95,7 +95,12 @@ def generate_page(name, data, custom_path = "!"):
     t = template
     t = t.replace("$CONTENT", fmt_cnt)
     t = t.replace("$ROOT", root_prefix)
-    t = t.replace("$PAGEROOT", root_prefix + output_path)
+
+    if custom_path != "!":
+        t = t.replace("$PAGEROOT", root_prefix + output_path)
+    else:
+        t = t.replace("$PAGEROOT", output_path)
+
     u = add_viewers(t)
     
     for tag in data:
@@ -114,6 +119,11 @@ generate_page("home", {
     "$TITLE": "Slyllama",
     "$DESC": "Illustrative graphics for a modern age." 
 }, "")
+
+generate_page("dwelt", {
+    "$TITLE": "Dwelt: Mechanical Dreams",
+    "$DESC": "A dreamscape in video game form." 
+}, "!")
 
 with open("source/journal.json") as file: # get list of journal entries
     journal_list = json.load(file)
