@@ -216,6 +216,7 @@ h1 {
 h2 {
   font-size: 25pt;
   color: #1C3C83;
+  line-height: 1.1em;
   margin-bottom: 25pt;
 }
 
@@ -282,6 +283,12 @@ p > code {
 }
 
 .date:hover {
+  background: #C93E30;
+  border-color: #C93E30;
+  color: #fff;
+}
+
+.draft-tag {
   background: #C93E30;
   border-color: #C93E30;
   color: #fff;

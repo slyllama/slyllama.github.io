@@ -132,8 +132,15 @@ with open("source/journal.json") as file: # get list of journal entries
 print(" * Building journal list...")
 master_content = ""
 master_content += "<h1><span>Design Journal</span></h1>"
+master_content += "<div class='sep'></div>"
+
+journal_list.reverse()
 
 for entry in journal_list:
+    if "status" in entry:
+        if entry["status"] == "draft":
+            continue
+    
     name = entry["name"]
     entry_path = Path(JPATH + name + "/source.html")
     page_root = root_prefix + "/" + JPATH + name
@@ -166,7 +173,7 @@ for entry in journal_list:
     name = entry["name"]
     entry_path = Path(JPATH + name + "/source.html")
     page_root = root_prefix + "/" + JPATH + name
-    
+
     if entry_path.exists():
         print(" * Creating entry for '" + name + "'...")
         output_path = JPATH + name
@@ -175,7 +182,11 @@ for entry in journal_list:
         # Format content header
         content = ""
         content += "<a href=\"" + page_root + "\">\n"
-        content += ind(1) + "<p class=\"date\">" + entry["date"] + "</p>\n"
+        if "status" in entry:
+            if entry["status"] == "draft":
+                content += ind(1) + "<p class=\"date draft-tag\">DRAFT</p>\n"
+        else:
+            content += ind(1) + "<p class=\"date\">" + entry["date"] + "</p>\n"
         content += "</a>"
         content += "<h2>"+ entry["title"] + "</h2>\n"
 

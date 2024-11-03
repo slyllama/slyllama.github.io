@@ -3,6 +3,14 @@
         "name": "hello",
         "title": "Welcome to Slyllama Design",
         "desc": "A little about this site and my design intentions.",
-        "date": "8.2024"
+        "date": "8.2024",
+        "status": "published"
+    },
+    {
+        "name": "fisheye",
+        "title": "Fisheye Projections for Kattabolt",
+        "desc": "Using customised camera projections for dramatic effect in comics!",
+        "date": "11.2024",
+        "status": "draft"
     }
 ]

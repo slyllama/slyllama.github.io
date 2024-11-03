@@ -84,6 +84,7 @@ h1 {
 h2 {
     font-size: $copy-title-size;
     color: $accent-blue;
+    line-height: 1.1em;
     margin-bottom: $copy-title-size;
 }
 
@@ -155,6 +156,12 @@ p > code {
 }
 
 .date:hover {
+    background: $accent-ochre;
+    border-color: $accent-ochre;
+    color: #fff;
+}
+
+.draft-tag {
     background: $accent-ochre;
     border-color: $accent-ochre;
     color: #fff;
