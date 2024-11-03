@@ -93,6 +93,7 @@ def generate_page(name, data, custom_path = "!"):
     fmt_cnt = indent_content(cnt)
 
     t = template
+    t = t.replace("$THUMB", "$ROOT/assets/thumb.jpg")
     t = t.replace("$CONTENT", fmt_cnt)
     t = t.replace("$ROOT", root_prefix)
 
@@ -158,6 +159,7 @@ for entry in journal_list:
 
 fmt_master_content = indent_content(master_content)
 em = template
+em = em.replace("$THUMB", "$ROOT/assets/thumb.jpg")
 em = em.replace("$CONTENT", fmt_master_content)
 em = em.replace("$ROOT", root_prefix)
 em = em.replace("$PAGEROOT", root_prefix + "/journal")
@@ -197,6 +199,11 @@ for entry in journal_list:
         fmt_content = indent_content(content)
 
         # Content substitutions
+        if "thumb" in entry:
+            e = e.replace("$THUMB", entry["thumb"])
+        else:
+            e = e.replace("$THUMB", "$ROOT/assets/thumb.jpg")
+
         e = e.replace("$CONTENT", fmt_content)
         e = e.replace("$ROOT", root_prefix)
         e = e.replace("$PAGEROOT", page_root)

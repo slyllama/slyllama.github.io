@@ -3,6 +3,7 @@
         "name": "hello",
         "title": "Welcome to Slyllama Design",
         "desc": "A little about this site and my design intentions.",
+        "thumb": "$PAGEROOT/knuth-zapf.jpg",
         "date": "8.2024",
         "status": "published"
     },
