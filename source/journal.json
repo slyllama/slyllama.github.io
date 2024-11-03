@@ -8,7 +8,7 @@
     },
     {
         "name": "fisheye",
-        "title": "Fisheye Projections for Kattabolt",
+        "title": "Polynomial Camera Projections for Kattabolt",
         "desc": "Using customised camera projections for dramatic effect in comics!",
         "date": "11.2024",
         "status": "draft"

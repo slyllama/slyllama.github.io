@@ -120,10 +120,10 @@ generate_page("home", {
     "$DESC": "Illustrative graphics for a modern age." 
 }, "")
 
-generate_page("dwelt", {
-    "$TITLE": "Dwelt: Mechanical Dreams",
-    "$DESC": "A dreamscape in video game form." 
-}, "!")
+#generate_page("dwelt", {
+#    "$TITLE": "Dwelt: Mechanical Dreams",
+#    "$DESC": "A dreamscape in video game form." 
+#}, "!")
 
 with open("source/journal.json") as file: # get list of journal entries
     journal_list = json.load(file)
