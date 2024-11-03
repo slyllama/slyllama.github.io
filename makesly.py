@@ -187,6 +187,8 @@ for entry in journal_list:
         if "status" in entry:
             if entry["status"] == "draft":
                 content += ind(1) + "<p class=\"date draft-tag\">DRAFT</p>\n"
+            else:
+                content += ind(1) + "<p class=\"date\">" + entry["date"] + "</p>\n"
         else:
             content += ind(1) + "<p class=\"date\">" + entry["date"] + "</p>\n"
         content += "</a>"
