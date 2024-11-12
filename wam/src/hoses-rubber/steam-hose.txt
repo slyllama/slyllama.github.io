@@ -1,0 +1,21 @@
+#name Steam Hose - Roiter WAM
+#subtitle 13mm - 51mm ID, 250psi WP
+#custom-image-link https://cdn11.bigcommerce.com/s-cst560l4iu/images/stencil/300x300/products/183/448/airwater14__80748.1696477348.jpg
+#description
+<p>Suitable for conveying saturated steam and hot water.</p>
+<ul>
+    <li>Standard: BS 5342:1985 2A.</li>
+    <li>Temperature range: &minus;35C &minus; 232&deg;C (saturated steam); 95&deg;C (hot water).</li>
+    <li>Safety factor: steam: 10:1; hot water: 3.15:1.</li>
+    <li>Coil lengths: 40m.</li>
+    <li>Pressure: 18bar (sat. steam); 55bar (hot water).</li>
+</ul>
+#data
+Code,ID (mm),OD (mm),WP (bar),Coil Length (m),Bend Radius (mm),Mass (g/m)
+S3602-1052,13,25,17,30,180,551
+S3602-1053,16,28,17,30,200,647
+S3602-1055,19,32,17,30,240,742
+S3602-1057,25,38,17,30,300,971
+S3602-1058,32,46,17,30,400,1304
+S3602-1059,38,52,17,30,500,1633
+S3602-1060,51,67,17,30,600,2533

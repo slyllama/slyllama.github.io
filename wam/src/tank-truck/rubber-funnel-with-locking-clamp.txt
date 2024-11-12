@@ -1,0 +1,6 @@
+#name Rubber Funnel with Locking Clamp
+#data
+Code,Size
+MT-0937160,6" 	
+MT-0937200,8" 	
+MT-0937250,10"

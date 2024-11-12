@@ -1,0 +1,12 @@
+#name Safety Valve
+#description
+<p>Features:</p>
+<ul>
+    <li>Factory pre-set and sealed to 5psi.</li>
+    <li>Stainless steel spring.</li>
+    <li>Relief capacity up to 300CFM.</li>
+    <li>Made in Italy.</li>
+</ul>
+#data
+Code,Size,Thread Type
+MT-0860050,2",BSP

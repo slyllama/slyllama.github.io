@@ -1,0 +1,10 @@
+#name Curved Siphon Valve
+#description
+<ul>
+	<li>Secondary shutoff valve.</li>
+	<li>Designed for low airflow.</li>
+	<li>Nyglass body.</li>
+	<li>Made in Italy.</li>
+#data
+Code,Size
+MT-0241080000,80mm

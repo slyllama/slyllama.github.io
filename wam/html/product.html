@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pipeline WAM</title>
+        <link rel="stylesheet" type="text/css" href="reset.css"/>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+    <body style="padding: 0; margin-top: 40px;">
+        <img id="header-img" src="assets/header.svg"/>
+        <p id="opening">Open weekdays (7:30am-5pm) and Saturdays (8am-12pm). Closed on statutory and public holidays.</p>
+        <div id="contacts">
+            <div class="contact"><b>Avondale</b><br />09 828 4710<br /><a href="#">pipelinewam@<wbr>xtra.co.nz</a></div>
+            <div class="contact"><b>East Tamaki</b><br />09 271 6433<br /><a href="#">easttamaki@<wbr>hoseshop.co.nz</a></div>
+            <div class="contact"><b>Coromandel</b><br />027 571 7472<br /><a href="#">coromandel@<wbr>hoseshop.co.nz</a></div>
+            <div class="contact"><b>Tauranga</b><br />07 547 4567<br /><a href="#">tauranga@<wbr>hoseshop.co.nz</a></div>
+            <div class="contact"><b>Hamilton</b><br />07 846 6960<br /><a href="#">hamilton@<wbr>hoseshop.co.nz</a></div>
+            <div class="contact"><b>Rotorua</b><br />07 343 7082<br /><a href="#">rotorua@<wbr>hoseshop.co.nz</a></div>
+            <div class="contact"><b>New Plymouth</b><br />06 759 1561<br /><a href="#">newplymouth@<wbr>hoseshop.co.nz</a></div>
+            <div class="contact"><b>Christchurch</b><br />03 341 1330<br /><a href="#">christchurch@<wbr>hoseshop.co.nz</a></div>
+            <div class="contact"><b>Ashburton</b><br />03 308 1307<br /><a href="#">ashburton@<wbr>hoseshop.co.nz</a></div>
+            <div class="contact"><b>Timaru</b><br />03 688 2823<br /><a href="#">timaru@<wbr>hoseshop.co.nz</a></div>
+        </div>
+        
+        <div id="header">
+            <ul>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Branches</a></li>
+                <li><a href="#">WAM Management System</a></li>
+                <li><a href="#">Supply Us</a></li>
+                <li><a href="#">Credit Application</a></li>
+                <li><a href="#">Sales Conditions</a></li>
+                <li><a href="#">Job Vacancy</a></li>
+                <li style="float: initial; clear: both;"></li>
+            </ul>
+        </div>
+        <div id="wrapper">
+            <div id="container">
+                <div id="sidebar">
+                    <h3>Product Categories</h3>
+                    <ul>
+                        <li><a href="?tank-truck">Tank Truck Hoses and Accessories</a></li>
+                    </ul>
+                </div>
+                <iframe id="product-frame" src=""></iframe>
+                <div style="height: 100px; display: block;"></div>
+            </div>
+        </div>
+
+        <script>
+            var productFrame = document.getElementById("product-frame");
+            function loadPath(getPath) {
+                var cleanPath = getPath.replace("?", "") + ".html"
+                productFrame.src = cleanPath;
+            }
+            loadPath(location.search); 
+
+            var eventMethod = window.addEventListener? "addEventListener": "attachEvent";
+            var eventer = window[eventMethod];
+            var messageEvent = eventMethod == "attachEvent"? "onmessage": "message";
+            
+            eventer(messageEvent,function(e) {
+                console.log(e.data);
+                productFrame.style.height = e.data + 50 + "px";
+            }, false);
+        </script>
+    </body>
+</html>
