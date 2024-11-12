@@ -2,7 +2,7 @@ import os
 import string
 
 #ROOT = "file:///C:/Users/alaing/Desktop/wam-site/html/"
-ROOT = "https://slyllama.net/wam/"
+ROOT = "https://slyllama.net/wam/html/"
 
 
 def fmt_name(name):
@@ -131,11 +131,11 @@ def generate_page(name, products):
         html += "<a target='_top' href='" + url + "'><h3>" + fmt_name(i.split("/")[1]) + "</h3></a>"
         if p != -1:
             if "subtitle" in p:
-                html += "\n<p class='subtitle'>" + p["subtitle"] + "</p>"
+                html += "<p class='subtitle'>" + p["subtitle"] + "</p>"
         else:
-            html += "\n<p class='subtitle' style='color: red;'>No product data!</p>"
+            html += "<p class='subtitle' style='color: red;'>No product data!</p>"
         html += "</div>"
-    html += "\n</div>"
+    html += "</div>"
     html += "\n<script>parent.postMessage(document.querySelector('body').scrollHeight, '*');</script>"
     html += "\n</body></html>"
     file = open("html/" + name + ".html", "w")
