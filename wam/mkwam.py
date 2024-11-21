@@ -1,8 +1,8 @@
 import os
 import string
 
-#ROOT = "file:///C:/Users/alaing/Desktop/wam-site/html/"
-ROOT = "https://slyllama.net/wam/html/"
+ROOT = "file:///D:/Repos/slyllama.github.io/wam/html/"
+#ROOT = "https://slyllama.net/wam/html/"
 
 
 def fmt_name(name):
@@ -71,6 +71,10 @@ def make_html(path):
         html += "<img src='img/" + data["id"] + ".jpg'/>"
     html += "</div>"
     html += "\n</div>"
+    html += "\n<script>"
+    html += "function postHeight() { parent.postMessage(document.querySelector('body').clientHeight, '*'); }"
+    html += "postHeight(); addEventListener('resize', (event) => { postHeight(); });"
+    html += "</script>"
     html += "\n</body>\n</html>"
 
     html_path = "html/" + path + ".html"
@@ -117,6 +121,7 @@ def generate_page(name, products):
     html = "<!DOCTYPE html>\n<html>\n<head>"
     html += "\n<link rel='stylesheet' type='text/css' href='" + ROOT + "reset.css'/>"
     html += "\n<link rel='stylesheet' type='text/css' href='" + ROOT + "style.css'/>"
+    html += "\n<meta name='viewport' content='width=device-width, initial-scale=1.0'>"
     html += "\n</head>"
     html += "\n<body id='body-iframe'>"
     html += "<h1>" + fmt_name(name) + "</h1>"
@@ -124,7 +129,7 @@ def generate_page(name, products):
     for i in products:
         p = serialise_product(i)
 
-        html += "\n<div class='category-card'>"
+        html += "\n<div id='category-grid' class='category-card'>"
         img_path = i.split("/")[0] + "/img/" + i.split("/")[1] + ".jpg"  
         url = ROOT + "product.html?" + i
         html += "<a target='_top' href='" + url + "'><img src='" + img_path + "'/></a>"
@@ -136,7 +141,10 @@ def generate_page(name, products):
             html += "<p class='subtitle' style='color: red;'>No product data!</p>"
         html += "</div>"
     html += "</div>"
-    html += "\n<script>parent.postMessage(document.querySelector('body').scrollHeight, '*');</script>"
+    html += "\n<script>"
+    html += "function postHeight() { parent.postMessage(document.querySelector('body').clientHeight, '*'); }"
+    html += "postHeight(); addEventListener('resize', (event) => { postHeight(); });"
+    html += "</script>"
     html += "\n</body></html>"
     file = open("html/" + name + ".html", "w")
     file.write(html)

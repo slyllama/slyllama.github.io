@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel='stylesheet' type='text/css' href='https://slyllama.net/wam/html/reset.css'/>
-<link rel='stylesheet' type='text/css' href='https://slyllama.net/wam/html/style.css'/>
+<link rel='stylesheet' type='text/css' href='file:///D:/Repos/slyllama.github.io/wam/html/reset.css'/>
+<link rel='stylesheet' type='text/css' href='file:///D:/Repos/slyllama.github.io/wam/html/style.css'/>
 </head>
 <body id='body-iframe'>
 <div class='product-info-wrapper'><div class='product-info'>
@@ -18,5 +18,6 @@
 </div>
 <div class='product-image'><img src='img/safety-valve.jpg'/></div>
 </div>
+<script>function postHeight() { parent.postMessage(document.querySelector('body').clientHeight, '*'); }postHeight(); addEventListener('resize', (event) => { postHeight(); });</script>
 </body>
 </html>
