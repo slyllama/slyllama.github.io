@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+    <meta name="viewport" content="width=300, initial-scale=1.0">
+    <meta charset="utf-8" />
+
+    <title>Seitung Spring Clean: Development Notes #1 &mdash; Slyllama</title>
+    <meta name="description" content="Clear Dragonvoid blights, pick weeds, and utilise your jade bot technologies to decorate a house and garden in this cozy Guild Wars 2 fan game, set in the vibrant landscape of Seitung Province!">
+    <meta property="og:title" content="Seitung Spring Clean: Development Notes #1 &mdash; Slyllama" />
+    <meta property="og:description" content="Clear Dragonvoid blights, pick weeds, and utilise your jade bot technologies to decorate a house and garden in this cozy Guild Wars 2 fan game, set in the vibrant landscape of Seitung Province!" />
+    <meta property="og:url" content="file:///D:/Repos/slyllama.github.io/journal/seitung-nov24" />
+    <meta property="og:image" content="file:///D:/Repos/slyllama.github.io/assets/thumb.jpg" />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#1C3C83" data-react-helmet="true" />
+    <link rel="apple-touch-icon" sizes="180x180" href="file:///D:/Repos/slyllama.github.io/assets/apple-icon-180px.png?ver=2">
+
+    <link rel="icon" type="image/png" href="file:///D:/Repos/slyllama.github.io/assets/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="file:///D:/Repos/slyllama.github.io/reset.css" />
+    <link rel="stylesheet" type="text/css" href="file:///D:/Repos/slyllama.github.io/style.css" />
+
+    <script src="file:///D:/Repos/slyllama.github.io/scripts.js" type="text/javascript"></script>
+
+    <body onload="loadDOM();">
+        <div id="img-view-container" onclick="closeImg();">
+            <div class="close-button" onclick="closeImg();"><img src="file:///D:/Repos/slyllama.github.io/assets/icon-close.svg" /></div>
+            <div id="img-view-inner">
+                <img id="img-view-img" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" />
+            </div>
+        </div>
+        
+        <div id="container">
+            <div id="header">
+                <div id="header-logo-container">
+                    <a href="file:///D:/Repos/slyllama.github.io">
+                        <img id="header-logo" src="file:///D:/Repos/slyllama.github.io/assets/logo.svg" alt="Slyllama." />
+                    </a>
+                </div>
+                
+                <span id="header-menu-btn" class="header-link focus-outline">
+                    <a id="mobile-menu-btn" onclick="toggleMobileMenu();" tabindex="0" style="display: block;">
+                        <img id="header-menu-btn-img" src="file:///D:/Repos/slyllama.github.io/assets/mobile-menu-btn.svg" alt="Mobile menu." />
+                    </a>
+                </span>
+                <ul id="header-desktop-links">
+                    <li class="header-link">
+                        <a href="https://www.artstation.com/slyllama" target="_tab">
+                            Art <img src="file:///D:/Repos/slyllama.github.io/assets/icon-external.svg" class="external-icon" alt="External link." />
+                        </a>
+                    </li>
+                    <li class="header-link"><a href="file:///D:/Repos/slyllama.github.io/journal">Journal</a></li>
+                    <li class="header-btn-container">
+                        <a href="https://bsky.app/profile/slyllama.net" target="_tab" title="Slyllama on Bluesky.">
+                            <span class="header-btn header-btn-bsky">
+                                <img style="height: 28px;" src="file:///D:/Repos/slyllama.github.io/assets/logo-bluesky.svg" alt="Slyllama on Bluesky."/>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="header-btn-container">
+                        <a href="mailto:slyllama@outlook.com" title="Email - slyllama@outlook.com.">
+                            <span class="header-btn">
+                                <img style="height: 26px;" src="file:///D:/Repos/slyllama.github.io/assets/logo-email.svg" alt="Email - slyllama@outlook.com." />
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <div style="clear: both;"></div>
+
+                <ul id="mobile-menu">
+                    <li><a href="https://www.artstation.com/slyllama" target="_tab">
+                        <div class="mobile-menu-link">Art <img src="file:///D:/Repos/slyllama.github.io/assets/icon-external.svg" class="external-icon" alt="External link." /></div>
+                    </a></li>
+                    <li><a href="file:///D:/Repos/slyllama.github.io/journal"><div class="mobile-menu-link">Journal</div></a></li>
+                    <li><a href="mailto:slyllama@outlook.com"><div class="mobile-menu-link">Email</div></a></li>
+                    <li><a href="https://bsky.app/profile/slyllama.bsky.social" target="_tab">
+                        <div class="mobile-menu-link">Follow <img src="file:///D:/Repos/slyllama.github.io/assets/icon-external.svg" class="external-icon" alt="External link." /></div>
+                    </a></li>
+                </ul>
+            </div>
+
+            <div id="copy">
+                <a href="file:///D:/Repos/slyllama.github.io/journal/seitung-nov24">
+                    <p class="date draft-tag">DRAFT</p>
+                </a><style>
+                    .use-libertinus { font-family: "Libertinus Sans", "Georgia"; }
+                    .use-libertinus p, li { line-height: 1.19em; }
+                    .use-libertinus li { margin-bottom: 2px; }
+                    .use-libertinus ul { color: #555; margin-bottom: 20px; }
+                    .disclaimer { opacity: 0.5; transition: opacity 0.1s; }
+                    .disclaimer:hover { opacity: 1.0; }
+                    .game-description { background: #f5f5f5; border-radius: 2px; padding-top: 27px; padding-bottom: 20px; }
+                    .game-description p, .game-description ul { margin-left: 24px; margin-right: 24px; }
+                </style>
+                
+                <img class="banner-desktop seitung-banner" src="banner.jpg" />
+                <img class="banner-mobile seitung-banner" src="banner-mobile.jpg" />
+                
+                <div class="use-libertinus">
+                    <div class="game-description">
+                        <p>Clear Dragonvoid blights, pick weeds, and utilise your jade bot technologies to decorate a house and garden in this tiny, cozy <a href="https://www.guildwars2.com/en/" target="_tab">Guild Wars 2</a> fan game, set in the vibrant landscape of Seitung Province!</p>
+                
+                        <p style="color: #888;"><i>Nayos was not easy on us; the force of that Kryptis turret&rsquo;s blast left my plating cracked and my servos crushed and fragmented. Repair and recovery will be a slow process and, as grateful as I am for my jade technicians, it pains me to be away from the Commander for so long. Though perhaps, as I rehabilitate, I too can help build something meaningful.</i></p>
+                
+                        <ul>
+                            <li>Build with decorations inspired by a variety of Guild Wars 2 regions.</li>
+                            <li>Play minigames to clear infestations featuring unique visual effects.</li>
+                            <li>Tweak your creation with a robust adjustment system.</li>
+                            <li>Configure your experience &ndash; play without infestations, or on a flat world!</li>
+                        </ul>
+                    </div>
+                    
+                
+                    <div style="height: 10px;"></div>
+                    <h2>Development Notes #1</h2>
+                
+                    <p>Heyo, Alec here with some quick notes on developing <i>Seitung Spring Clean</i>&thinsp;! This is a little fan game I&rsquo;ve been working on to expose myself to the entirety of the game development cycle (and also because Guild Wars 2 &ndash; and <a href="https://youtu.be/j1Zjbaxy07A?si=a5-6LGv-b272Bhbs" target="_tab">Cantha in particular</a> &ndash; is very special to me). I&rsquo;ve touched on many aspects of development that really excite me, and so I&rsquo;d like to write a little bit about them and where I&rsquo;m at with fitting everything together. This will be a mix of a progress log and some personal aspirations, so thank you so much for taking a look!</p>
+                
+                    <div style="height: 10px;"></div>
+                    <img src="gameplay.jpg" alt="((Alt text))" onclick="viewImg('gameplay.jpg', '((Alt text))');" tabindex="-1" style="cursor: zoom-in;" />
+                
+                    <p>The design brief for the game is a simple one: <a href="https://wiki.guildwars2.com/wiki/Homestead" target="_tab">GW2 homesteads</a> meets <a href="https://store.steampowered.com/app/613100/House_Flipper/" target ="tab">House Flipper</a>, set in the verdancy of an End of Dragons-inspired map. I am trying to keep its scope very small but to think in a modular, systems-driven way which could technically facilitate enhancements and expansion in the future! The truth is that my interests lie much more in environment art and music than in engineering, but the reward of having a system to drop all of that art in is quite satisfying.</p>
+                
+                    <div class="sep"></div>
+                
+                    <p class="disclaimer">Notice as specified by ArenaNet&rsquo;s <a href="https://www.arena.net/en/legal/content-terms-of-use" target="_tab">content terms of use</a>: &copy; ArenaNet LLC. All rights reserved. NCSOFT, ArenaNet, Guild Wars, Guild Wars 2, GW2, Guild Wars 2: Heart of Thorns, Guild Wars 2: Path of Fire, Guild Wars 2: End of Dragons, and Guild Wars 2: Secrets of the Obscure and all associated logos, designs, and composite marks are trademarks or registered trademarks of NCSOFT Corporation.</p>
+                </div>
+                
+            </div>
+
+            <div id="footer-container">
+                <p>
+                    &copy; Slyllama 2024.
+                    <span style="width: 0.5em; display: inline-block;"></span>
+                    <a href="https://slyllama.net/alec">Personal site.</a>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
+

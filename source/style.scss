@@ -19,6 +19,12 @@
 }
 
 @font-face {
+    font-family: 'Libertinus Sans';
+    src: url('assets/libertinus-sans.otf');
+}
+
+
+@font-face {
     font-family: 'Work Sans';
     src: url('assets/work-sans.ttf');
 }
@@ -92,6 +98,10 @@ h3 {
     font-size: 16pt;
     font-weight: bold;
     margin-top: 40px;
+}
+
+i {
+    font-style: italic;
 }
 
 p, #copy > ul, h3 {
@@ -377,4 +387,12 @@ p > code {
     @media (max-width: $mobile-width) {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+/*I use this when I need a mobile and desktop version of a header*/
+.banner-desktop { display: block !important; }
+.banner-mobile { display: none !important; }
+@media screen and (max-width: 700px) {
+    .banner-desktop { display: none !important; }
+    .banner-mobile { display: block !important; }
 }

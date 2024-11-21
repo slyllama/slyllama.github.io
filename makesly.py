@@ -192,7 +192,8 @@ for entry in journal_list:
         else:
             content += ind(1) + "<p class=\"date\">" + entry["date"] + "</p>\n"
         content += "</a>"
-        content += "<h2>"+ entry["title"] + "</h2>\n"
+        if "hide-title" in entry == False:
+            content += "<h2>"+ entry["title"] + "</h2>\n"
 
         with open(output_path + "/source.html") as file:
             content += file.read()
