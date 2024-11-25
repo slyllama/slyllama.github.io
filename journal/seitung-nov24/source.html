@@ -7,6 +7,32 @@
     .disclaimer:hover { opacity: 1.0; }
     .game-description { background: #f5f5f5; border-radius: 2px; padding-top: 27px; padding-bottom: 20px; }
     .game-description p, .game-description ul { margin-left: 24px; margin-right: 24px; }
+
+    .feed-btn {
+        background: rgb(91,179,101);
+        background: linear-gradient(0deg, rgba(91,179,101,1) 0%, rgba(41,105,59,1) 100%);
+        border: 1px solid black;
+        border-radius: 2px;
+        color: white;
+        cursor: pointer;
+        display: block;
+        font-family: "Libertinus Sans", "Georgia";
+        font-size: 17pt;
+        padding: 7px 0;
+        margin: 20px auto;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+
+        width: fit-content;
+        max-width: 100%;
+    }
+
+    .feed-btn > span {
+        margin: 0 30px;
+    }
+
+    .feed-btn:hover {
+        background: rgba(41,105,59,1);
+    }
 </style>
 
 <img class="banner-desktop seitung-banner" src="banner.jpg" />
@@ -24,6 +50,10 @@
             <li>Tweak your creation with a robust adjustment system.</li>
             <li>Configure your experience &ndash; play without infestations, or on a flat world!</li>
         </ul>
+
+        <a href="https://bsky.app/profile/slyllama.net/feed/aaafb4cpfbeqi" target="_tab">
+            <div class="feed-btn"><span>Bluesky Feed</span></div>
+        </a>
     </div>
     
     <div style="height: 30px;"></div>
