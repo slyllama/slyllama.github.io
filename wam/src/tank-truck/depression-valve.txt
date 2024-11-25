@@ -1,9 +1,0 @@
-#name Depression Valve
-#description
-<ul>
-<li>1-1/2" BSP parallel thread.</li>
-<li>Fully adjustable.</li>
-<li>Made in Italy.</li>
-#data
-Code,Size,Thread
-MT-0810040,1 1/2",BSP

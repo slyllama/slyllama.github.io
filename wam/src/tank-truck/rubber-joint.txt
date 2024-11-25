@@ -1,7 +1,0 @@
-#name Rubber Joint
-#subtitle 6" - 10"
-#data
-Code,Size
-MT-0938150,6"
-MT-0938200,8"
-MT-0938250,10"
