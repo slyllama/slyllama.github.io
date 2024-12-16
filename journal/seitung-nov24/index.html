@@ -3,9 +3,9 @@
     <meta name="viewport" content="width=300, initial-scale=1.0">
     <meta charset="utf-8" />
 
-    <title>Seitung Spring Clean: Development Notes #1 &mdash; Slyllama</title>
+    <title>Jade Spring: Development Notes #1 &mdash; Slyllama</title>
     <meta name="description" content="Clear Dragonvoid blights, pick weeds, and utilise your jade bot technologies to decorate a house and garden in this cozy Guild Wars 2 fan game, set in the vibrant landscape of Seitung Province!">
-    <meta property="og:title" content="Seitung Spring Clean: Development Notes #1 &mdash; Slyllama" />
+    <meta property="og:title" content="Jade Spring: Development Notes #1 &mdash; Slyllama" />
     <meta property="og:description" content="Clear Dragonvoid blights, pick weeds, and utilise your jade bot technologies to decorate a house and garden in this cozy Guild Wars 2 fan game, set in the vibrant landscape of Seitung Province!" />
     <meta property="og:url" content="https://slyllama.net/journal/seitung-nov24" />
     <meta property="og:image" content="https://slyllama.net/journal/seitung-nov24/thumb.jpg" />
@@ -69,7 +69,7 @@
                         <div class="mobile-menu-link">Art <img src="https://slyllama.net/assets/icon-external.svg" class="external-icon" alt="External link." /></div>
                     </a></li>
                     <li><a href="https://slyllama.net/journal"><div class="mobile-menu-link">Journal</div></a></li>
-                    <li><a href="https://slyllama.net/journal/seitung-nov24"><div class="mobile-menu-link">Seitung Spring Clean</div></a></li>
+                    <li><a href="https://slyllama.net/journal/seitung-nov24"><div class="mobile-menu-link">Jade Spring</div></a></li>
                     <li><a href="mailto:slyllama@outlook.com"><div class="mobile-menu-link">Email</div></a></li>
                     <li><a href="https://bsky.app/profile/slyllama.bsky.social" target="_tab">
                         <div class="mobile-menu-link">Follow <img src="https://slyllama.net/assets/icon-external.svg" class="external-icon" alt="External link." /></div>
@@ -145,12 +145,12 @@
                     }
                 </style>
                 
-                <img alt="Seitung Spring Clean" class="banner-desktop seitung-banner" src="banner.jpg" />
-                <img alt="Seitung Spring Clean" class="banner-mobile seitung-banner" src="banner-mobile.jpg" />
+                <img alt="Jade Spring" class="banner-desktop seitung-banner" src="banner.jpg" />
+                <img alt="Jade Spring" class="banner-mobile seitung-banner" src="banner-mobile.jpg" />
                 
                 <div class="use-libertinus">
                     <div class="game-description">
-                        <p>Clear Dragonvoid blights, pick weeds, and utilise your jade bot technologies to decorate a house and garden in this tiny, cozy <a href="https://www.guildwars2.com/en/" target="_tab">Guild Wars 2</a> fan game, set in the vibrant landscape of Seitung Province!</p>
+                        <p>Clear Dragonvoid blights, pick weeds, and utilise your jade bot technologies to decorate a house and garden in this tiny, cozy <a href="https://www.guildwars2.com/en/" target="_tab">Guild Wars 2</a> fan game, <i>Jade Spring</i>, set in the vibrant landscape of Seitung Province!</p>
                 
                         <p style="color: #aaa;"><i>Nayos was not easy on us; the force of that Kryptis turret&rsquo;s blast left my plating cracked and my servos crushed and fragmented. Repair and recovery will be a slow process and, as grateful as I am for my jade technicians, it pains me to be away from the Commander for so long. Though perhaps, as I rehabilitate, I too can help build something meaningful.</i></p>
                 
@@ -170,9 +170,9 @@
                 
                     <h2 style="margin-right: 60px;">Development Notes #1</h2>
                 
-                    <img src="gameplay.jpg" alt="Screen capture of the Seitung Spring Clean game, showing a golden jade bot hovering above a verdant field filled with a few decorations like a fountain and fences." onclick="viewImg('gameplay.jpg', 'Screen capture of the Seitung Spring Clean game, showing a golden jade bot hovering above a verdant field filled with a few decorations like a fountain and fences.');" tabindex="-1" style="cursor: zoom-in;" />
+                    <img src="gameplay.jpg" alt="Screen capture of the Jade Spring game, showing a golden jade bot hovering above a verdant field filled with a few decorations like a fountain and fences." onclick="viewImg('gameplay.jpg', 'Screen capture of the Jade Spring game, showing a golden jade bot hovering above a verdant field filled with a few decorations like a fountain and fences.');" tabindex="-1" style="cursor: zoom-in;" />
                 
-                    <p>Heyo, Alec here with some quick notes about working on <i>Seitung Spring Clean</i>&thinsp;! This is a little fan game I&rsquo;ve been making in order to experience the entirety of the game development cycle (and also because Guild Wars 2 &ndash; <a href="https://youtu.be/j1Zjbaxy07A?si=a5-6LGv-b272Bhbs" target="_tab">Cantha in particular</a> &ndash; is very special to me). I&rsquo;ve touched on many aspects of development that really excite me, so I&rsquo;d like to write a little bit about them and where I&rsquo;m at with fitting all the pieces together. This will be a mix of a progress log and some personal aspirations, so thank you so much for taking a look!</p>
+                    <p>Heyo, Alec here with some quick notes about working on <i>Jade Spring</i> (formerly <i>Seitung Spring Clean</i>)&thinsp;! This is a little fan game I&rsquo;ve been making in order to experience the entirety of the game development cycle (and also because Guild Wars 2 &ndash; <a href="https://youtu.be/j1Zjbaxy07A?si=a5-6LGv-b272Bhbs" target="_tab">Cantha in particular</a> &ndash; is very special to me). I&rsquo;ve touched on many aspects of development that really excite me, so I&rsquo;d like to write a little bit about them and where I&rsquo;m at with fitting all the pieces together. This will be a mix of a progress log and some personal aspirations, so thank you so much for taking a look!</p>
                 
                     <div style="height: 10px;"></div>
                 
@@ -181,13 +181,13 @@
                     <div style="height: 20px;"></div>
                 
                     <div class="three-column">
-                        <img alt="The decoration pane for Seitung Spring Clean, showing a placeable fountain which you can preview." src="dev-pics/deco-pane.jpg" onclick="viewImg('dev-pics/deco-pane.jpg', 'The decoration pane for Seitung Spring Clean, showing a placeable fountain which you can preview.');" tabindex="-1" style="cursor: zoom-in;" />
+                        <img alt="The decoration pane for Jade Spring, showing a placeable fountain which you can preview." src="dev-pics/deco-pane.jpg" onclick="viewImg('dev-pics/deco-pane.jpg', 'The decoration pane for Jade Spring, showing a placeable fountain which you can preview.');" tabindex="-1" style="cursor: zoom-in;" />
                         <img alt="Captures in Blender of a Bloodstone-impacted pillar, featuring an eroded column with red crystal shards growing out of its badly damaged center." src="dev-pics/bloodstone.jpg" onclick="viewImg('dev-pics/bloodstone.jpg', 'Captures in Blender of a Bloodstone-impacted pillar, featuring an eroded column with red crystal shards growing out of its badly damaged center.');" tabindex="-1" style="cursor: zoom-in;" />
-                        <img alt="The bug-clearing minigame in Seitung Spring Clean, with a little horizontal nodule that you have to chase for a certain duration." src="dev-pics/fishing.jpg" onclick="viewImg('dev-pics/fishing.jpg', 'The bug-clearing minigame in Seitung Spring Clean, with a little horizontal nodule that you have to chase for a certain duration.');" tabindex="-1" style="cursor: zoom-in;" />
+                        <img alt="The bug-clearing minigame in Jade Spring, with a little horizontal nodule that you have to chase for a certain duration." src="dev-pics/fishing.jpg" onclick="viewImg('dev-pics/fishing.jpg', 'The bug-clearing minigame in Jade Spring, with a little horizontal nodule that you have to chase for a certain duration.');" tabindex="-1" style="cursor: zoom-in;" />
                         
-                        <img alt="Various little icons for Seitung Spring Clean, including the jade bot main icon as well as transformation tool icons, etc." src="dev-pics/icons.jpg" onclick="viewImg('dev-pics/icons.jpg', 'Various little icons for Seitung Spring Clean, including the jade bot main icon as well as transformation tool icons, etc.');" tabindex="-1" style="cursor: zoom-in;" />
-                        <img alt="A very early screenshot of Seitung Spring Clean, with a placeholder floor and very basic UI. Transformation arrows are already working, though." src="dev-pics/early.jpg" onclick="viewImg('dev-pics/early.jpg', 'A very early screenshot of Seitung Spring Clean, with a placeholder floor and very basic UI. Transformation arrows are already working, though.');" tabindex="-1" style="cursor: zoom-in;" />
-                        <img alt="The story panel for Seitung Spring Clean, with some placeholder text and art (my GW2 asura, Slyghtly Eepy)." src="dev-pics/story-panel.jpg" onclick="viewImg('dev-pics/story-panel.jpg', 'The story panel for Seitung Spring Clean, with some placeholder text and art (my GW2 asura, Slyghtly Eepy).');" tabindex="-1" style="cursor: zoom-in;" />
+                        <img alt="Various little icons for Jade Spring, including the jade bot main icon as well as transformation tool icons, etc." src="dev-pics/icons.jpg" onclick="viewImg('dev-pics/icons.jpg', 'Various little icons for Jade Spring, including the jade bot main icon as well as transformation tool icons, etc.');" tabindex="-1" style="cursor: zoom-in;" />
+                        <img alt="A very early screenshot of Jade Spring, with a placeholder floor and very basic UI. Transformation arrows are already working, though." src="dev-pics/early.jpg" onclick="viewImg('dev-pics/early.jpg', 'A very early screenshot of Jade Spring, with a placeholder floor and very basic UI. Transformation arrows are already working, though.');" tabindex="-1" style="cursor: zoom-in;" />
+                        <img alt="The story panel for Jade Spring, with some placeholder text and art (my GW2 asura, Slyghtly Eepy)." src="dev-pics/story-panel.jpg" onclick="viewImg('dev-pics/story-panel.jpg', 'The story panel for Jade Spring, with some placeholder text and art (my GW2 asura, Slyghtly Eepy).');" tabindex="-1" style="cursor: zoom-in;" />
                     </div>
                 
                     <div style="height: 36px;"></div>
