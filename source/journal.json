@@ -22,5 +22,13 @@
         "thumb": "$PAGEROOT/thumb.jpg",
         "date": "11.2024",
         "status": "published"
+    },
+    {
+        "name": "2025",
+        "title": "Onward to 2025!",
+        "hide-title": "true",
+        "desc": "Plans and thoughts for this coming year.",
+        "date": "12.2025",
+        "status": "draft"
     }
 ]
