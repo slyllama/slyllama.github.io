@@ -8,7 +8,7 @@
     <meta property="og:title" content="Polynomial Camera Projections for Kattabolt &mdash; Slyllama" />
     <meta property="og:description" content="Using customised camera projections for dramatic effect in comics!" />
     <meta property="og:url" content="https://slyllama.net/journal/fisheye" />
-    <meta property="og:image" content="https://slyllama.net/assets/thumb.jpg" />
+    <meta property="og:image" content="https://slyllama.net/journal/fisheye/final.jpg" />
     <meta property="og:type" content="website" />
     <meta name="theme-color" content="#1C3C83" data-react-helmet="true" />
     <link rel="apple-touch-icon" sizes="180x180" href="https://slyllama.net/assets/apple-icon-180px.png?ver=2">
@@ -80,12 +80,50 @@
             <div id="copy">
                 <a href="https://slyllama.net/journal/fisheye">
                     <p class="date draft-tag">DRAFT</p>
-                </a><div class="two-column">
-                    <img src="https://slyllama.net/journal/fisheye/test.jpg" alt="Computer scientist Don Knuth and type designer Hermann Zapf looking over font proofs displayed on a computer." onclick="viewImg('https://slyllama.net/journal/fisheye/test.jpg', 'Computer scientist Don Knuth and type designer Hermann Zapf looking over font proofs displayed on a computer.');" tabindex="-1" style="cursor: zoom-in;" />
-                    <img src="https://slyllama.net/journal/fisheye/test.jpg" alt="Computer scientist Don Knuth and type designer Hermann Zapf looking over font proofs displayed on a computer." onclick="viewImg('https://slyllama.net/journal/fisheye/test.jpg', 'Computer scientist Don Knuth and type designer Hermann Zapf looking over font proofs displayed on a computer.');" tabindex="-1" style="cursor: zoom-in;" />
+                </a><h2>Polynomial Camera Projections for Kattabolt</h2>
+                
+                <img src="https://slyllama.net/journal/fisheye/final.jpg" alt="A sweeping, dramatic angle of a medieval-like town, with figures running into it. A big plume of smoke billows up ahead." onclick="viewImg('https://slyllama.net/journal/fisheye/final.jpg', 'A sweeping, dramatic angle of a medieval-like town, with figures running into it. A big plume of smoke billows up ahead.');" tabindex="-1" style="cursor: zoom-in;" />
+                
+                <p><a href="https://kattabolt.com">Kattabolt</a> is <a href="https://bsky.app/profile/areyoshi.bsky.social">areyoshi&rsquo;s</a> incredible web-comic (a fantasy story about Alex, &ldquo;a &lsquo;Young Ambassador&rsquo; sent to the neighboring country of Thandinas to stay with the mysterious and powerful matriarch, Lord Kerri&rdquo;), which I&rsquo;ve been lucky enough to be able to assist on a little! If you haven&rsquo;t checked it out yet, you <a href="https://kattabolt.com/comics/1">totally should</a>; today I wanted to write a bit about a cool techinical principle that helped make the wide landscape zoom in <a href="https://kattabolt.com/comics/34">page 32</a> work out. It&rsquo;s a dramatic key moment because, at that point in the story &ndash; well, read for yourself and then come back! But it was important to underscore the beat with a striking angle and line of motion.</p>
+                
+                <p>A fisheye perspective <i>feels</i> like the intuitive solution &ndash; the spherical kinds of lenses that we emulate using this technique have a much wider and more sweeping field of view. But when you put it into practice, it doesn&rsquo;t quite seem to work! Take a look at the examples below.</p>
+                
+                <div class="two-column">
+                    <img src="https://slyllama.net/journal/fisheye/perspectival.jpg" alt="A collection of houses rendered in perspective." onclick="viewImg('https://slyllama.net/journal/fisheye/perspectival.jpg', 'A collection of houses rendered in perspective.');" tabindex="-1" style="cursor: zoom-in;" />
+                    <img src="https://slyllama.net/journal/fisheye/traditional-fisheye.jpg" alt="A collection of houses rendered in traditional fisheye perspective." onclick="viewImg('https://slyllama.net/journal/fisheye/traditional-fisheye.jpg', 'A collection of houses rendered in traditional fisheye perspective.');" tabindex="-1" style="cursor: zoom-in;" />
                 </div>
                 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>On the left is a standard perspectival view of a bunch of houses; on the right is an emulation of a basic fisheye lens. The view is certainly dramatic, but the way in which it draws the eye isn&rsquo;t really conducive to forming a convergent arc of motion; in a sense, in giving everything focus, the traditional fisheye perspective denies any one subject or area from having priority. This is where a <a href="https://docs.blender.org/manual/en/latest/render/cycles/object_settings/cameras.html#fisheye-lens-polynomial">fisheye polynomial projection</a> can come in useful.</p>
+                
+                <img src="https://slyllama.net/journal/fisheye/polynomial.jpg" alt="A collection of houses rendered in polynomial perspective, with the corners of the houses stretched out to the extents of the page." onclick="viewImg('https://slyllama.net/journal/fisheye/polynomial.jpg', 'A collection of houses rendered in polynomial perspective, with the corners of the houses stretched out to the extents of the page.');" tabindex="-1" style="cursor: zoom-in;" />
+                
+                <p>As far as I can tell, this method was devised to fix  and inconsistencies in a simple fisheye rendering emulation! It does this by mapping your image onto points on a sphere and then allowing you to manipulate certain characteristics of that sphere to correct issues with the image. This suits us perfectly because it exposes parameters that we can twist with villainous laughter to our own devices! In the case of page 32 we have shrunk the center of the image&rsquo;s projection and pulled out its extents, creating that warped look which really pulls the eye into the town and toward the action.</p>
+                
+                <p>Here are a couple more interesting images. The first is the initial rendered output which provided the polynomial base for inking and developing the final panel. The grid lines helped us to align various other elements to the correct perspective. And the second, well, that&rsquo;s an example of what happens when you push the polynomial values to their extremes; it&rsquo;s the same cluster of houses as the ones above!</p>
+                
+                <style>
+                    #additional img {
+                        border: 1px solid #555;
+                    }
+                </style>
+                
+                <div class="two-column" id="additional">
+                    <img src="https://slyllama.net/journal/fisheye/p32-render.jpg" alt="Rendered wide-angle fisheye view of a townscape, with planning grids rendered above it." onclick="viewImg('https://slyllama.net/journal/fisheye/p32-render.jpg', 'Rendered wide-angle fisheye view of a townscape, with planning grids rendered above it.');" tabindex="-1" style="cursor: zoom-in;" />
+                    <img src="https://slyllama.net/journal/fisheye/extreme-polynomial.jpg" alt="An extreme polynomial projection of a collection of houses, creating a very warped effect." onclick="viewImg('https://slyllama.net/journal/fisheye/extreme-polynomial.jpg', 'An extreme polynomial projection of a collection of houses, creating a very warped effect.');" tabindex="-1" style="cursor: zoom-in;" />
+                </div>
+                
+                <p>We&rsquo;re always finding new cool techniques to help achieve effects like this. The smoke in that same panel, for instance, is arranged using <a href="https://docs.blender.org/manual/en/latest/modeling/metas/introduction.html#visualization">Metaballs</a> (very neat implicit surfaces)! Once again I&rsquo;d highly recommend checking out Kattabolt if you haven&rsquo;t already (or read through it again if you have &ndash; there are many neat details to pick up); You can also support it on <a href="https://www.patreon.com/areyoshi">Patreon</a> and gain access to a bunch of other super-cool things.</p>
+                
+                <div style="display: block; margin: 50px auto; width: 600px; max-width: 100%;">
+                    <blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:byfeieo447alv4w7u4cus3eo/app.bsky.feed.post/3l6oevry22522" data-bluesky-cid="bafyreigrunsjw6cjl2ibwfcxgjnx3737sqqyk27vplcslgwvwu6zvfm4ki"><p lang="en">I&#x27;m apricot! I make the fantasy webcomic Kattabolt, about spunky cat girl Alex &#9889;&#128049;
+                
+                        kattabolt.carrd.co
+                        kattabolt.com
+                        areyoshi.com
+                        
+                        I post about Pokemon, my pets, &amp; my OCs. If you like middle-aged men with issues who fall in love: hello, ask me about my #OC ship called Kibble. I have no self control.<br><br><a href="https://bsky.app/profile/did:plc:byfeieo447alv4w7u4cus3eo/post/3l6oevry22522?ref_src=embed">[image or embed]</a></p>&mdash; apricot (<a href="https://bsky.app/profile/did:plc:byfeieo447alv4w7u4cus3eo?ref_src=embed">@areyoshi.bsky.social</a>) <a href="https://bsky.app/profile/did:plc:byfeieo447alv4w7u4cus3eo/post/3l6oevry22522?ref_src=embed">October 17, 2024 at 3:12 PM</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+                </div>
+                
             </div>
 
             <div id="footer-container">
