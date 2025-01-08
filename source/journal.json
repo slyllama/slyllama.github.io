@@ -29,6 +29,7 @@
         "title": "Onward to 2025!",
         "hide-title": "true",
         "desc": "Plans and thoughts for this coming year.",
+        "thumb": "$PAGEROOT/cori.jpg",
         "date": "12.2025",
         "status": "draft"
     }
