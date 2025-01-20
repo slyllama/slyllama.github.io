@@ -154,6 +154,13 @@ p > code {
     }
 }
 
+.caption {
+    color: #aaa;
+    font-style: italic;
+    margin-top: -0.5em;
+    text-align: center;
+}
+
 .date {
     color: $accent-blue;
     cursor: pointer;

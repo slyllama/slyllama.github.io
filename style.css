@@ -279,6 +279,13 @@ p > code {
   padding-left: 1em;
 }
 
+.caption {
+  color: #aaa;
+  font-style: italic;
+  margin-top: -0.5em;
+  text-align: center;
+}
+
 .date {
   color: #1C3C83;
   cursor: pointer;
