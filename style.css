@@ -280,9 +280,10 @@ p > code {
 }
 
 .caption {
-  color: #aaa;
+  color: #777;
   font-style: italic;
-  margin-top: -0.5em;
+  margin-bottom: 1.65em;
+  margin-top: -0.7em;
   text-align: center;
 }
 
