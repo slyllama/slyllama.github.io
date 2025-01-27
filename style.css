@@ -483,6 +483,15 @@ p > code {
   background: #eee;
 }
 
+#no-gen-ai {
+  border: 0;
+  display: block;
+  margin: 50px auto;
+  max-width: 75%;
+  outline: 0;
+  width: 156px;
+}
+
 .sep {
   display: block;
   height: 42px;
