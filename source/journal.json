@@ -41,5 +41,14 @@
         "thumb": "$PAGEROOT/thumb.jpg",
         "date": "1.2025",
         "status": "published"
+    },
+    {
+        "name": "gen-ai",
+        "title": "The Pestilence of Generative AI",
+        "hide-title": "false",
+        "desc": "((Description))",
+        "thumb": "$PAGEROOT/thumb.jpg",
+        "date": "2.2025",
+        "status": "draft"
     }
 ]
