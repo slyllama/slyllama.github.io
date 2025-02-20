@@ -104,7 +104,7 @@ i {
     font-style: italic;
 }
 
-p, #copy > ul, h3 {
+p, #copy > ul, li, h3 {
     color: $copy-color;
     line-height: $copy-line-height;
     hyphens: auto;

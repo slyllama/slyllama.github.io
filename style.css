@@ -234,17 +234,17 @@ i {
   font-style: italic;
 }
 
-p, #copy > ul, h3 {
+p, #copy > ul, li, h3 {
   color: #555;
   line-height: 26px;
   hyphens: auto;
   margin-bottom: 16px;
 }
-p a, #copy > ul a, h3 a {
+p a, #copy > ul a, li a, h3 a {
   color: #C93E30 !important;
   border-bottom: 1px solid #C93E30;
 }
-p a:hover, #copy > ul a:hover, h3 a:hover {
+p a:hover, #copy > ul a:hover, li a:hover, h3 a:hover {
   color: #1C3C83 !important;
   border-bottom: 1px solid #1C3C83;
 }
