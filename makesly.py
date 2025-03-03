@@ -123,7 +123,7 @@ generate_page("home", {
 
 generate_page("jade-spring", {
     "$TITLE": "Jade Spring",
-    "$DESC": "((Jade Spring description))" 
+    "$DESC": "Take some time to relax, potter, and decorate in Jade Spring, a small, independent Guild Wars 2 sandbox fan game." 
 }, "!")
 
 with open("source/journal.json") as file: # get list of journal entries
