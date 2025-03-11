@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+    <meta name="viewport" content="width=300, initial-scale=1.0">
+    <meta charset="utf-8" />
+
+    <title>Jade Spring: Development Notes #3 &mdash; Slyllama</title>
+    <meta name="description" content="Jade Spring progress continues! Read about the tour video, improvements to the game, and the Steam page coming soon!">
+    <meta property="og:title" content="Jade Spring: Development Notes #3 &mdash; Slyllama" />
+    <meta property="og:description" content="Jade Spring progress continues! Read about the tour video, improvements to the game, and the Steam page coming soon!" />
+    <meta property="og:url" content="https://slyllama.net/journal/jade-mar25" />
+    <meta property="og:image" content="https://slyllama.net/assets/thumb.jpg" />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#1C3C83" data-react-helmet="true" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://slyllama.net/assets/apple-icon-180px.png?ver=2">
+
+    <meta name="twitter:site" content="@slyllama">
+    <meta name="twitter:title" content="Jade Spring: Development Notes #3 &mdash; Slyllama">
+    <meta name="twitter:description" content="Jade Spring progress continues! Read about the tour video, improvements to the game, and the Steam page coming soon!">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:src" content="https://slyllama.net/assets/thumb.jpg">
+
+    <link rel="icon" type="image/png" href="https://slyllama.net/assets/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="https://slyllama.net/reset.css" />
+    <link rel="stylesheet" type="text/css" href="https://slyllama.net/style.css" />
+
+    <script src="https://slyllama.net/scripts.js" type="text/javascript"></script>
+
+    <body onload="loadDOM();">
+        <div id="img-view-container" onclick="closeImg();">
+            <div class="close-button" onclick="closeImg();"><img src="https://slyllama.net/assets/icon-close.svg" /></div>
+            <div id="img-view-inner">
+                <img id="img-view-img" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" />
+            </div>
+        </div>
+        
+        <div id="container">
+            <div id="header">
+                <div id="header-logo-container">
+                    <a href="https://slyllama.net">
+                        <img id="header-logo" src="https://slyllama.net/assets/logo.svg" alt="Slyllama." />
+                    </a>
+                </div>
+                
+                <span id="header-menu-btn" class="header-link focus-outline">
+                    <a id="mobile-menu-btn" onclick="toggleMobileMenu();" tabindex="0" style="display: block;">
+                        <img id="header-menu-btn-img" src="https://slyllama.net/assets/mobile-menu-btn.svg" alt="Mobile menu." />
+                    </a>
+                </span>
+                <ul id="header-desktop-links">
+                    <li class="header-link">
+                        <a href="https://www.artstation.com/slyllama" target="_tab">
+                            Art <img src="https://slyllama.net/assets/icon-external.svg" class="external-icon" alt="External link." />
+                        </a>
+                    </li>
+                    <li class="header-link"><a href="https://slyllama.net/journal">Journal</a></li>
+                    <li class="header-btn-container">
+                        <a href="https://bsky.app/profile/slyllama.net" target="_tab" title="Slyllama on Bluesky.">
+                            <span class="header-btn header-btn-bsky">
+                                <img style="height: 28px;" src="https://slyllama.net/assets/logo-bluesky.svg" alt="Slyllama on Bluesky."/>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="header-btn-container">
+                        <a href="mailto:slyllama@outlook.com" title="Email - slyllama@outlook.com.">
+                            <span class="header-btn">
+                                <img style="height: 26px;" src="https://slyllama.net/assets/logo-email.svg" alt="Email - slyllama@outlook.com." />
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <div style="clear: both;"></div>
+
+                <ul id="mobile-menu">
+                    <li><a href="https://www.artstation.com/slyllama" target="_tab">
+                        <div class="mobile-menu-link">Art <img src="https://slyllama.net/assets/icon-external.svg" class="external-icon" alt="External link." /></div>
+                    </a></li>
+                    <li><a href="https://slyllama.net/journal"><div class="mobile-menu-link">Journal</div></a></li>
+                    <li><a href="https://slyllama.net/journal/jade-jan25"><div class="mobile-menu-link">Jade Spring</div></a></li>
+                    <li><a href="mailto:slyllama@outlook.com"><div class="mobile-menu-link">Email</div></a></li>
+                    <li><a href="https://bsky.app/profile/slyllama.bsky.social" target="_tab">
+                        <div class="mobile-menu-link">Follow <img src="https://slyllama.net/assets/icon-external.svg" class="external-icon" alt="External link." /></div>
+                    </a></li>
+                </ul>
+            </div>
+
+            <div id="copy">
+                <a href="https://slyllama.net/journal/jade-mar25">
+                    <p class="date">3.2025</p>
+                </a><h2>Jade Spring: Development Notes #3</h2>
+                
+                <style>
+                    .disclaimer {
+                        opacity: 0.5;
+                        transition: opacity 0.1s;
+                    }
+                    .disclaimer:hover {
+                        opacity: 1.0;
+                    }
+                    .videoWrapper {
+                        position: relative;
+                        padding-bottom: 56.25%;
+                        /* 16:9 */
+                        padding-top: 25px;
+                        height: 0;
+                        margin: 40px 0;
+                    }
+                    .videoWrapper iframe {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    li {
+                        margin-bottom: 0 !important;
+                    }
+                </style>
+                
+                <p>Hey there everyone! Here&rsquo;s a super-speedy March summary for <a href="https://slyllama.net/jade-spring"><i>Jade Spring</i></a>. (How is it already March&hellip;) Last week I put out a <a href="https://youtu.be/BjZt3eDijF0" target="_tab">quick video tour of the game <img src="https://slyllama.net/assets/icon-external-ochre.svg" class="external-icon" alt="External link." /></a>, which you can check out below. (That&rsquo;s why these development notes are a bit late &ndash; I thought I&rsquo;d focus on putting the tour together first.) I&rsquo;m so grateful that people have been watching and enjoying it!</p>
+                
+                <div class="videoWrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/BjZt3eDijF0?si=Y7sVvv0-HNWGmBjd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                
+                <p>Lots and lots of additions and improvements have gone into the game even since the tour &ndash; I&rsquo;m trying to get things as intuitive, bug-free, and polished as possible. The problems that crop up as a result of competing mechanics and systems can also get pretty spicy<a style="border: none;" href="#footnote">*</a>, so I&rsquo;ve been addressing many of those.</p>
+                
+                <ul>
+                    <li>Implemented the Attenuator, which allows you to play Elder Dragon melodies on a piano keyboard in order to attune Dragonvoid-dispersing flux.</li>
+                    <li>Improved decoration pane layout; ability to search for decorations.</li>
+                    <li>Added New Kaineng City floors and stairs, rustic door, Janthiri bee, and more decorations and components.</li>
+                    <li>Ability to take screenshots in-game.</li>
+                    <li>Many bug fixes i.e., you can no longer &lsquo;lose&rsquo; a decoration out of bounds.</li>
+                    <li>Added Cid.</li>
+                </ul>
+                
+                <div style="height: 1em;">&nbsp;</div>
+                
+                <div class="two-column">
+                    <img src="https://slyllama.net/jade-spring/decorating.jpg" alt="Screenshot in Jade Spring showing the player adjusting a decoration by dragging it with a gizmo arrow." onclick="viewImg('https://slyllama.net/jade-spring/decorating.jpg', 'Screenshot in Jade Spring showing the player adjusting a decoration by dragging it with a gizmo arrow.');" tabindex="-1" style="cursor: zoom-in;" />
+                    <img src="https://slyllama.net/jade-spring/nkc.jpg" alt="Screenshot of a Canthan city made in Jade Spring." onclick="viewImg('https://slyllama.net/jade-spring/nkc.jpg', 'Screenshot of a Canthan city made in Jade Spring.');" tabindex="-1" style="cursor: zoom-in;" />
+                    <img src="https://slyllama.net/journal/jade-mar25/aaa.jpg" alt="Thank you for all of your support of Slyllama and Jade Spring." onclick="viewImg('https://slyllama.net/journal/jade-mar25/aaa.jpg', 'Thank you for all of your support of Slyllama and Jade Spring.');" tabindex="-1" style="cursor: zoom-in;" />
+                    <img src="https://slyllama.net/jade-spring/attenuator.jpg" alt="Screenshot of the bug-clearing minigame in Jade Spring - a tracker following a horizontal nodule with Asuran runes surrounding it." onclick="viewImg('https://slyllama.net/jade-spring/attenuator.jpg', 'Screenshot of the bug-clearing minigame in Jade Spring - a tracker following a horizontal nodule with Asuran runes surrounding it.');" tabindex="-1" style="cursor: zoom-in;" />
+                </div>
+                
+                <p>And lastly, the Steam page will be going up next <b>Monday the 17<sup>th</sup></b>! You&rsquo;ll be able to wishlist it and stuff, and eventually add it to your library for free once it&rsquo;s out. I know it&rsquo;s a small deal for a tiny fan game, but I&rsquo;ve never done that kinda thing before nor gotten nearly this far, so I&rsquo;m quite anxious but also very excited to have made it to this point. Thank you from my heart to everyone who&rsquo;s followed the development of <i>Jade Spring</i> and been so supportive of the adventure.</p>
+                
+                <div style="display: block; margin: 50px auto; width: 600px; max-width: 100%;">
+                    <blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:nb4ucl2d7r4s4ctb6ma22tmx/app.bsky.feed.post/3lk2mg2anr22v" data-bluesky-cid="bafyreidsnp52plljfms2cqwurh3spy2fnj532yfgju7lb7wlwog43ndcoe" data-bluesky-embed-color-mode="system"><p lang="en">Been tuning up Jade Spring&#x27;s decoration pane, it now has a search bar and displays effects and info more clearly! Also added a built-in screenshots feature 📷 to make sharing your garden easier #GameDev<br><br><a href="https://bsky.app/profile/did:plc:nb4ucl2d7r4s4ctb6ma22tmx/post/3lk2mg2anr22v?ref_src=embed">[image or embed]</a></p>&mdash; Alec 🌸 (<a href="https://bsky.app/profile/did:plc:nb4ucl2d7r4s4ctb6ma22tmx?ref_src=embed">@slyllama.net</a>) <a href="https://bsky.app/profile/did:plc:nb4ucl2d7r4s4ctb6ma22tmx/post/3lk2mg2anr22v?ref_src=embed">March 11, 2025 at 11:35 AM</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+                </div>
+                
+                <div style="height: 1em;"></div>
+                
+                <p><span id="footnote">*</span>For instance, there&rsquo;s a decoration which you can interact with to change the time of day. But what happens if the player puts it on top of a weed or bug swarm &ndash; which gets interacted with? And if the player puts two right next to each other, how do you prevent both dialogues from opening at once? These are the sorts of spicy (often unanticipated) problems that you have to solve.</p>
+                
+                <p class="disclaimer" style="margin-top: 3em;">Notice as specified by ArenaNet&rsquo;s <a href="https://www.arena.net/en/legal/content-terms-of-use" target="_tab">content terms of use</a>: &copy; ArenaNet LLC. All rights reserved. NCSOFT, ArenaNet, Guild Wars, Guild Wars 2, GW2, Guild Wars 2: Heart of Thorns, Guild Wars 2: Path of Fire, Guild Wars 2: End of Dragons, and Guild Wars 2: Secrets of the Obscure and all associated logos, designs, and composite marks are trademarks or registered trademarks of NCSOFT Corporation.</p>
+                
+            </div>
+
+            <div id="footer-container">
+                <p>
+                    &copy; Slyllama 2025.
+                    <span style="width: 0.5em; display: inline-block;"></span>
+                    <a href="https://slyllama.net/alec">Personal site.</a>
+                </p>
+            </div>
+            <img src="https://slyllama.net/assets/no-gen-ai.svg" id="no-gen-ai" />
+        </div>
+    </body>
+</html>
+

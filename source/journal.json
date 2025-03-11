@@ -51,4 +51,13 @@
         "date": "2.2025",
         "status": "draft"
     }
+    ,
+    {
+        "name": "jade-mar25",
+        "title": "Jade Spring: Development Notes #3",
+        "hide-title": "false",
+        "desc": "Jade Spring progress continues! Read about the tour video, improvements to the game, and the Steam page coming soon!",
+        "date": "3.2025",
+        "status": "published"
+    }
 ]
