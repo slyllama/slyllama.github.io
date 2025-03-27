@@ -253,6 +253,31 @@ p > code {
   font-size: 12.75pt;
 }
 
+/* Table styles */
+table {
+  color: #555;
+  font-size: 12.5pt;
+  line-height: 23.4px;
+  margin: 2em 0;
+  hyphens: auto;
+  width: 100%;
+}
+
+td {
+  border-bottom: 1px solid #CCC;
+  padding: 0.75em 0;
+}
+
+tr:first-child > td {
+  border-top: 1px solid #CCC;
+}
+
+td:first-child {
+  font-weight: bold;
+  min-width: 15%;
+  padding-right: 1em;
+}
+
 #container {
   display: block;
   margin: 90px auto;

@@ -49,5 +49,13 @@
         "desc": "Jade Spring progress continues! Read about the tour video, improvements to the game, and the Steam page coming soon!",
         "date": "3.2025",
         "status": "published"
+    },
+    {
+        "name": "jade-mar25-2",
+        "title": "Jade Spring: Development Notes #4",
+        "hide-title": "false",
+        "desc": "A second March development update for Jade Spring! Let's talk Steam, visual effects, graphics settings, outlines for the next couple of months, and more.",
+        "date": "3.2025",
+        "status": "draft"
     }
 ]
