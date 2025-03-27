@@ -43,16 +43,6 @@
         "status": "published"
     },
     {
-        "name": "gen-ai",
-        "title": "The Pestilence of Generative AI",
-        "hide-title": "false",
-        "desc": "((Description))",
-        "thumb": "$PAGEROOT/thumb.jpg",
-        "date": "2.2025",
-        "status": "draft"
-    }
-    ,
-    {
         "name": "jade-mar25",
         "title": "Jade Spring: Development Notes #3",
         "hide-title": "false",
