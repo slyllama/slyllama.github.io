@@ -138,6 +138,7 @@ p > code {
 table {
     border-collapse: collapse;
     color: $copy-color;
+    display: inline-table;
     font-size: $copy-font-size - 1;
     line-height: $copy-line-height * 0.9;
     hyphens: auto;
