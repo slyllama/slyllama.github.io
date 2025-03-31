@@ -159,13 +159,8 @@ td > ul > li {
     padding-left: 0.75em !important;
 }
 
-tr {
-    border-bottom: 1px solid $separator-color;
-}
-
-tr:first-child > td {
-    border-top: 1px solid $separator-color;
-}
+tr { border-bottom: 1px solid $separator-color; }
+tr:first-child { border-top: 1px solid $separator-color; }
 
 td:first-child {
     font-weight: bold;
