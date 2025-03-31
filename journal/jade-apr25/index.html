@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+    <meta name="viewport" content="width=300, initial-scale=1.0">
+    <meta charset="utf-8" />
+
+    <title>Jade Spring: Development Notes #4 &mdash; Slyllama</title>
+    <meta name="description" content="A second March development update for Jade Spring! Let's talk Steam, visual effects, graphics settings, outlines for the next couple of months, and more.">
+    <meta property="og:title" content="Jade Spring: Development Notes #4 &mdash; Slyllama" />
+    <meta property="og:description" content="A second March development update for Jade Spring! Let's talk Steam, visual effects, graphics settings, outlines for the next couple of months, and more." />
+    <meta property="og:url" content="https://slyllama.net/journal/jade-apr25" />
+    <meta property="og:image" content="https://slyllama.net/assets/thumb.jpg" />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#1C3C83" data-react-helmet="true" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://slyllama.net/assets/apple-icon-180px.png?ver=2">
+
+    <meta name="twitter:site" content="@slyllama">
+    <meta name="twitter:title" content="Jade Spring: Development Notes #4 &mdash; Slyllama">
+    <meta name="twitter:description" content="A second March development update for Jade Spring! Let's talk Steam, visual effects, graphics settings, outlines for the next couple of months, and more.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:src" content="https://slyllama.net/assets/thumb.jpg">
+
+    <link rel="icon" type="image/png" href="https://slyllama.net/assets/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="https://slyllama.net/reset.css" />
+    <link rel="stylesheet" type="text/css" href="https://slyllama.net/style.css" />
+
+    <script src="https://slyllama.net/scripts.js" type="text/javascript"></script>
+
+    <body onload="loadDOM();">
+        <div id="img-view-container" onclick="closeImg();">
+            <div class="close-button" onclick="closeImg();"><img src="https://slyllama.net/assets/icon-close.svg" /></div>
+            <div id="img-view-inner">
+                <img id="img-view-img" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" />
+            </div>
+        </div>
+        
+        <div id="container">
+            <div id="header">
+                <div id="header-logo-container">
+                    <a href="https://slyllama.net">
+                        <img id="header-logo" src="https://slyllama.net/assets/logo.svg" alt="Slyllama." />
+                    </a>
+                </div>
+                
+                <span id="header-menu-btn" class="header-link focus-outline">
+                    <a id="mobile-menu-btn" onclick="toggleMobileMenu();" tabindex="0" style="display: block;">
+                        <img id="header-menu-btn-img" src="https://slyllama.net/assets/mobile-menu-btn.svg" alt="Mobile menu." />
+                    </a>
+                </span>
+                <ul id="header-desktop-links">
+                    <li class="header-link">
+                        <a href="https://www.artstation.com/slyllama" target="_tab">
+                            Art <img src="https://slyllama.net/assets/icon-external.svg" class="external-icon" alt="External link." />
+                        </a>
+                    </li>
+                    <li class="header-link"><a href="https://slyllama.net/journal">Journal</a></li>
+                    <li class="header-btn-container">
+                        <a href="https://bsky.app/profile/slyllama.net" target="_tab" title="Slyllama on Bluesky.">
+                            <span class="header-btn header-btn-bsky">
+                                <img style="height: 28px;" src="https://slyllama.net/assets/logo-bluesky.svg" alt="Slyllama on Bluesky."/>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="header-btn-container">
+                        <a href="mailto:slyllama@outlook.com" title="Email - slyllama@outlook.com.">
+                            <span class="header-btn">
+                                <img style="height: 26px;" src="https://slyllama.net/assets/logo-email.svg" alt="Email - slyllama@outlook.com." />
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <div style="clear: both;"></div>
+
+                <ul id="mobile-menu">
+                    <li><a href="https://www.artstation.com/slyllama" target="_tab">
+                        <div class="mobile-menu-link">Art <img src="https://slyllama.net/assets/icon-external.svg" class="external-icon" alt="External link." /></div>
+                    </a></li>
+                    <li><a href="https://slyllama.net/journal"><div class="mobile-menu-link">Journal</div></a></li>
+                    <li><a href="https://slyllama.net/journal/jade-jan25"><div class="mobile-menu-link">Jade Spring</div></a></li>
+                    <li><a href="mailto:slyllama@outlook.com"><div class="mobile-menu-link">Email</div></a></li>
+                    <li><a href="https://bsky.app/profile/slyllama.bsky.social" target="_tab">
+                        <div class="mobile-menu-link">Follow <img src="https://slyllama.net/assets/icon-external.svg" class="external-icon" alt="External link." /></div>
+                    </a></li>
+                </ul>
+            </div>
+
+            <div id="copy">
+                <a href="https://slyllama.net/journal/jade-apr25">
+                    <p class="date draft-tag">DRAFT</p>
+                </a><style>
+                    .warning {
+                        border-radius: 2px;
+                        background: #ffe9b4;
+                        padding-bottom: 1px;
+                        padding-top: 16px;
+                    }
+                    .warning > p {
+                        color: #6a5f4e !important;
+                        font-size: 12.5pt;
+                        line-height: 1.17em;
+                        padding: 0 20px;
+                    }
+                </style>
+                
+                <h2>Jade Spring: Development Notes #4</h2>
+                
+                <p>Hello everyone! Oh boy, I can&rsquo;t believe it&rsquo;s already April; <i>Jade Spring</i> is five months old (and 530 commits in). In March I put together a little <a href="https://youtu.be/BjZt3eDijF0" target="_tab">tour video</a> and set the <a href="https://store.steampowered.com/app/3561310/Jade_Spring" target="_tab">Steam store page</a> live, in addition to completing the game&rsquo;s little tutorial story and adding a bunch of features (like &ldquo;jumping puzzle mode,&rdquo; which toggles gravity for your Jade Bot, and a &ldquo;ping&rdquo; feature that allows you to find weeds and bugs hiding nearby).</p>
+                
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3561310/d114313a98695dcd97f494aa5a7d1813b6a7e85a/ss_d114313a98695dcd97f494aa5a7d1813b6a7e85a.jpg" alt="Screenshot of the Jade Bot looking at an arcane compendium in my Guild Wars 2 fan game, Jade Spring. The book has Asuran script on it." onclick="viewImg('https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3561310/d114313a98695dcd97f494aa5a7d1813b6a7e85a/ss_d114313a98695dcd97f494aa5a7d1813b6a7e85a.jpg', 'Screenshot of the Jade Bot looking at an arcane compendium in my Guild Wars 2 fan game, Jade Spring. The book has Asuran script on it.');" tabindex="-1" style="cursor: zoom-in;"/>
+                <p class="caption">Shhh&hellip; nobody will ever know that the text on this book&rsquo;s cover was upside down when this capture was taken.</p>
+                
+                <p>I&rsquo;ve just gotten access to Steam key distribution, so I&rsquo;m gonna start a broader private test of this tiny game in the next couple of days. I&rsquo;m really keen to have other people try it out as soon as possible, so I&rsquo;m thinking of <u>publically releasing the beta in May</u>, if this month&rsquo;s testing and additions go well! The version of the game would be a completable version of <i>Jade Spring</i>, just without some core decorations. The main thing I&rsquo;d be hoping to get back from a beta release are a lot of suggestions and bug reports which I can use to make the game as polished as I can. It&rsquo;s spicy because while I want to release the neatest and most crafted game that I can, I also happen to be an absolute newbie; and there are some things I can only learn and apply by seeing them happen in action!<a id="nerd" href="#ftn-1" style="border: none; padding: 0 2px; text-decoration: underline;"><sup>1</sup></a> So I&rsquo;m trying to find a good balance between the two, and I&rsquo;m so lucky to have such cool and understanding folks around.</p>
+                
+                <p>If everything went well the plan would be to take the beta tag off between June and July, and release the game with an additional set of decorations, &ldquo;Xunlai Neon&rdquo;. This is an idea I&rsquo;m super excited about: a collection of cyberpunk-style Kaineng noodle stands, neon signs, air vents, and substation components! In general, I love the idea of being able to release small expansions to the game every now and then.</p>
+                
+                <p>As always, thank you so much for following <i>Jade Spring&rsquo;s</i> progress. I started working on it as a way to learn game development, and to understand what I love so much about my time in Guild Wars 2. (Actually, a <a href="https://www.creativebloq.com/art/digital-art/we-focused-on-creating-something-timeless-why-guild-wars-2-remains-an-artistically-unique-game" target="_tab">wonderful interview with their art director Aaron Coberly</a> was published recently, which explains my feelings quite well.) Seeing interest build in the game has been unfathomable to me, and I&rsquo;m super-duper hoping that I can put something out there that will be fun and relaxing, and perhaps resonate with Guild Wars 2 enjoyers a bit.</p>
+                
+                <div style="height: 1em;"></div>
+                
+                <div class="two-column">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3561310/d114313a98695dcd97f494aa5a7d1813b6a7e85a/ss_d114313a98695dcd97f494aa5a7d1813b6a7e85a.jpg" alt="Screenshot of the Jade Bot looking at an arcane compendium in my Guild Wars 2 fan game, Jade Spring. The book has Asuran script on it." onclick="viewImg('https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3561310/d114313a98695dcd97f494aa5a7d1813b6a7e85a/ss_d114313a98695dcd97f494aa5a7d1813b6a7e85a.jpg', 'Screenshot of the Jade Bot looking at an arcane compendium in my Guild Wars 2 fan game, Jade Spring. The book has Asuran script on it.');" tabindex="-1" style="cursor: zoom-in;"/>
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3561310/d114313a98695dcd97f494aa5a7d1813b6a7e85a/ss_d114313a98695dcd97f494aa5a7d1813b6a7e85a.jpg" alt="Screenshot of the Jade Bot looking at an arcane compendium in my Guild Wars 2 fan game, Jade Spring. The book has Asuran script on it." onclick="viewImg('https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3561310/d114313a98695dcd97f494aa5a7d1813b6a7e85a/ss_d114313a98695dcd97f494aa5a7d1813b6a7e85a.jpg', 'Screenshot of the Jade Bot looking at an arcane compendium in my Guild Wars 2 fan game, Jade Spring. The book has Asuran script on it.');" tabindex="-1" style="cursor: zoom-in;"/>
+                </div>
+                
+                <h4>Rough Schedule &ndash; Summary</h4>
+                
+                <div class="warning"><p><b>Note:</b> these dates are indications and could definitely change! Hey, I&rsquo;m just a little guy! But I&rsquo;ll do my best to stick to &rsquo;em.</p></div>
+                
+                <table>
+                    <tr>
+                        <td>March 31<sup>st</sup></td>
+                        <td>I get access to distributing beta Steam keys!</td>
+                    </tr>
+                    <tr>
+                        <td>April</td>
+                        <td>Final core gameplay additions and internal testing.</td>
+                    </tr>
+                    <tr>
+                        <td>Early May</td>
+                        <td>
+                            <ul>
+                                <li>Public beta release of <i>Jade Spring</i>.</li>
+                                <li>Core furniture set.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>June &minus; July</td>
+                        <td>
+                            <ul>
+                                <li>Public release of <i>Jade Spring</i>.</li>
+                                <li>&ldquo;Xunlai Neon&rdquo; decorations expansion.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                
+                <div style="height: 2.5em;"></div>
+                
+                <!--Footnotes-->
+                
+                <p><a id="ftn-1" style="border: none; padding: 0 2px;"><sup>1</sup></a> For example, setting up all of the <a href="https://partner.steamgames.com/" target="_tab">Steamworks</a> integrations (the pipeline which gets your game files on Steam, as well as configuring statistics and achievements) was quite daunting to work out! I used <a href="https://youtu.be/J0GrG-AffCI?si=TIM6ZQEfQRy5HbKU" target="_tab">this video</a> as a basis and it was super-useful. I also recently how to resolve <a href="https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts" target="_tab">merge conflicts</a> in the version control system, &rsquo;cause I&rsquo;d worked on two different machines with two different versions (the laptop was offline at a caf&eacute;, heh). Going through the same-file conflicts in VSCode was cool, and I was blown away to see it all work out just fine. I&rsquo;m yapping on a bit, but yeah &ndash; nerd stuff!</p>
+                
+                <div style="height: 1em;"></div>
+                
+                <p class="disclaimer" style="margin-top: 3em;">Notice as specified by ArenaNet&rsquo;s <a href="https://www.arena.net/en/legal/content-terms-of-use" target="_tab">content terms of use</a>: &copy; ArenaNet LLC. All rights reserved. NCSOFT, ArenaNet, Guild Wars, Guild Wars 2, GW2, Guild Wars 2: Heart of Thorns, Guild Wars 2: Path of Fire, Guild Wars 2: End of Dragons, and Guild Wars 2: Secrets of the Obscure and all associated logos, designs, and composite marks are trademarks or registered trademarks of NCSOFT Corporation.</p>
+                
+            </div>
+
+            <div id="footer-container">
+                <p>
+                    &copy; Slyllama 2025.
+                    <span style="width: 0.5em; display: inline-block;"></span>
+                    <a href="https://slyllama.net/alec">Personal site.</a>
+                </p>
+            </div>
+            <img src="https://slyllama.net/assets/no-gen-ai.svg" id="no-gen-ai" />
+        </div>
+    </body>
+</html>
+
