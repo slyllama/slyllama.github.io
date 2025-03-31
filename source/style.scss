@@ -143,30 +143,26 @@ table {
     margin-top: 26px !important;
     width: 100%;
 }
-
 td {
+    border: 0 !important;
     padding: 0.75em 0;
 }
-
+td:first-child {
+    font-weight: bold;
+    min-width: 15%;
+    padding-right: 1em;
+}
 td > ul {
     margin-left: 1.5em !important;
 }
-
 td > ul > li {
     color: $copy-color;
     line-height: $copy-line-height * 0.9;
     margin-bottom: 0;
     padding-left: 0.75em !important;
 }
-
 tr { border-bottom: 1px solid $separator-color; }
 tr:first-child { border-top: 1px solid $separator-color; }
-
-td:first-child {
-    font-weight: bold;
-    min-width: 15%;
-    padding-right: 1em;
-}
 
 #container {
     display: block;

@@ -273,7 +273,14 @@ table {
 }
 
 td {
+  border: 0 !important;
   padding: 0.75em 0;
+}
+
+td:first-child {
+  font-weight: bold;
+  min-width: 15%;
+  padding-right: 1em;
 }
 
 td > ul {
@@ -293,12 +300,6 @@ tr {
 
 tr:first-child {
   border-top: 1px solid #CCC;
-}
-
-td:first-child {
-  font-weight: bold;
-  min-width: 15%;
-  padding-right: 1em;
 }
 
 #container {
