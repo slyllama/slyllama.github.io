@@ -264,6 +264,7 @@ p > code {
 
 /* Table styles */
 table {
+  border-collapse: collapse;
   color: #555;
   font-size: 12.5pt;
   line-height: 23.4px;
