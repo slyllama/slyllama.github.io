@@ -145,7 +145,6 @@ table {
 }
 
 td {
-    border-bottom: 1px solid $separator-color;
     padding: 0.75em 0;
 }
 
@@ -158,6 +157,10 @@ td > ul > li {
     line-height: $copy-line-height * 0.9;
     margin-bottom: 0;
     padding-left: 0.75em !important;
+}
+
+tr {
+    border-bottom: 1px solid $separator-color;
 }
 
 tr:first-child > td {
@@ -399,6 +402,10 @@ td:first-child {
     border-bottom: 1px solid $separator-color;
     display: none;
     margin-top: 34px;
+
+    li {
+        margin-bottom: 0 !important;
+    }
 
     li > a > div {
         background: #fff;

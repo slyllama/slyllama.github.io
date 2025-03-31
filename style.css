@@ -273,7 +273,6 @@ table {
 }
 
 td {
-  border-bottom: 1px solid #CCC;
   padding: 0.75em 0;
 }
 
@@ -286,6 +285,10 @@ td > ul > li {
   line-height: 23.4px;
   margin-bottom: 0;
   padding-left: 0.75em !important;
+}
+
+tr {
+  border-bottom: 1px solid #CCC;
 }
 
 tr:first-child > td {
@@ -527,6 +530,9 @@ td:first-child {
   border-bottom: 1px solid #CCC;
   display: none;
   margin-top: 34px;
+}
+#mobile-menu li {
+  margin-bottom: 0 !important;
 }
 #mobile-menu li > a > div {
   background: #fff;
