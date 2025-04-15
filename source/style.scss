@@ -8,6 +8,11 @@
 }
 
 @font-face {
+    font-family: 'Sitelen';
+    src: url('assets/sitelen.ttf');
+}
+
+@font-face {
     font-family: 'Cabin';
     font-weight: bold;
     src: url('assets/cabin-semibold.ttf');
@@ -19,14 +24,13 @@
 }
 
 @font-face {
-    font-family: 'Libertinus Sans';
-    src: url('assets/libertinus-sans.otf');
-}
-
-
-@font-face {
     font-family: 'Work Sans';
     src: url('assets/work-sans.ttf');
+}
+
+.toki-pona {
+    font-family: "Sitelen";
+    text-transform: lowercase;
 }
 
 a {
