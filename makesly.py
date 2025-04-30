@@ -126,6 +126,12 @@ generate_page("jade-spring", {
     "$DESC": "Take some time to relax, potter, and decorate in Jade Spring, a small, independent Guild Wars 2 sandbox fan game." 
 }, "!")
 
+generate_page("ticket", {
+    "$TITLE": "Jade Spring Ticket",
+    "$DESC": "Hey there! Use this form to send a Jade Spring bug report or feature request, or any questions and comments you have! Thank you so much for taking the time to do so." 
+}, "!")
+
+
 with open("source/journal.json") as file: # get list of journal entries
     journal_list = json.load(file)
 
