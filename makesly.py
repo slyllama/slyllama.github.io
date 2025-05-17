@@ -81,7 +81,7 @@ def add_viewers(data):
     return(u)
 
 
-def generate_page(name, data, custom_path = "!"):
+def generate_page(name, data, custom_path = "!", custom_thumb = False):
     print(" * Generating page '" + name + "'...")
     cnt = ""
     if custom_path != "!":
@@ -93,7 +93,12 @@ def generate_page(name, data, custom_path = "!"):
     fmt_cnt = indent_content(cnt)
 
     t = template
-    t = t.replace("$THUMB", "$ROOT/assets/thumb.jpg")
+
+    if custom_thumb == False:
+        t = t.replace("$THUMB", "$ROOT/assets/thumb.jpg")
+    else:
+        t = t.replace("$THUMB", "$PAGEROOT/thumb.jpg")
+    
     t = t.replace("$CONTENT", fmt_cnt)
     t = t.replace("$ROOT", root_prefix)
 
@@ -101,7 +106,7 @@ def generate_page(name, data, custom_path = "!"):
         t = t.replace("$PAGEROOT", root_prefix + output_path)
     else:
         t = t.replace("$PAGEROOT", output_path)
-
+    
     u = add_viewers(t)
     
     for tag in data:
@@ -124,7 +129,7 @@ generate_page("home", {
 generate_page("jade-spring", {
     "$TITLE": "Jade Spring",
     "$DESC": "Take some time to relax, potter, and decorate in Jade Spring, a small, independent Guild Wars 2 sandbox fan game." 
-}, "!")
+}, "!", True)
 
 generate_page("ticket", {
     "$TITLE": "Jade Spring Ticket",

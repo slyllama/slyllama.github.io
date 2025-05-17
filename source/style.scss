@@ -170,6 +170,31 @@ td > ul > li {
 tr { border-bottom: 1px solid $separator-color; }
 tr:first-child { border-top: 1px solid $separator-color; }
 
+.button {
+    background: $accent-blue;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 16pt;
+    font-weight: bold;
+    margin-bottom: 7px;
+    padding: 12px 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+
+    span {
+        margin: 0 10px;
+    }
+}
+
+.button:hover {
+    outline: 1px solid #222;
+}
+
+.button-subtle {
+    background: $copy-color;
+}
+
 #container {
     display: block;
     margin: 90px auto;
@@ -424,6 +449,12 @@ tr:first-child { border-top: 1px solid $separator-color; }
     width: 156px;
 }
 
+.question {
+    color: $accent-ochre;
+    font-weight: 500;
+    margin-top: 1em;
+}
+
 .sep {
     display: block;
     height: $sep-height;
@@ -463,6 +494,19 @@ tr:first-child { border-top: 1px solid $separator-color; }
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+.warning {
+        border-radius: 2px;
+        background: #ffe9b4;
+        padding-bottom: 1px;
+        padding-top: 16px;
+    }
+    .warning > p {
+        color: #6a5f4e !important;
+        font-size: 12.5pt;
+        line-height: 1.17em;
+        padding: 0 20px;
+    }
 
 /*I use this when I need a mobile and desktop version of a header*/
 .banner-desktop { display: block !important; }
