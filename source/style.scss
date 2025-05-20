@@ -452,7 +452,10 @@ tr:first-child { border-top: 1px solid $separator-color; }
 .question {
     color: $accent-blue;
     font-weight: 500;
+    margin-bottom: 0.5em;
     margin-top: 1.6em;
+    padding-top: 6px;
+    border-top: 1px solid #97acda;
 }
 
 .sep {

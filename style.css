@@ -587,7 +587,10 @@ tr:first-child {
 .question {
   color: #1C3C83;
   font-weight: 500;
+  margin-bottom: 0.5em;
   margin-top: 1.6em;
+  padding-top: 6px;
+  border-top: 1px solid #97acda;
 }
 
 .sep {

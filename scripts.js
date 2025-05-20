@@ -61,6 +61,15 @@ function toggleMobileMenu() {
     }
 }
 
+function toggleElementVisibility(element) {
+    var e = document.getElementById(element);
+    if (e.style.display == "none") {
+        e.style.display = "block";
+    } else {
+        e.style.display = "none";
+    }
+}
+
 /* Image viewer functions */
 
 function viewImg(url, alt = "Image.") {
