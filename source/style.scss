@@ -460,6 +460,20 @@ tr:first-child { border-top: 1px solid $separator-color; }
     height: $sep-height;
 }
 
+#top-banner {
+    background: #1C3C83;
+    background: linear-gradient(90deg,rgba(28, 60, 131, 1) 0%, rgba(27, 92, 117, 1) 50%, rgba(34, 107, 35, 1) 100%);
+    color: #fff;
+    padding: 12px 0;
+    text-align: center;
+    width: 100%;
+
+    a {
+        color: #fff;
+        text-decoration: underline;
+    }
+}
+
 .two-column {
     display: grid;
     gap: 10px;
@@ -504,7 +518,7 @@ tr:first-child { border-top: 1px solid $separator-color; }
     .warning > p {
         color: #6a5f4e !important;
         font-size: 12.5pt;
-        line-height: 1.17em;
+        line-height: 1.21em;
         padding: 0 20px;
     }
 
