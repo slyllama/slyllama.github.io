@@ -587,7 +587,7 @@ tr:first-child {
 .question {
   color: #1C3C83;
   font-weight: 500;
-  margin-top: 1em;
+  margin-top: 1.6em;
 }
 
 .sep {
@@ -653,7 +653,7 @@ tr:first-child {
 .warning > p {
   color: #6a5f4e !important;
   font-size: 12.5pt;
-  line-height: 1.21em;
+  line-height: 1.27em;
   padding: 0 20px;
 }
 
