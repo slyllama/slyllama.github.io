@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+    <meta name="viewport" content="width=300, initial-scale=1.0">
+    <meta charset="utf-8" />
+
+    <title>Jade Spring: Development Notes #5 &mdash; Slyllama</title>
+    <meta name="description" content="The Jade Spring beta has been released! Here are a couple of quick notes on its release and progress on the game.">
+    <meta property="og:title" content="Jade Spring: Development Notes #5 &mdash; Slyllama" />
+    <meta property="og:description" content="The Jade Spring beta has been released! Here are a couple of quick notes on its release and progress on the game." />
+    <meta property="og:url" content="https://slyllama.net/journal/jade-may25" />
+    <meta property="og:image" content="https://slyllama.net/assets/thumb.jpg" />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#1C3C83" data-react-helmet="true" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://slyllama.net/assets/apple-icon-180px.png?ver=2">
+
+    <meta name="twitter:site" content="@slyllama">
+    <meta name="twitter:title" content="Jade Spring: Development Notes #5 &mdash; Slyllama">
+    <meta name="twitter:description" content="The Jade Spring beta has been released! Here are a couple of quick notes on its release and progress on the game.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:src" content="https://slyllama.net/assets/thumb.jpg">
+
+    <link rel="icon" type="image/png" href="https://slyllama.net/assets/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="https://slyllama.net/reset.css" />
+    <link rel="stylesheet" type="text/css" href="https://slyllama.net/style.css" />
+
+    <script src="https://slyllama.net/scripts.js" type="text/javascript"></script>
+
+    <body onload="loadDOM();">
+        <img id="bg" src="https://slyllama.net/assets/bg.jpg" />
+        <div id="top-banner"><a href="https://slyllama.net/jade-spring">Jade Spring beta available!</a></div>
+
+        <div id="img-view-container" onclick="closeImg();">
+            <div class="close-button" onclick="closeImg();"><img src="https://slyllama.net/assets/icon-close.svg" /></div>
+            <div id="img-view-inner">
+                <img id="img-view-img" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" />
+            </div>
+        </div>
+        
+        <div id="container">
+            <div id="header">
+                <div id="header-logo-container">
+                    <a href="https://slyllama.net">
+                        <img id="header-logo" src="https://slyllama.net/assets/logo.svg" alt="Slyllama." />
+                    </a>
+                </div>
+                
+                <span id="header-menu-btn" class="header-link focus-outline">
+                    <a id="mobile-menu-btn" onclick="toggleMobileMenu();" tabindex="0" style="display: block;">
+                        <img id="header-menu-btn-img" src="https://slyllama.net/assets/mobile-menu-btn.svg" alt="Mobile menu." />
+                    </a>
+                </span>
+                <ul id="header-desktop-links">
+                    <li class="header-link">
+                        <a href="https://www.artstation.com/slyllama" target="_tab">
+                            Art <span class="toki-pona">lukin musi</span>
+                        </a>
+                    </li>
+                    <li class="header-link"><a href="https://slyllama.net/journal">
+                        Journal <span class="toki-pona">lipu mi</span></a></li>
+                    <li class="header-btn-container">
+                        <a href="https://bsky.app/profile/slyllama.net" target="_tab" title="Slyllama on Bluesky.">
+                            <span class="header-btn header-btn-bsky">
+                                <img style="height: 28px;" src="https://slyllama.net/assets/logo-bluesky.svg" alt="Slyllama on Bluesky."/>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="header-btn-container">
+                        <a href="mailto:slyllama@outlook.com" title="Email - slyllama@outlook.com.">
+                            <span class="header-btn">
+                                <img style="height: 26px;" src="https://slyllama.net/assets/logo-email.svg" alt="Email - slyllama@outlook.com." />
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <div style="clear: both;"></div>
+
+                <ul id="mobile-menu">
+                    <li><a href="https://www.artstation.com/slyllama" target="_tab">
+                        <div class="mobile-menu-link">Art <span class="toki-pona">lukin musi</span> <img src="https://slyllama.net/assets/icon-external.svg" class="external-icon" alt="External link." /></div>
+                    </a></li>
+                    <li><a href="https://slyllama.net/journal"><div class="mobile-menu-link">Journal <span class="toki-pona">lipu mi</span></div></a></li>
+                    <li><a href="https://slyllama.net/jade-spring"><div class="mobile-menu-link">Jade Spring</div></a></li>
+                    <li><a href="mailto:slyllama@outlook.com"><div class="mobile-menu-link">Email</div></a></li>
+                    <li><a href="https://bsky.app/profile/slyllama.bsky.social" target="_tab">
+                        <div class="mobile-menu-link">Follow <img src="https://slyllama.net/assets/icon-external.svg" class="external-icon" alt="External link." /></div>
+                    </a></li>
+                </ul>
+            </div>
+
+            <div id="copy">
+                <a href="https://slyllama.net/journal/jade-may25">
+                    <p class="date draft-tag">DRAFT</p>
+                </a><style>
+                    .links li {
+                        margin-bottom: 0.1em !important;
+                    }
+                </style>
+                
+                <h2><a href="https://slyllama.net/jade-spring">Jade Spring</a>: Development Notes #5</h2>
+                
+                <img src="apricot.jpg" alt="A dim atmosphere of ruins and a bee in the Jade Spring game." onclick="viewImg('apricot.jpg', 'A dim atmosphere of ruins and a bee in the Jade Spring game.');" tabindex="-1" style="cursor: zoom-in;"/>
+                
+                <ul class="links" style="margin-bottom: 2em;">
+                    <li><a href="https://slyllama.net/jade-spring">
+                        The <i>Jade Spring Website</i>
+                    </a></li>
+                    <li><a href="https://slyllama.net/jade-spring/#oaq">
+                        Occasionally Asked Questions
+                    </a></li>
+                </ul>
+                
+                <p>Jade Spring <i>is available on <a href="https://slyllama.itch.io/jade-spring">itch.io</a>! I&rsquo;m really hoping that the <a href="https://store.steampowered.com/app/3561310/Jade_Spring">Steam version</a> will be available soon, but I am still waiting on a reply from them. The design above was built by <a href="https://bsky.app/profile/did:plc:byfeieo447alv4w7u4cus3eo">apricot</a>, who was able to make a whole new beautiful atmosphere in the game!</i></p>
+                
+                <p>It&rsquo;s a beautiful day outside. Flowers are blooming; birds are singing&hellip; On days like these, kids like you&hellip; Should try out the <i>Jade Spring</i> beta, which went up last Friday!<a href="#sans"><sup>1</sup></a> OMG, I&rsquo;m so thankful for the comments I&rsquo;ve received from the people who have played the game already. A special thanks to <a href="https://bsky.app/profile/did:plc:byfeieo447alv4w7u4cus3eo">apricot</a> (<i>Jade Spring&rsquo;s</i> incredible principal character designer), our <a href="https://bsky.app/profile/slyllama.net/post/3lps3jj76b22s">testers</a>, and <a href="https://bsky.app/profile/poksmox.bsky.social">Poksmox</a>, who very kindly tried the game out on his stream.</p>
+                
+                <p>I&rsquo;ve collected a list of things I want to add and fix, and I&rsquo;m hoping I can have the first lot of changes done this week! There are things on there ranging from grass clumps to plushie decorations to (possibly) being able to duplicate a selection of items. I&rsquo;ve received a lot of great feedback and suggestions, and I also have a bunch more decorations in mind to add. (There are also thoughts of an expansion, hehe, but that will come a little later.) I really hope everything goes well with getting the game through Steam because it will make it a lot easier for people to update (which is the main reason I&rsquo;d planned for <a href="https://store.steampowered.com/app/3561310/Jade_Spring">Steam</a>). For now though, I&rsquo;ll also be adding a little indicator on the main menu of the <a href="https://slyllama.itch.io/jade-spring">itch.io</a> version which tells you if your version is behind the latest one.</p>
+                
+                <p>Thank you again to anyone has tried out <i>Jade Spring</i>. There will be more updates to come here and on <a href="https://bsky.app/profile/slyllama.net">Bluesky</a>; I&rsquo;m thinking of making a behind-the-scenes video describing some weird and interesting stuff behind the game! For example, there is an inaccessible weed which will haunt the underneath of the map forever; it&rsquo;s there so that the &ldquo;crumb&rdquo; system (weeds, bugs, and Dragonvoid blights) will never be fully unloaded.</p>
+                
+                <div style="height: 2em;"></div>
+                
+                <p><span id="sans"><sup>1</sup></span>This quote was bought to you by William &ldquo;Sans&rdquo; Shakespeare, the beloved author of Julius Sans-sar.</p>
+                
+            </div>
+
+            <div id="footer-container">
+                <p>
+                    &copy; Slyllama 2025.
+                    <span style="width: 0.5em; display: inline-block;"></span>
+                    <a href="https://slyllama.net/alec">Personal site.</a>
+                </p>
+            </div>
+            <img src="https://slyllama.net/assets/no-gen-ai.svg" id="no-gen-ai" />
+        </div>
+    </body>
+</html>
+

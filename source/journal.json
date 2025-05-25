@@ -57,5 +57,13 @@
         "desc": "A freshly-baked development update for Jade Spring! Let's talk Steam, graphical performance and settings, outlines for the next couple of months, and more.",
         "date": "4.2025",
         "status": "published"
+    },
+    {
+        "name": "jade-may25",
+        "title": "Jade Spring: Development Notes #5",
+        "hide-title": "false",
+        "desc": "The Jade Spring beta has been released! Here are a couple of quick notes on its release and progress on the game.",
+        "date": "5.2025",
+        "status": "draft"
     }
 ]
