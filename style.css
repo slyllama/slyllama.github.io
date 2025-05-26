@@ -311,6 +311,7 @@ tr:first-child {
 
 .button {
   background: #1C3C83;
+  background: linear-gradient(90deg, rgb(28, 60, 131) 0%, rgb(27, 92, 117) 25%, rgb(27, 92, 117) 75%, rgb(28, 60, 131) 100%);
   border-radius: 3px;
   color: #fff;
   font-size: 16pt;
@@ -614,9 +615,11 @@ tr:first-child {
 
 #top-banner {
   background: #1C3C83;
-  background: linear-gradient(90deg, rgb(28, 60, 131) 0%, rgb(27, 92, 117) 50%, rgb(34, 107, 35) 100%);
+  background: linear-gradient(90deg, rgb(28, 60, 131) 0%, rgb(27, 92, 117) 25%, rgb(27, 92, 117) 75%, rgb(28, 60, 131) 100%);
   color: #fff;
-  padding: 12px 0;
+  font-size: 11pt;
+  padding-top: 10px;
+  padding-bottom: 8px;
   text-align: center;
   width: 100%;
 }
