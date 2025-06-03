@@ -65,5 +65,14 @@
         "desc": "The Jade Spring beta has been released! Here are a couple of quick notes on its release and progress on the game.",
         "date": "5.2025",
         "status": "published"
+    },
+    {
+        "name": "jade-v1-1b",
+        "title": "Jade Spring: v1.1b Update",
+        "hide-title": "false",
+        "thumb": "$PAGEROOT/thumb.jpg",
+        "desc": "Check out new noodle decorations, decoration set duplication, bug fixes, and more in this Jade Spring beta update!",
+        "date": "6.2025",
+        "status": "published"
     }
 ]
