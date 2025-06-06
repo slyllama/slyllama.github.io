@@ -24,8 +24,8 @@
 }
 
 @font-face {
-    font-family: 'Work Sans';
-    src: url('assets/work-sans.ttf');
+    font-family: 'Joffi';
+    src: url('assets/joffi.ttf');
 }
 
 .toki-pona {
@@ -73,21 +73,20 @@ code, pre {
 }
 
 h1 {
-    border: 3px solid $accent-blue;
-    font-family: 'Work Sans', sans-serif;
-    font-size: $copy-title-size + 2pt;
+    font-family: "Joffi", "Georgia", sans-serif;
+    font-size: $copy-title-size + 17pt;
     font-weight: 500;
-    letter-spacing: -0.04em;
-    padding: 10px 17px;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
     color: $accent-blue;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
+    min-width: 300px;
     max-width: 80%;
     width: fit-content;
     word-wrap: break-word;
 
     @media (max-width: $mobile-width) {
-        font-size: $copy-title-size - 3pt;
+        font-size: $copy-title-size + 8pt;
     }
 }
 
@@ -190,7 +189,7 @@ tr:first-child { border-top: 1px solid $separator-color; }
 
 #bg {
     bottom: 0;
-    opacity: 0.12;
+    opacity: 0.14;
     position: fixed;
     right: 0;
     width: 50%;
@@ -424,14 +423,15 @@ tr:first-child { border-top: 1px solid $separator-color; }
 .journal-list-pad {
     border-top: 1px solid $separator-color;
     display: block;
-    height: 29px;
-    margin-top: 29px;
+    height: 20px;
+    margin-top: 20px;
     width: 100%;
 }
 
 .journal-list-title {
-    font-size: 20pt;
-    margin-bottom: 8px;
+    font-size: 16pt;
+    font-weight: 700;
+    margin-bottom: 4px;
 }
 
 #mobile-menu {
@@ -478,17 +478,23 @@ tr:first-child { border-top: 1px solid $separator-color; }
 }
 
 #top-banner {
-    background: #1C3C83;
-    background: linear-gradient(90deg, rgba(28, 60, 131, 1) 0%, rgba(27, 92, 117, 1) 25%, rgba(27, 92, 117, 1) 75%, rgba(28, 60, 131, 1) 100%);
-    color: #fff;
-    font-size: 11pt;
-    padding-top: 10px;
-    padding-bottom: 8px;
-    text-align: center;
+    margin: 10px auto;
     width: 100%;
 
     a {
         color: #fff;
+    }
+
+    div {
+        background: #1C3C83;
+        background: linear-gradient(90deg, rgba(28, 60, 131, 1) 0%, rgba(27, 92, 117, 1) 25%, rgba(27, 92, 117, 1) 75%, rgba(28, 60, 131, 1) 100%);
+        border-radius: 14px;
+        color: #fff;
+        font-size: 11pt;
+        margin: 0 11px;
+        padding-top: 10px;
+        padding-bottom: 8px;
+        text-align: center;
     }
 }
 

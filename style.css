@@ -156,8 +156,8 @@
   src: url("assets/intel-one-mono.ttf");
 }
 @font-face {
-  font-family: "Work Sans";
-  src: url("assets/work-sans.ttf");
+  font-family: "Joffi";
+  src: url("assets/joffi.ttf");
 }
 .toki-pona {
   font-family: "Sitelen";
@@ -203,22 +203,21 @@ code, pre {
 }
 
 h1 {
-  border: 3px solid #1C3C83;
-  font-family: "Work Sans", sans-serif;
-  font-size: 27pt;
+  font-family: "Joffi", "Georgia", sans-serif;
+  font-size: 42pt;
   font-weight: 500;
-  letter-spacing: -0.04em;
-  padding: 10px 17px;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
   color: #1C3C83;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
+  min-width: 300px;
   max-width: 80%;
   width: fit-content;
   word-wrap: break-word;
 }
 @media (max-width: 700px) {
   h1 {
-    font-size: 22pt;
+    font-size: 33pt;
   }
 }
 
@@ -328,7 +327,7 @@ tr:first-child {
 
 #bg {
   bottom: 0;
-  opacity: 0.12;
+  opacity: 0.14;
   position: fixed;
   right: 0;
   width: 50%;
@@ -563,14 +562,15 @@ tr:first-child {
 .journal-list-pad {
   border-top: 1px solid #CCC;
   display: block;
-  height: 29px;
-  margin-top: 29px;
+  height: 20px;
+  margin-top: 20px;
   width: 100%;
 }
 
 .journal-list-title {
-  font-size: 20pt;
-  margin-bottom: 8px;
+  font-size: 16pt;
+  font-weight: 700;
+  margin-bottom: 4px;
 }
 
 #mobile-menu {
@@ -614,17 +614,22 @@ tr:first-child {
 }
 
 #top-banner {
-  background: #1C3C83;
-  background: linear-gradient(90deg, rgb(28, 60, 131) 0%, rgb(27, 92, 117) 25%, rgb(27, 92, 117) 75%, rgb(28, 60, 131) 100%);
-  color: #fff;
-  font-size: 11pt;
-  padding-top: 10px;
-  padding-bottom: 8px;
-  text-align: center;
+  margin: 10px auto;
   width: 100%;
 }
 #top-banner a {
   color: #fff;
+}
+#top-banner div {
+  background: #1C3C83;
+  background: linear-gradient(90deg, rgb(28, 60, 131) 0%, rgb(27, 92, 117) 25%, rgb(27, 92, 117) 75%, rgb(28, 60, 131) 100%);
+  border-radius: 14px;
+  color: #fff;
+  font-size: 11pt;
+  margin: 0 11px;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  text-align: center;
 }
 
 .two-column {
