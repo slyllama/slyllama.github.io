@@ -1,123 +1,39 @@
-<style>
-    .use-libertinus p, li {
-        color: #ddd;
-        line-height: 1.23em;
-    }
-    .use-libertinus li {
-        margin-bottom: 2px;
-    }
-    .use-libertinus ul {
-        margin-bottom: 20px;
-    }
-    .disclaimer {
-        opacity: 0.5;
-        transition: opacity 0.1s;
-    }
-    .disclaimer:hover {
-        opacity: 1.0;
-    }
-    .game-description {
-        background: #375032;
-        border-radius: 2px;
-        padding-top: 36px;
-        padding-bottom: 20px;
-    }
-    .game-description p, .game-description ul {
-        color: #ddd;
-        margin-left: 24px;
-        margin-right: 24px;
-    }
-    .game-description a {
-        border-bottom: 1px solid #8de67c !important;
-        color: #8de67c !important;
-    }
-    .game-description a:hover {
-        border-bottom: 1px solid #eee !important;
-        color: #eee !important;
-    }
-    .feed-btn {
-        background: #eee;
-        border: 1px solid black;
-        border-radius: 2px;
-        box-shadow: none;
-        color: #24501c;
-        cursor: pointer;
-        display: block;
-        font-size: 15pt;
-        padding: 7px 0;
-        margin: 27px auto;
-        width: fit-content;
-        max-width: 100%;
-    }
+<h1>Jade Spring: Development Notes #1</h1>
 
-    .feed-btn > span {
-        margin: 0 50px;
-    }
+<img src="gameplay.jpg" alt="Screen capture of the Jade Spring game, showing a golden jade bot hovering above a verdant field filled with a few decorations like a fountain and fences." $VIEWER />
 
-    .feed-btn:hover {
-        background: #fff;
-        box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
-    }
-</style>
+<p style="text-align: center"><a href="https://www.slyllama.net/jade-spring/">Visit the main Jade Spring page!</a><br/>&nbsp;</p>
 
-<img alt="Jade Spring" class="banner-desktop seitung-banner" src="banner.jpg" />
-<img alt="Jade Spring" class="banner-mobile seitung-banner" src="banner-mobile.jpg" />
+<p>Heyo, Alec here with some quick notes about working on <i>Jade Spring</i> (formerly <i>Seitung Spring Clean</i>)&thinsp;! This is a little fan game I&rsquo;ve been making in order to experience the entirety of the game development cycle (and also because Guild Wars 2 &ndash; <a href="https://youtu.be/j1Zjbaxy07A?si=a5-6LGv-b272Bhbs" target="_tab">Cantha in particular</a> &ndash; is very special to me). I&rsquo;ve touched on many aspects of development that really excite me, so I&rsquo;d like to write a little bit about them and where I&rsquo;m at with fitting all the pieces together. This will be a mix of a progress log and some personal aspirations, so thank you so much for taking a look!</p>
 
-<div class="use-libertinus">
-    <p style="text-align: center"><a href="https://www.slyllama.net/jade-spring/">Visit the main Jade Spring page!</a><br/>&nbsp;</p>
-    <div class="game-description">
-        <p>Clear Dragonvoid blights, pick weeds, make melodies, and utilise your jade bot technologies to decorate a house and garden in this tiny, cozy <a href="https://www.guildwars2.com/en/" target="_tab">Guild Wars 2</a> fan game, <i>Jade Spring</i>, set in the vibrant landscape of Seitung Province!</p>
+<div style="height: 10px;"></div>
 
-        <p style="color: #aaa;"><i>Nayos was not easy on the Commander and I; the force of a Kryptis turret&rsquo;s blast left my plating cracked and my servos crushed and fragmented. Repair and recovery is a slow process and, as grateful as I am for my jade technicians, it pains me to be away from the Commander for so long. Though perhaps, as I rehabilitate, I too can help build something meaningful.</i></p>
+<p>The design brief for the game is a simple one: <a href="https://wiki.guildwars2.com/wiki/Homestead" target="_tab">GW2 homesteads</a> meets <a href="https://store.steampowered.com/app/613100/House_Flipper/" target ="tab">House Flipper</a>, set in the verdancy of an End of Dragons-inspired map. I am trying to keep <i>Seitung</i>&rsquo;s scope very small, but to think in a modular, extensible, systems-driven way! The truth is that my interests lie much more in environment art and music than in engineering, but the reward of having a system to drop all of that art into is quite satisfying. Two of my favourite parts of the process have been UI design and shader-writing. It&rsquo;s cool seeing painted UI architecture being built up to frame the 3D-world; and shaders are just magic &ndash; being able to make things wobble, ripple, dissolve, and aberrate feels like some kind of arcane spell.*</p>
 
-        <ul style="margin-right: 10%;">
-            <li>Build with decorations inspired by a variety of Guild Wars 2 regions, from the verdant plains of Cantha to the gleaming towers of the Astral Ward.</li>
-            <li>Play minigames to clear infestations featuring unique visual effects. Collect karma to spend on unlocking special decorations and permanent upgrades.</li>
-            <li>Perfect your creation with a robust adjustment system: move, scale, and rotate decorations, and manage items in bulk.</li>
-        </ul>
+<div style="height: 20px;"></div>
 
-        <a href="https://bsky.app/profile/slyllama.net/" target="_tab">
-            <div class="feed-btn"><span>Keep Up on Bluesky!</span></div>
-        </a>
-    </div>
+<div class="three-column">
+    <img alt="The decoration pane for Jade Spring, showing a placeable fountain which you can preview." src="dev-pics/deco-pane.jpg" $VIEWER />
+    <img alt="Captures in Blender of a Bloodstone-impacted pillar, featuring an eroded column with red crystal shards growing out of its badly damaged center." src="dev-pics/bloodstone.jpg" $VIEWER />
+    <img alt="The bug-clearing minigame in Jade Spring, with a little horizontal nodule that you have to chase for a certain duration." src="dev-pics/fishing.jpg" $VIEWER />
     
-    <div style="height: 30px;"></div>
-
-    <h2 style="margin-right: 60px;">Development Notes #1</h2>
-
-    <img src="gameplay.jpg" alt="Screen capture of the Jade Spring game, showing a golden jade bot hovering above a verdant field filled with a few decorations like a fountain and fences." $VIEWER />
-
-    <p>Heyo, Alec here with some quick notes about working on <i>Jade Spring</i> (formerly <i>Seitung Spring Clean</i>)&thinsp;! This is a little fan game I&rsquo;ve been making in order to experience the entirety of the game development cycle (and also because Guild Wars 2 &ndash; <a href="https://youtu.be/j1Zjbaxy07A?si=a5-6LGv-b272Bhbs" target="_tab">Cantha in particular</a> &ndash; is very special to me). I&rsquo;ve touched on many aspects of development that really excite me, so I&rsquo;d like to write a little bit about them and where I&rsquo;m at with fitting all the pieces together. This will be a mix of a progress log and some personal aspirations, so thank you so much for taking a look!</p>
-
-    <div style="height: 10px;"></div>
-
-    <p>The design brief for the game is a simple one: <a href="https://wiki.guildwars2.com/wiki/Homestead" target="_tab">GW2 homesteads</a> meets <a href="https://store.steampowered.com/app/613100/House_Flipper/" target ="tab">House Flipper</a>, set in the verdancy of an End of Dragons-inspired map. I am trying to keep <i>Seitung</i>&rsquo;s scope very small, but to think in a modular, extensible, systems-driven way! The truth is that my interests lie much more in environment art and music than in engineering, but the reward of having a system to drop all of that art into is quite satisfying. Two of my favourite parts of the process have been UI design and shader-writing. It&rsquo;s cool seeing painted UI architecture being built up to frame the 3D-world; and shaders are just magic &ndash; being able to make things wobble, ripple, dissolve, and aberrate feels like some kind of arcane spell.*</p>
-
-    <div style="height: 20px;"></div>
-
-    <div class="three-column">
-        <img alt="The decoration pane for Jade Spring, showing a placeable fountain which you can preview." src="dev-pics/deco-pane.jpg" $VIEWER />
-        <img alt="Captures in Blender of a Bloodstone-impacted pillar, featuring an eroded column with red crystal shards growing out of its badly damaged center." src="dev-pics/bloodstone.jpg" $VIEWER />
-        <img alt="The bug-clearing minigame in Jade Spring, with a little horizontal nodule that you have to chase for a certain duration." src="dev-pics/fishing.jpg" $VIEWER />
-        
-        <img alt="Various little icons for Jade Spring, including the jade bot main icon as well as transformation tool icons, etc." src="dev-pics/icons.jpg" $VIEWER />
-        <img alt="A very early screenshot of Jade Spring, with a placeholder floor and very basic UI. Transformation arrows are already working, though." src="dev-pics/early.jpg" $VIEWER />
-        <img alt="The story panel for Jade Spring, with some placeholder text and art (my GW2 asura, Slyghtly Eepy)." src="dev-pics/story-panel.jpg" $VIEWER />
-    </div>
-
-    <div style="height: 36px;"></div>
-
-    <p>A lot of the core mechanics of the game are now in place: you can move and scale decorations (relative to either their current orientation or world coordinates), and the &lsquo;fishing&rsquo; minigame used to clear weeds exists in a basic form. Next I&rsquo;ll be completing the feature set (rotation still needs to be implemented, for example) and fixing and tuning existing ones. Then the step I&rsquo;ve been looking forward to is producing the visual effects and a variety of decorations for building with, a practice I really wanna improve and develop.</p>
-
-    <p>I&rsquo;m hoping to have something to share in the not-too-distant future; I&rsquo;m going to test (inflict?) <i>Seitung</i> on some friends as soon as it&rsquo;s in some kind of MVP state, and then polish it as much as I can before sharing it with a wider audience (while keeping the scope of the game agressively tiny and cozy). I&rsquo;ve already learned so much from it &ndash; both by looking closely at the beautiful props of the world of Guild Wars (getting distracted for perhaps just a couple of metas along the way, xD) and by implementing a game world with mechanics from start to finish. Thank you so much for checking all of this out!</p>
-
-    <div style="height: 32px;"></div>
-
-    <p>*Just a quick little tangent! A lot of the core mechanics and visual bases for <i>Seitung</i> came out of a dream-diary project I was messing around with at the same time, <a target="_tab" href="https://www.slyllama.net/alec/dwelt.html">Dwelt</a>. (Basically more prop art studies &ndash; <a target="_tab" href="https://bsky.app/profile/slyllama.net/post/3l6uim7ffbn2h">here&rsquo;s one</a>!) It took me so long to work out simple things like the MMO-style camera and the foliage spawner &ndash; I&rsquo;m really not so good with math. But having them done made it a lot easier to modularise them and put them into <i>Seitung</i>. If I can polish them enough I&rsquo;ll try and make public available versions of them, if they&rsquo;re gonna help!</p>
-
-    <div style="display: block; margin: 50px auto; width: 600px; max-width: 100%;">
-        <blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:nb4ucl2d7r4s4ctb6ma22tmx/app.bsky.feed.post/3lbsp6gqygs2j" data-bluesky-cid="bafyreicsv27on3ibacpd22t4sl6bizc5hbtps2dlr4yc3qe3flvivergby"><p lang="en">Here&#x27;s a tiny bit of WIP gameplay footage!!<br><br><a href="https://bsky.app/profile/did:plc:nb4ucl2d7r4s4ctb6ma22tmx/post/3lbsp6gqygs2j?ref_src=embed">[image or embed]</a></p>&mdash; Alec 🌸 (<a href="https://bsky.app/profile/did:plc:nb4ucl2d7r4s4ctb6ma22tmx?ref_src=embed">@slyllama.net</a>) <a href="https://bsky.app/profile/did:plc:nb4ucl2d7r4s4ctb6ma22tmx/post/3lbsp6gqygs2j?ref_src=embed">Nov 26, 2024 at 12:42 pm</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
-    </div>
-
-    <p class="disclaimer">Notice as specified by ArenaNet&rsquo;s <a href="https://www.arena.net/en/legal/content-terms-of-use" target="_tab">content terms of use</a>: &copy; ArenaNet LLC. All rights reserved. NCSOFT, ArenaNet, Guild Wars, Guild Wars 2, GW2, Guild Wars 2: Heart of Thorns, Guild Wars 2: Path of Fire, Guild Wars 2: End of Dragons, and Guild Wars 2: Secrets of the Obscure and all associated logos, designs, and composite marks are trademarks or registered trademarks of NCSOFT Corporation.</p>
+    <img alt="Various little icons for Jade Spring, including the jade bot main icon as well as transformation tool icons, etc." src="dev-pics/icons.jpg" $VIEWER />
+    <img alt="A very early screenshot of Jade Spring, with a placeholder floor and very basic UI. Transformation arrows are already working, though." src="dev-pics/early.jpg" $VIEWER />
+    <img alt="The story panel for Jade Spring, with some placeholder text and art (my GW2 asura, Slyghtly Eepy)." src="dev-pics/story-panel.jpg" $VIEWER />
 </div>
+
+<div style="height: 36px;"></div>
+
+<p>A lot of the core mechanics of the game are now in place: you can move and scale decorations (relative to either their current orientation or world coordinates), and the &lsquo;fishing&rsquo; minigame used to clear weeds exists in a basic form. Next I&rsquo;ll be completing the feature set (rotation still needs to be implemented, for example) and fixing and tuning existing ones. Then the step I&rsquo;ve been looking forward to is producing the visual effects and a variety of decorations for building with, a practice I really wanna improve and develop.</p>
+
+<p>I&rsquo;m hoping to have something to share in the not-too-distant future; I&rsquo;m going to test (inflict?) <i>Seitung</i> on some friends as soon as it&rsquo;s in some kind of MVP state, and then polish it as much as I can before sharing it with a wider audience (while keeping the scope of the game agressively tiny and cozy). I&rsquo;ve already learned so much from it &ndash; both by looking closely at the beautiful props of the world of Guild Wars (getting distracted for perhaps just a couple of metas along the way, xD) and by implementing a game world with mechanics from start to finish. Thank you so much for checking all of this out!</p>
+
+<div style="height: 32px;"></div>
+
+<p>*Just a quick little tangent! A lot of the core mechanics and visual bases for <i>Seitung</i> came out of a dream-diary project I was messing around with at the same time, <a target="_tab" href="https://www.slyllama.net/alec/dwelt.html">Dwelt</a>. (Basically more prop art studies &ndash; <a target="_tab" href="https://bsky.app/profile/slyllama.net/post/3l6uim7ffbn2h">here&rsquo;s one</a>!) It took me so long to work out simple things like the MMO-style camera and the foliage spawner &ndash; I&rsquo;m really not so good with math. But having them done made it a lot easier to modularise them and put them into <i>Seitung</i>. If I can polish them enough I&rsquo;ll try and make public available versions of them, if they&rsquo;re gonna help!</p>
+
+<div style="display: block; margin: 50px auto; width: 600px; max-width: 100%;">
+    <blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:nb4ucl2d7r4s4ctb6ma22tmx/app.bsky.feed.post/3lbsp6gqygs2j" data-bluesky-cid="bafyreicsv27on3ibacpd22t4sl6bizc5hbtps2dlr4yc3qe3flvivergby"><p lang="en">Here&#x27;s a tiny bit of WIP gameplay footage!!<br><br><a href="https://bsky.app/profile/did:plc:nb4ucl2d7r4s4ctb6ma22tmx/post/3lbsp6gqygs2j?ref_src=embed">[image or embed]</a></p>&mdash; Alec 🌸 (<a href="https://bsky.app/profile/did:plc:nb4ucl2d7r4s4ctb6ma22tmx?ref_src=embed">@slyllama.net</a>) <a href="https://bsky.app/profile/did:plc:nb4ucl2d7r4s4ctb6ma22tmx/post/3lbsp6gqygs2j?ref_src=embed">Nov 26, 2024 at 12:42 pm</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+</div>
+
+<p class="disclaimer">Notice as specified by ArenaNet&rsquo;s <a href="https://www.arena.net/en/legal/content-terms-of-use" target="_tab">content terms of use</a>: &copy; ArenaNet LLC. All rights reserved. NCSOFT, ArenaNet, Guild Wars, Guild Wars 2, GW2, Guild Wars 2: Heart of Thorns, Guild Wars 2: Path of Fire, Guild Wars 2: End of Dragons, and Guild Wars 2: Secrets of the Obscure and all associated logos, designs, and composite marks are trademarks or registered trademarks of NCSOFT Corporation.</p>
