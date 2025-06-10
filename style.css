@@ -427,7 +427,7 @@ tr:first-child {
   border-radius: 3px;
   background: #f7f7f7;
   margin-top: 150px;
-  padding: 14px 0;
+  padding: 21px 0;
   width: 100%;
 }
 #footer-container p {
@@ -624,7 +624,7 @@ tr:first-child {
 #top-banner div {
   background: #1C3C83;
   background: linear-gradient(90deg, rgb(28, 60, 131) 0%, rgb(27, 92, 117) 25%, rgb(27, 92, 117) 75%, rgb(28, 60, 131) 100%);
-  border-radius: 14px;
+  border-radius: 7px;
   color: #fff;
   font-size: 11pt;
   margin: 0 11px;
