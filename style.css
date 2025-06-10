@@ -249,7 +249,7 @@ i {
 
 p, #copy > ul, li, h3 {
   color: #555;
-  line-height: 26px;
+  line-height: 1.33em;
   hyphens: auto;
   margin-bottom: 16px;
 }
@@ -272,7 +272,7 @@ table {
   color: #555;
   display: inline-table;
   font-size: 12.5pt;
-  line-height: 23.4px;
+  line-height: 1.197em;
   hyphens: auto;
   margin-top: 26px !important;
   width: 100%;
@@ -295,7 +295,7 @@ td > ul {
 
 td > ul > li {
   color: #555;
-  line-height: 23.4px;
+  line-height: 1.197em;
   margin-bottom: 0;
   padding-left: 0.75em !important;
 }
@@ -327,7 +327,7 @@ tr:first-child {
 
 #bg {
   bottom: 0;
-  opacity: 0.14;
+  opacity: 0.69;
   position: fixed;
   right: 0;
   width: 50%;
@@ -335,6 +335,7 @@ tr:first-child {
 }
 @media (max-width: 910px) {
   #bg {
+    opacity: 0.35;
     width: 90%;
   }
 }

@@ -189,13 +189,14 @@ tr:first-child { border-top: 1px solid $separator-color; }
 
 #bg {
     bottom: 0;
-    opacity: 0.14;
+    opacity: 0.69;
     position: fixed;
     right: 0;
     width: 50%;
     z-index: -10;
 
     @media (max-width: $desktop-width) {
+        opacity: 0.35;
         width: 90%;
     }
 }
