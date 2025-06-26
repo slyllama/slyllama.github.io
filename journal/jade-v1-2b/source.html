@@ -6,51 +6,47 @@
 
 <h1>Jade Spring 1.2<span style="text-transform: none;">b</span></h1>
 
-<p>((You&rsquo;re gonna forget to put something here, aren&rsquo;t you.))</p>
+<img src="$PAGEROOT/banner.jpg" alt="Screenshot of my Guild Wars 2 fan game, Jade Spring, showing the Jade Bot at night with arches, string lights, and an overall cozy setting." $VIEWER />
 
-<div class="warning">
+<p>Hello everyone! First of all, thank you so much everyone for playing and enjoying <i>Jade Spring</i>; I&rsquo;ve been so happy to hear people&rsquo;s comments and ideas. OMG, Mukluk covered the game (<a href="https://www.youtube.com/watch?v=f6ruGcFeGms" target="_tab">you can watch it here</a>), I couldn&rsquo;t believe it. And it also got a <a href="https://www.youtube.com/live/rMqilVrkepg" target="_tab">play-through and review from AngryZorric</a>. I&rsquo;ve got a bunch of decorations that I&rsquo;ve started, and all this makes me really excited to finish them and get them all in the game. Thanks again, from my heart, ahhh.</p>
+
+<p>For now though, here&rsquo;s the 1.2b version of <i>Jade Spring</i>&thinsp;! There are a couple of new features but it&rsquo;s mainly comprised of lots and lots of bug fixes. I&rsquo;m hoping to make the game really stable over the next few versions while I continue to work on new decorations, and then put out a release version with a plenitude of new stuff. Here&rsquo;s a list of everything that&rsquo;s been changed and fixed:</p>
+
+<h3>Changelog (1.2b)</h3>
+
+<div class="warning" style="margin-bottom: 1.75em;">
     <p><b>Note:</b> the <i>Jade Spring</i> 1.2b will be a bit bigger than it has been in the past (about 130MB). This is because the engine that the game uses (<a href="https://godotengine.org/">Godot</a>) has also updated, and I&rsquo;ve just moved <i>Jade Spring</i> up to that new version.</p>
 </div>
-
-<h3>1.2b Changelog</h3>
 
 <ul class="copy">
     <li>Quickly find walls, floors, etc with category tiles in the decoration pane.</li>
     <li>Fixed several instances of stuttering on load (transition to Godot 4.4.1).</li>
-    <li>Fixed an issue where the run would no longer be rotatable after returning to the main menu.</li>
+    <li>An effect will display when Ratchet has optional dialogue.</li>
+    <ul>
+        <li style="list-style-type: circle;">Contributes to the &lsquo;My Friend Ratchet&rsquo; achievement.</li>
+    </ul>
+    <li>Added a banner which will turn you into a miniature Jade Bot!</li>
+    <li>Added &lsquo;String Lights&rsquo; decoration.</li>
+    <li>Added an option to clear the shader cache in settings.</li>
+    <li>Directing the camera upward or downard will guide the Jade Bot to ascend or descend.</li>
+    <li>&lsquo;Enter&rsquo; and &lsquo;space&rsquo; keys can now be freely bound by the player without conflicts.</li>
+    <li>Directional movement keys can be changed to control the rotation of the camera rather than strafing.</li>
+    <li>Fixed skill button conflicts where skills could be used simultaneously or while manipulating decorations.</li>
+</ul>
+
+<p><b>Minor bugfixes and improvements</b></p>
+
+<ul class="copy">
+    <li>Fixed an issue where the sun would no longer be rotatable after returning to the main menu.</li>
+    <li>Fixed the menu art flickering on load.</li>
+    <li>Fixed the Slyllama website button spawning multiple browsers.</li>
     <li>Fixed the appearances of some text and dialogue boxes.</li>
     <li>Fixed an issue where the window mode might not update properly in settings.</li>
-</ul>
-
-<h3>1.1b Changelog</h3>
-
-<p>(See the <a href="$ROOT/journal/jade-v1-1b">full article</a>.)</p>
-
-<p><b>Decorations</b></p>
-
-<ul class="copy">
-    <li>Added the ability to duplicate and move multiple decorations at once.</li>
-    <li>Added noodle bar stool.</li>
-    <li>Added neon noodle store display.</li>
-    <li>Added a small clump of grass.</li>
-    <li>Lanterns now emit light.</li>
-</ul>
-
-<p><b>Saves and game versions</b></p>
-
-<ul class="copy">
-    <li>Loading a new decoration save file with an older version of <i>Jade Spring</i> will generate a warning.</li>
-    <li>Save file backups are now generated for each new version of <i>Jade Spring</i>.</li>
-    <li>A small indicator will show on the main menu if there is a newer version of the game that you can download.</li>
-</ul>
-
-<p><b>Fixes and minor improvements</b></p>
-
-<ul class="copy">
-    <li>Many small script fixes and improvements, with a big thanks to <a href="https://bsky.app/profile/did:plc:byfeieo447alv4w7u4cus3eo">areyoshi</a>.</li>
-    <li>Light rays no longer appear at night.</li>
-    <li>Fixed extra clicking sounds when applying transformations.</li>
-    <li>Fixed snapping persisting after changing from decoration rotation to movement.</li>
-    <li>Lights now show a hint as to how their intensity and color can be modified.</li>
-    <li>Light previews no longer disappear during editing after being duplicated.</li>
+    <li>Fixed an issue where selecting multiple decorations might miss some decorations.</li>
+    <li>Attenuator marker is now properly aligned to tracks.</li>
+    <li>Reduced the intensity of Jade Bot engine heat distortion.</li>
+    <li>Fixed Karma eligibility not updating properly in decoration pane.</li>
+    <li>&lsquo;Warp to safe point&rsquo; button no longer opens screenshot folder on right click.</li>
+    <li>Updated credits.</li>
+    <li>Various small wording and bug fixes.</li>
 </ul>
