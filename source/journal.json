@@ -83,5 +83,14 @@
         "desc": "Check out decoration categories, bug fixes, a Steam launch, and more in this Jade Spring beta update!",
         "date": "6.2025",
         "status": "published"
+    },
+    {
+        "name": "jul25",
+        "title": "July Thoughts",
+        "hide-title": "false",
+        "thumb": "$PAGEROOT/thumb.jpg",
+        "desc": "Life, Jade Spring, art, and more",
+        "date": "7.2025",
+        "status": "draft"
     }
 ]
