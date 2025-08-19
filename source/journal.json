@@ -86,11 +86,11 @@
     },
     {
         "name": "jul25",
-        "title": "July Thoughts",
+        "title": "August Thoughts",
         "hide-title": "false",
         "thumb": "$PAGEROOT/thumb.jpg",
         "desc": "Life, Jade Spring, art, and more",
-        "date": "7.2025",
-        "status": "draft"
+        "date": "8.2025",
+        "status": "published"
     }
 ]
