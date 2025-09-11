@@ -1,8 +1,13 @@
+@font-face {
+    font-family: "Tahoma Embedded";
+    src: url("fonts/tahoma.ttf");
+}
+
 body {
     background: url("../assets/space.gif") repeat;
     color: #333;
-    font-family: "Tahoma", sans-serif;
-    font-size: 14px;
+    font-family: "Tahoma Embedded", "Tahoma", sans-serif;
+    font-size: 14px !important;
     line-height: 1.24em;
 }
 
