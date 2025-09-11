@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+    <meta name="viewport" content="width=300, initial-scale=1.0">
+    <meta charset="utf-8" />
+
+    <title>Jade Spring: Development Notes #6 &mdash; Slyllama</title>
+    <meta name="description" content="Design templates, decorations, and more are coming to Jade Spring on the 27th September.">
+    <meta property="og:title" content="Jade Spring: Development Notes #6 &mdash; Slyllama" />
+    <meta property="og:description" content="Design templates, decorations, and more are coming to Jade Spring on the 27th September." />
+    <meta property="og:url" content="https://slyllama.net/journal/jade-sep25" />
+    <meta property="og:image" content="https://slyllama.net/assets/thumb.jpg" />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#1C3C83" data-react-helmet="true" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://slyllama.net/assets/apple-icon-180px.png?ver=2">
+
+    <meta name="twitter:site" content="@slyllama">
+    <meta name="twitter:title" content="Jade Spring: Development Notes #6 &mdash; Slyllama">
+    <meta name="twitter:description" content="Design templates, decorations, and more are coming to Jade Spring on the 27th September.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:src" content="https://slyllama.net/assets/thumb.jpg">
+
+    <link rel="icon" type="image/png" href="https://slyllama.net/assets/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="https://slyllama.net/reset.css" />
+    <link rel="stylesheet" type="text/css" href="https://slyllama.net/style.css" />
+
+    <script src="https://slyllama.net/scripts.js" type="text/javascript"></script>
+
+    <body onload="loadDOM();">
+        <img id="bg" src="https://slyllama.net/assets/bg.jpg" />
+
+        <div id="img-view-container" onclick="closeImg();">
+            <div class="close-button" onclick="closeImg();"><img src="https://slyllama.net/assets/icon-close.svg" /></div>
+            <div id="img-view-inner">
+                <img id="img-view-img" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" />
+            </div>
+        </div>
+        
+        <div id="container">
+            <div id="header">
+                <div id="header-logo-container">
+                    <a href="https://slyllama.net">
+                        <img id="header-logo" src="https://slyllama.net/assets/logo.svg" alt="Slyllama." />
+                    </a>
+                </div>
+                
+                <span id="header-menu-btn" class="header-link focus-outline">
+                    <a id="mobile-menu-btn" onclick="toggleMobileMenu();" tabindex="0" style="display: block;">
+                        <img id="header-menu-btn-img" src="https://slyllama.net/assets/mobile-menu-btn.svg" alt="Mobile menu." />
+                    </a>
+                </span>
+                <ul id="header-desktop-links">
+                    <li class="header-link">
+                        <a href="https://www.artstation.com/slyllama" target="_tab">
+                            Art <span class="toki-pona">lukin musi</span>
+                        </a>
+                    </li>
+                    <li class="header-link"><a href="https://slyllama.net/journal">
+                        Journal <span class="toki-pona">lipu mi</span></a></li>
+                    <li class="header-btn-container">
+                        <a href="https://bsky.app/profile/slyllama.net" target="_tab" title="Slyllama on Bluesky.">
+                            <span class="header-btn header-btn-bsky">
+                                <img style="height: 28px;" src="https://slyllama.net/assets/logo-bluesky.svg" alt="Slyllama on Bluesky."/>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="header-btn-container">
+                        <a href="mailto:slyllama@outlook.com" title="Email - slyllama@outlook.com.">
+                            <span class="header-btn">
+                                <img style="height: 26px;" src="https://slyllama.net/assets/logo-email.svg" alt="Email - slyllama@outlook.com." />
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <div style="clear: both;"></div>
+
+                <ul id="mobile-menu">
+                    <li><a href="https://www.artstation.com/slyllama" target="_tab">
+                        <div class="mobile-menu-link">Art <span class="toki-pona">lukin musi</span> <img src="https://slyllama.net/assets/icon-external.svg" class="external-icon" alt="External link." /></div>
+                    </a></li>
+                    <li><a href="https://slyllama.net/journal"><div class="mobile-menu-link">Journal <span class="toki-pona">lipu mi</span></div></a></li>
+                    <li><a href="https://slyllama.net/jade-spring"><div class="mobile-menu-link">Jade Spring</div></a></li>
+                    <li><a href="mailto:slyllama@outlook.com"><div class="mobile-menu-link">Email</div></a></li>
+                    <li><a href="https://bsky.app/profile/slyllama.bsky.social" target="_tab">
+                        <div class="mobile-menu-link">Follow <img src="https://slyllama.net/assets/icon-external.svg" class="external-icon" alt="External link." /></div>
+                    </a></li>
+                </ul>
+            </div>
+
+            <div id="copy">
+                <a href="https://slyllama.net/journal/jade-sep25">
+                    <p class="date">9.2025</p>
+                </a><style>
+                    .copy li {
+                        margin-bottom: 0em !important;
+                    }
+                    .videoWrapper {
+                        position: relative;
+                        padding-bottom: 56.25%;
+                        /* 16:9 */
+                        padding-top: 25px;
+                        height: 0;
+                        margin: 40px 0;
+                    }
+                    .videoWrapper iframe {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                </style>
+                
+                <h1>Jade Spring: Development Notes #6</h1>
+                
+                <div class="videoWrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/S7BHsbz7Wf8?si=Buz2SagXQ3bsti3S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                
+                <p>Hello everyone! It&rsquo;s been a little while since the last <a href="https://www.slyllama.net/journal/jade-v1-2b/" target="_tab">Jade Spring update</a> in June, but I&rsquo;ve slowly been chipping away at additions and improvements to the game, and now 1.3b will be coming out on the <b>27th of September</b>. I made a video about progress on this update a couple of weeks ago! (You can also read a bit about it <a href="https://www.slyllama.net/journal/jul25/" target="_tab">here</a>.)</p>
+                
+                <p>One of the main additions to <i>Jade Spring</i> will be the <b>Otter&rsquo;s Enclave</b>, a special room which allows you to create, manage, and swap garden designs. You can share your layouts and import designs that your friends have made, too. I&rsquo;d like to give a huge thanks to <a href="https://bsky.app/profile/anari-alari.bsky.social" target="_tab">anari</a>, who has been doing some really comprehensive testing of what's been a very spicy feature to add!</p>
+                
+                <p>I&rsquo;ve been enjoying putting some Kodan decorations into the game. Actually, I was going to add a lot more decorations before releasing 1.3b, but I decided to go for a release as soon as possible for two main reasons:</p>
+                
+                <ul>
+                    <li>AMD recently released a GPU driver update which caused <a href="https://github.com/godotengine/godot/issues/109378" target="_tab">big issues</a> for all Vulkan games, the graphics API which <i>Jade Spring</i> is built on. I recently added DirectX support so that AMD users can continue to play the game without having to roll back their drivers, and I'd like to get that out as soon as possible!</li>
+                    <li>I found a very small bug which makes the performance cost of the default garden home (and any build with lights in it) like, more than three times as high as it should be. I could have done a patch, but I like the idea of getting this all out together. When you play this update, you'll notice a big performance improvement.</li>
+                </ul>
+                
+                <p>Which leads to what&rsquo;s coming after 1.3b! The place I&rsquo;d like to get <i>Jade Spring</i> into is a very stable state where I can do <b>regular small decoration updates</b>, as a sort of side-project and continuous testing ground for future developments (I&rsquo;ve been thinking a lot about a full-fledged architectural simulator). So the next update after this one will be 1.0 (woohoo), and subsequent updates will be for adding different decorations from various expansions.</p>
+                
+                <p>As always, thank you so much for all of your support. It has been so fun developing <i>Jade Spring</i> this year, and it makes me excited to make more architectural stuff!</p>
+                
+            </div>
+
+            <div id="footer-container">
+                <p>
+                    &copy; Slyllama 2025.
+                    <span style="width: 0.5em; display: inline-block;"></span>
+                    <a href="https://slyllama.net/alec">Personal site.</a>
+                </p>
+            </div>
+            <img src="https://slyllama.net/assets/no-gen-ai.svg" id="no-gen-ai" />
+        </div>
+    </body>
+</html>
+

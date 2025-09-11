@@ -92,5 +92,13 @@
         "desc": "Life, Jade Spring, video games, and more. Woohoo!",
         "date": "8.2025",
         "status": "published"
+    },
+    {
+        "name": "jade-sep25",
+        "title": "Jade Spring: Development Notes #6",
+        "hide-title": "false",
+        "desc": "Design templates, decorations, and more are coming to Jade Spring on the 27th September.",
+        "date": "9.2025",
+        "status": "published"
     }
 ]
