@@ -8,7 +8,6 @@ body {
     color: #333;
     font-family: "Tahoma Embedded", "Tahoma", sans-serif;
     min-width: 700px;
-    line-height: 1.24em;
 }
 
 h1 {
@@ -20,9 +19,15 @@ h1 {
     padding-bottom: 0.5em;
 }
 
+img {
+    image-rendering: crisp-edges;
+}
+
 p {
     font-size: 14px !important;
+    hyphens: auto;
     margin-bottom: 0.9em;
+    line-height: 1.15em;
 }
 
 #banner {
@@ -35,11 +40,11 @@ p {
 .box {
     background: #d7dfd4;
     border-radius: 2px;
+    box-shadow: 0px 1px 0px white inset;
     padding: 6px;
 }
 
 .sidebar {
-    height: fit-content;
     padding-bottom: 1em;
 }
 
@@ -70,24 +75,17 @@ p {
     max-width: 100%;
 }
 
-#content-wrapper > p {
-    margin-right: 30px;
-}
-
 #grid-wrapper {
     display: grid;
-    gap: 4px;
+    gap: 2px;
     grid-template-columns: 200px 1fr 200px;
     width: 100%;
 }
 
 @media only screen and (max-width: 800px) {
-    #container {
-        #sidebar-right {
+    #sidebar-right {
             display: none;
-        }
     }
-
     #grid-wrapper {
         grid-template-columns: 200px 1fr;
     }
