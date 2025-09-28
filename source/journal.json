@@ -100,5 +100,14 @@
         "desc": "Design templates, decorations, and more are coming to Jade Spring on the 27th September.",
         "date": "9.2025",
         "status": "published"
+    },
+        {
+        "name": "jade-v1-3b",
+        "title": "Jade Spring: v1.3b Update",
+        "hide-title": "false",
+        "thumb": "$PAGEROOT/thumb.jpg",
+        "desc": "Design templates, numerous decorations, and many bug fixes and improvements are now available in Jade Spring!",
+        "date": "9.2025",
+        "status": "draft"
     }
 ]
