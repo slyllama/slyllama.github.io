@@ -136,11 +136,6 @@ generate_page("ticket", {
     "$DESC": "Hey there! Use this form to send a Jade Spring bug report or feature request, or any questions and comments you have! Thank you so much for taking the time to do so." 
 }, "!")
 
-generate_page("psychostratum", {
-    "$TITLE": "Psychostratum",
-    "$DESC": "((Psychostratum))" 
-}, "!")
-
 with open("source/journal.json") as file: # get list of journal entries
     journal_list = json.load(file)
 
