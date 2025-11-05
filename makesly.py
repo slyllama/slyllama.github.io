@@ -14,6 +14,7 @@ import json
 import os
 import re
 import sys
+import smartypants
 from pathlib import Path
 
 def print_usage_and_quit():
@@ -187,7 +188,14 @@ for entry in journal_list:
     page_root = root_prefix + "/" + JPATH + name
 
     if entry_path.exists():
-        print(" * Creating entry for '" + name + "'...")
+        sp = False # Smartypants check
+        if "smartypants" in entry:
+            if entry["smartypants"] == "true":
+                sp = True
+        
+        if sp == True: print(" * Creating entry for '" + name + "' (S)...")
+        else: print(" * Creating entry for '" + name + "'...")
+
         output_path = JPATH + name
         e = template
 
@@ -206,7 +214,11 @@ for entry in journal_list:
             content += "<h2>"+ entry["title"] + "</h2>\n"
 
         with open(output_path + "/source.html") as file:
-            content += file.read()
+            if "smartypants" in entry: # format with Smartypants if that option is specified in the journal metadata
+                if entry["smartypants"] == "true":
+                    content += smartypants.smartypants(file.read())
+                else: content += file.read()
+            else: content += file.read()
         
         # Add indentation to match template file
         fmt_content = indent_content(content)

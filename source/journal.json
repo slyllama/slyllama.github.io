@@ -109,5 +109,14 @@
         "desc": "Design templates, decorations, bug fixes, and more improvements are now available in Jade Spring!",
         "date": "10.2025",
         "status": "published"
+    },
+        {
+        "name": "eoy-2025",
+        "title": "Thoughts For the End Of 2025",
+        "hide-title": "false",
+        "desc": "((Thoughts For the End Of 2025))",
+        "date": "11.2025",
+        "status": "draft",
+        "smartypants": "true"
     }
 ]
