@@ -414,6 +414,12 @@ tr:first-child {
   color: #fff;
 }
 
+.unlisted-tag {
+  background: #8000AD;
+  border-color: #8000AD;
+  color: #fff;
+}
+
 .external-icon {
   display: inline-block;
   height: 19px;

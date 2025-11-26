@@ -150,7 +150,7 @@ journal_list.reverse()
 
 for entry in journal_list:
     if "status" in entry:
-        if entry["status"] == "draft":
+        if entry["status"] == "draft" or entry["status"] == "unlisted":
             continue
     
     name = entry["name"]
@@ -205,6 +205,8 @@ for entry in journal_list:
         if "status" in entry:
             if entry["status"] == "draft":
                 content += ind(1) + "<p class=\"date draft-tag\">DRAFT</p>\n"
+            elif entry["status"] == "unlisted":
+                content += ind(1) + "<p class=\"date unlisted-tag\">UNLISTED</p>\n"
             else:
                 content += ind(1) + "<p class=\"date\">" + entry["date"] + "</p>\n"
         else:

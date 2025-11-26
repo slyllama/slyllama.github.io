@@ -278,6 +278,12 @@ tr:first-child { border-top: 1px solid $separator-color; }
     color: #fff;
 }
 
+.unlisted-tag {
+    background: #8000AD;
+    border-color: #8000AD;
+    color: #fff;
+}
+
 .external-icon {
     display: inline-block;
     height: 19px;

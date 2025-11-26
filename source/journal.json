@@ -111,12 +111,12 @@
         "status": "published"
     },
         {
-        "name": "eoy-2025",
-        "title": "Thoughts For the End Of 2025",
+        "name": "jade-1-0doc",
+        "title": "Jade Spring: v1.0 Development Document",
+        "desc": "((Jade Spring: v1.0 Development Document))",
         "hide-title": "false",
-        "desc": "((Thoughts For the End Of 2025))",
-        "date": "11.2025",
-        "status": "draft",
+        "date": "12.2025",
+        "status": "unlisted",
         "smartypants": "true"
     }
 ]
