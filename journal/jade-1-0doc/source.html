@@ -1,3 +1,25 @@
+<style>
+    .censor { background: #000; color: #000; }
+    li { margin-bottom: 5px; }
+
+    .issue-href {
+        border: 0 !important;
+    }
+
+    .issue {
+        background: #fff;
+        border: 1px solid #555;
+        border-radius: 24px;
+        margin: 0 3px;
+        padding: 0 8px;
+    }
+
+    .issue:hover {
+        background: #555;
+        color: white;
+    }
+</style>
+
 <h2>Jade Spring: v1.0 Development Document</h2>
 
 <p> It's been a <a href="https://www.slyllama.net/journal/seitung-nov24/">year</a> since I started working on <i>Jade Spring</i>, and about <a href="https://www.slyllama.net/journal/jade-v1-2b/">five months since I <a href="https://store.steampowered.com/app/3561310/Jade_Spring/">released it on Steam</a>. So much has happened in the intervening months, with moving house twice and having a car stolen! Developing <i>Jade Spring</i> has always been a really welcome pursuit in the midst of it all, even though sometimes it's been hard to set aside enough time to devote attention to it. Most of all, seeing people <a href="https://youtu.be/S7BHsbz7Wf8?si=RUFPIzMPf-EJ-vkl">live-stream and post their creations</a> was an absolute highlight for me this year, up with seeing and working with areyoshi bring the first chapter of their webcomic, <a href="https://kattabolt.com/comics/1#content-start">Kattabolt</a>, to its conclusion.</p>
@@ -7,3 +29,20 @@
 <p>I've honestly been putting off the 1.0 update a little bit. I find things easy to start, and hard to maintain, because it's hard for me to not judge my work, see only the flaws in it, and want to discard a lot of it and start over. I've found that the best way of getting out of this rut is often to write out clearly a pathway for going back in, and testing and updating things -- so I thought I'd try and do that with you all! So below is a process of me working out the broad areas that need to be addressed for <i>Jade Spring</i> 1.0, and then breaking them down into proper tasks. Thanks for reading, and enjoy!</p>
 
 <h3>Narrative and game flow</h3>
+
+<p>Right now <i>Jade Spring</i> still has a mix of missing dialogue and unexplained concepts and features. For instance there is no proper writing for the ending, just a placeholder message! And the Otter's Enclave (design templates) is never telegraphed well. I've listed the additions to make that I'm aware of below, but the best thing to do for this kind of change is to play through the game in its entirety, and note everything else which needs to be implemented.</p>
+
+<ul>
+    <li><b>Ending dialogue</b> (i.e., for clearing the entire garden).</li>
+    <li><b>Text and imagery for the "plush hood" gift.</b> This gift isn't telegraphed well, and it confused a couple of players through the beta. I think we will have some art of the item in silhouette with a little gift icon, and then show that same image with the hood revealed once the gift has been earned! We could use art similar to <a href="https://wiki.guildwars2.com/wiki/Renown_Heart#/media/File:Renown_Heart_completion.jpg">renown hearts and chests in GW2</a> i.e., all the coins stacked up with the item resting on them. <a class="issue-href" href="https://github.com/slyllama/jade-spring/issues/52"><span class="issue">#52</span></a></li>
+    <li><b>More hints for the Otter's Enclave and design templates.</b> It's an important feature which just appears pretty much out of nowhere. It could do with some lore reasoning, too, like <span class="censor">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp; &ensp;&ensp; &ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</span>.</li>
+</ul>
+
+<h3>Thorough testing of design templates</h3>
+
+<p>Design templates were added a little while ago, in 1.3b. They were carefully tested by <a href="https://bsky.app/profile/anari-alari.bsky.social">anari</a>, who did an amazing job at uncovering and helping to fix many issues with the system. Now I just need to be really sure that the system is robust and player's aren't gonna lose their layouts or any data. My plan is to prepare a series of tests which need to "pass" by functioning correctly:</p>
+
+<ol>
+    <li>((Item one))</li>
+    <li>((Item two))</li>
+</ol>

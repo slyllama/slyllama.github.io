@@ -116,7 +116,7 @@ i {
     font-style: italic;
 }
 
-p, #copy > ul, li, h3 {
+p, #copy > ul, ol, li, h3 {
     color: $copy-color;
     line-height: $copy-line-height;
     hyphens: auto;
@@ -230,9 +230,16 @@ tr:first-child { border-top: 1px solid $separator-color; }
 
     ul {
         margin-left: 2.5em;
-
         li {
             list-style-type: initial;
+            padding-left: 1em;
+        }
+    }
+
+    ol {
+        margin-left: 2.5em;
+        li {
+            list-style-type: decimal;
             padding-left: 1em;
         }
     }
