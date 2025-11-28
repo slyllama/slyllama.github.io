@@ -36,13 +36,34 @@
     <li><b>Ending dialogue</b> (i.e., for clearing the entire garden).</li>
     <li><b>Text and imagery for the "plush hood" gift.</b> This gift isn't telegraphed well, and it confused a couple of players through the beta. I think we will have some art of the item in silhouette with a little gift icon, and then show that same image with the hood revealed once the gift has been earned! We could use art similar to <a href="https://wiki.guildwars2.com/wiki/Renown_Heart#/media/File:Renown_Heart_completion.jpg">renown hearts and chests in GW2</a> i.e., all the coins stacked up with the item resting on them. <a class="issue-href" href="https://github.com/slyllama/jade-spring/issues/52"><span class="issue">#52</span></a></li>
     <li><b>More hints for the Otter's Enclave and design templates.</b> It's an important feature which just appears pretty much out of nowhere. It could do with some lore reasoning, too, like <span class="censor">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp; &ensp;&ensp; &ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp; &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;</span>.</li>
+    <ul>
+        <li>It's difficult to alter story structure (partly cause it wasn't designed very modularly, and partly because I don't want to accidentally disrupt existing stories and saves), so the best way to go about this might be able to add a new "starry" pane to the sidebar and a promiment marker to the orb.</li>
+        <li>There should be something in the Enclave to talk to about the above. Actually there is a space to the left of the Compendium so thiat would be a nice place to put whatever that is (just use the orb again?).</li>
+    </ul>
 </ul>
 
 <h3>Thorough testing of design templates</h3>
 
-<p>Design templates were added a little while ago, in 1.3b. They were carefully tested by <a href="https://bsky.app/profile/anari-alari.bsky.social">anari</a>, who did an amazing job at uncovering and helping to fix many issues with the system. Now I just need to be really sure that the system is robust and player's aren't gonna lose their layouts or any data. My plan is to prepare a series of tests which need to "pass" by functioning correctly:</p>
+<p>Design templates were added a little while ago, in 1.3b. They were carefully tested by <a href="https://bsky.app/profile/anari-alari.bsky.social">anari</a>, who did an amazing job at uncovering and helping to fix many issues with the system. Now I just need to be really sure that the system is robust and player's aren't gonna lose their layouts or any data. My plan is to perform a series of tests which need to "pass" by functioning correctly. <i>Reminder that no design templates are overwritten on new game except for the default slot. This is the standard behaviour and should always be respected.</i></p>
 
 <ol>
-    <li>((Item one))</li>
-    <li>((Item two))</li>
+    <li>Create a new decoration template and make it unique by clearing the map and adding new decorations. Switch back to the default template. While on the default decoration template and with some altered decorations on the map, close the game and load back in. The player's decorations should remain in the correct place, and all other design slots intact.</li>
+    <li>While on the default decoration template, add some decorations, return to the main menu, and load back in. The newest changes should be intact.</li>
+    <li>Alter the default decoration template. Create a new decoration template and alter it too. With that template still activated, quit the game, re-open it, and create a new save. The game should default to a fresh default template, but the previously active template should still be active.</li>
 </ol>
+
+<h3>Changelog</h3>
+
+<p>Lastly but importantly, the patch notes for 1.0 have to be written! They include all outcomes from the above, as well as the following which has already been completed:</p>
+
+<ul>
+    <li><b>Misc. decorations:</b></li>
+    <ul>
+        <li>Added Orrian Arch.</li>
+    </ul>
+    <li><b>Multi-threaded loading.</b> Decorations now load asynchronously, greatly increasing the game's map loading speed.</li>
+    <li>New icon, painted art, and improved assets in various locations.</li>
+    <li>Minor improvements to how inputs are presented.</li>
+    <li>Improvements to 3D rendering of characters in the dialogue pane.</li>
+    <li>UI bug fixes (obscured/unclickable buttons in certain conditions, etc). Decoration pane behaviour fixes (i.e., to search bar). Cleaned up the edit state overlay.</li>
+</ul>
