@@ -93,7 +93,7 @@
                     <p class="date unlisted-tag">UNLISTED</p>
                 </a><style>
                     .censor { background: #000; color: #000; }
-                    li { margin-bottom: 5px; }
+                    li { margin-bottom: 2px; }
                 
                     .issue-href {
                         border: 0 !important;
@@ -103,7 +103,7 @@
                         background: #fff;
                         border: 1px solid #555;
                         border-radius: 24px;
-                        margin: 0 3px;
+                        margin: 0 1px;
                         padding: 0 8px;
                     }
                 
@@ -119,11 +119,25 @@
                 
                 <p> It&#8217;s been a <a href="https://www.slyllama.net/journal/seitung-nov24/">year</a> since I started working on <i>Jade Spring</i>, and about <a href="https://www.slyllama.net/journal/jade-v1-2b/">five months since I <a href="https://store.steampowered.com/app/3561310/Jade_Spring/">released it on Steam</a>. So much has happened in the intervening months, with moving house twice and having a car stolen! Developing <i>Jade Spring</i> has always been a really welcome pursuit in the midst of it all, even though sometimes it&#8217;s been hard to set aside enough time to devote attention to it. Most of all, seeing people <a href="https://youtu.be/S7BHsbz7Wf8?si=RUFPIzMPf-EJ-vkl">live-stream and post their creations</a> was an absolute highlight for me this year, up with working on and seeing areyoshi bring the first chapter of their webcomic, <a href="https://kattabolt.com/comics/1#content-start">Kattabolt</a>, to its conclusion.</p>
                 
+                <table style="margin-top: 0; margin-bottom: 1.5em;">
+                    <tr>
+                        <td style="font-weight: initial !important;">
+                            <ul style="padding-bottom: .75em;">
+                                <li><a href="#flow">Narrative and game flow</a></li>
+                                <li><a href="#deco">Decorations</a></li>
+                                <li><a href="#templates">Design template QA</a></li>
+                                <li><a href="#changelog">Changelog</a></li>
+                                <li><a href="#steam">Steam store page</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                
                 <p><i>Jade Spring</i> has been in beta all this time, and now I wanna finally commit to polishing it and releasing it as the full game! Some people have been looking forward to playing the game once it exits beta, and I have kept them waiting quite a few months. I&#8217;m very interested in putting the game into a stable state so that I can approach it as a solid framework to keep adding decorations to. And I&#8217;m also looking ahead to developing a new game called <i>Dwelt: Iron Solstice</i>, which would be similar to <i>Jade Spring</i> but formed out of original designs and a little bit broader in scope. (My ultimate dream is to have <i>Dwelt</i> be moddable, so that everything in <i>Jade Spring</i> can eventually be polished and merged into <i>Dwelt</i>, with the garden-clearing and narrative capabilities being the same. But that&#8217;s a conversation for another time!)</p>
                 
                 <p>I&#8217;ve honestly been putting off the 1.0 update a little bit. I find things easy to start, and hard to maintain, because it&#8217;s hard for me to not judge my work, see only the flaws in it, and want to discard a lot of it and start over. I&#8217;ve found that the best way of getting out of this rut is often to write out clearly a pathway for going back in, and testing and updating things &#8212; so I thought I&#8217;d try and do that with you all! So below is a process of me working out the broad areas that need to be addressed for <i>Jade Spring</i> 1.0, and then breaking them down into proper tasks. Thanks for reading, and enjoy!</p>
                 
-                <h3>Narrative and game flow</h3>
+                <h3 id="flow">Narrative and game flow</h3>
                 
                 <p>Right now <i>Jade Spring</i> still has a mix of missing dialogue and unexplained concepts and features. For instance there is no proper writing for the ending, just a placeholder message! And the Otter&#8217;s Enclave (design templates) is never telegraphed well. I&#8217;ve listed the additions to make that I&#8217;m aware of below, but the best thing to do for this kind of change is to play through the game in its entirety, and note everything else which needs to be implemented.</p>
                 
@@ -137,16 +151,23 @@
                     </ul>
                 </ul>
                 
-                <h3>New decorations</h3>
+                <h3 id="deco">New decorations</h3>
                 
                 <p>I wanna make sure the <i>Guild Wars 2</i> flavour of <i>Jade Spring</i> is really strong, by adding a few very iconic/recognisable decorations for each race in-game. This has a few additional benefits, it&#8217;s a good way to pave to way for future expansions, and it will be helpful for producing new Steam store screenshots! I also have some wonderful decorations that areyoshi helped produce to add, like the <a href="https://bsky.app/profile/slyllama.net/post/3m5cpps3fw22c">railroad bridge</a> and some Kaineng stairs. Here are my ideas for other decorations. I&#8217;m planning on producing two architectural components and two props/ornaments for each race:</p>
                 
+                <p>Note, there are many helpful pictures and illustrations <a href="https://wiki.guildwars2.com/wiki/Andrew_McLeod_Talks_Crafting_in_GW2">on this wiki page here</a>.</p>
+                
                 <ul>
                     <li><b>Human.</b> Architectural: (1) Gendarran Spinning Windmill (<a href="https://wiki.guildwars2.com/wiki/Jeb%27s_Wheatfield">particularly this one</a>), Gendarran worker&#8217;s hut (see same image &#8212; I&#8217;m interested in creating a whole basic house as a decoration piece). Props: (1) Apple Tree, (2) Divinity&#8217;s Reach Feast Table (oh yeah, I&#8217;m hungry).</li>
-                    <li><b>Asura.</b> Architectural: (1) Dynamics Note Board, (2) Rata Sum Arch Piece (see <a href="https://nerdybookahs.wordpress.com/2012/07/24/the-glorious-rata-sum-in-pictures/#jp-carousel-3852">left here</a>). Prop: (1) Synergetics Container (see in the background of the <a href="https://www.guildwars2.com/en/news/notes-from-rata-novus-parttwo/">first image here</a>), (2) C.L.E.A.N. 5000 Golem (RIP our favourite clean-up golem).</li>
+                    <li><b>Charr.</b> Architectural: (1) Mechanical Wall (I&#8217;m thinking of all the cogs in the Black Citadel), (2) Black Citadel Iron-Work Wall. Prop: (1) Charr Steam Engine (can you imagine if it had moving parts!), (2) Iron Legion Forge.</li>
+                    <li><b>Sylvari.</b> Architectural: (1) Verdant vine well (I want to keep these very natural and organic-looking; I&#8217;m not quite sure how to go about this yet but I have a couple of ideas), (2) Mushroom-Laden Tree Branch (could help form the basis for a jumping puzzle). Prop: Orchid Light Beacon (a curl of a vine with a blossoming orchid and fireflies, casting light), (2) <a href="https://wiki.guildwars2.com/wiki/Ventari%27s_Tablet">Ventari&#8217;s tablet</a>.</li>
+                    <li><b>Norn.</b> Architectural: (1) Hoelbrak Mesh Wall (featuring some snow), (2) Totem Shrine (see something like the <a href="https://wiki.guildwars2.com/wiki/Bear_Totem_Shrine#/media/File:Heart_of_the_Bear_destroyed.jpg">Bear Totem Shrine</a>). Prop: (1) snow pile (maybe with snowflakes or drizzling snow), (2) Norn Torch (very ornate and elaborate).</li>
+                    <li><b>Asura.</b> Architectural: (1) Rata Sum portal (VFX are all done), (2) Rata Sum Arch Piece (see <a href="https://nerdybookahs.wordpress.com/2012/07/24/the-glorious-rata-sum-in-pictures/#jp-carousel-3852">left here</a>). Prop: (1) Synergetics Container (see in the background of the <a href="https://www.guildwars2.com/en/news/notes-from-rata-novus-parttwo/">first image here</a>), (2) C.L.E.A.N. 5000 Golem (RIP our favourite clean-up golem).</li>
                 </ul>
                 
-                <h3>Thorough testing of design templates</h3>
+                <p>If possible, I&#8217;d also like to add a Dragon Bash fireworks launcher, as a little celebration for the release of the game, and a thank-you to everyone who&#8217;s supported it so far.</p>
+                
+                <h3 id="templates">Thorough testing of design templates</h3>
                 
                 <p>Design templates were added a little while ago, in 1.3b. They were carefully tested by <a href="https://bsky.app/profile/anari-alari.bsky.social">anari</a>, who did an amazing job at uncovering and helping to fix many issues with the system. Now I just need to be really sure that the system is robust and player&#8217;s aren&#8217;t gonna lose their layouts or any data. My plan is to perform a series of tests which need to &#8220;pass&#8221; by functioning correctly. <i>Reminder that no design templates are overwritten on new game except for the default slot. This is the standard behaviour and should always be respected.</i></p>
                 
@@ -156,7 +177,7 @@
                     <li>Alter the default decoration template. Create a new decoration template and alter it too. With that template still activated, quit the game, re-open it, and create a new save. The game should default to a fresh default template, but the previously active template should still be active.</li>
                 </ol>
                 
-                <h3>Changelog</h3>
+                <h3 id="changelog">Changelog</h3>
                 
                 <p>Lastly but importantly, the patch notes for 1.0 have to be written! They include all outcomes from the above, as well as the following which has already been completed:</p>
                 
@@ -171,6 +192,10 @@
                     <li>Improvements to 3D rendering of characters in the dialogue pane.</li>
                     <li>UI bug fixes (obscured/unclickable buttons in certain conditions, etc). Decoration pane behaviour fixes (i.e., to search bar). Cleaned up the edit state overlay.</li>
                 </ul>
+                
+                <h3 id="steam">Steam store page configuration</h3>
+                
+                <p>The <i>final</i> final thing which needs to be done is to update the Steam store page, this hasn&#8217;t been done in a while! We need new screenshots (part of the reason for the additional decorations), and to remove of any &#8220;beta&#8221; comments. The trailer also needs updating, as <i>Jade Spring</i> now looks quite different from how it did when the beta first released. Luckily we have the source and I don&#8217;t think the pacing really needs to change, so we can just replace some footage. The Itch version also needs to be updated, I don&#8217;t think this is even on 1.3 yet!</p>
                 
             </div>
 
