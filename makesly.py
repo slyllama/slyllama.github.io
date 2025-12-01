@@ -195,8 +195,8 @@ for entry in journal_list:
             if entry["smartypants"] == "true":
                 sp = True
         
-        if sp == True: print(" * Creating entry for '" + name + "' (S)...")
-        else: print(" * Creating entry for '" + name + "'...")
+        if sp == True: print(" * Updating entry '" + name + "' (S)...")
+        else: print(" * Updating entry '" + name + "'...")
 
         output_path = JPATH + name
         e = template
@@ -224,7 +224,9 @@ for entry in journal_list:
                 else: content += file.read()
             else: content += file.read()
         
-        content = re.sub(ISSUE_PATTERN, ISSUE_SUB, content)
+        if "gh-issues" in entry:
+            print("    (Unwrapping Github Issues...)")
+            content = re.sub(ISSUE_PATTERN, ISSUE_SUB, content)
 
         # Add indentation to match template file
         fmt_content = indent_content(content)
