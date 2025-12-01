@@ -9,6 +9,8 @@ DESC = "Illustrative graphics for a modern age."
 INDENT = "    "
 VIEWER_PATTERN = r'src=\"[^\"]*\"'
 VIEWER_ALT_PATTERN = r'alt=\"[^\"]*\"'
+ISSUE_PATTERN = r'\$\#([0-9]*)'
+ISSUE_SUB = r'<a class="issue-href" href="https://github.com/slyllama/jade-spring/issues/\1" target="_tab"><span class="issue">#\1</span></a>'
 
 import json
 import os
@@ -222,6 +224,8 @@ for entry in journal_list:
                 else: content += file.read()
             else: content += file.read()
         
+        content = re.sub(ISSUE_PATTERN, ISSUE_SUB, content)
+
         # Add indentation to match template file
         fmt_content = indent_content(content)
 
