@@ -46,10 +46,10 @@ def indent_content(c):
 if len(sys.argv) != 2:
     print(PROG_TITLE + ".")
     print_usage_and_quit()
-if sys.argv[1] == "-local":
+if sys.argv[1] == "-local" or sys.argv[1] == "--local":
     print(PROG_TITLE + " (working locally).")
     root_prefix = "file:///" + os.path.abspath(".").replace("\\", "/")
-elif sys.argv[1] == "-live":
+elif sys.argv[1] == "-live" or sys.argv[1] == "--live":
     print(PROG_TITLE + " (working live).")
     root_prefix = URL
 else:
