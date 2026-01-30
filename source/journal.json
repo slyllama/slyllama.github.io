@@ -117,7 +117,7 @@
         "hide-title": "false",
         "thumb": "$PAGEROOT/thumb.jpg",
         "date": "12.2025",
-        "status": "unlisted",
+        "status": "published",
         "smartypants": "true",
         "gh-issues": "true"
     }
