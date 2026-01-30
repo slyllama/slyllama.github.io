@@ -101,7 +101,7 @@
         "date": "9.2025",
         "status": "published"
     },
-        {
+    {
         "name": "jade-v1-3b",
         "title": "Jade Spring: v1.3b Update",
         "hide-title": "false",
@@ -110,7 +110,7 @@
         "date": "10.2025",
         "status": "published"
     },
-        {
+    {
         "name": "jade-1-0doc",
         "title": "Jade Spring: v1.0 Development Document",
         "desc": "Let's get into detail about what's going to go into Jade Spring for its 1.0 release!",
@@ -120,5 +120,14 @@
         "status": "published",
         "smartypants": "true",
         "gh-issues": "true"
+    },
+    {
+        "name": "jade-release",
+        "title": "Jade Spring: v1.0 Release",
+        "hide-title": "false",
+        "desc": "Woohoo, the release of Jade Spring is now live! Thank you so much everyone for your support. Let's go through everything that's been added and improved, and talk about what's next.",
+        "date": "2.2026",
+        "status": "draft"
     }
 ]
+
