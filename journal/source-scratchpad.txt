@@ -1,0 +1,20 @@
+Changes and additions
+ - You can now hold 3 Fish Food at once.
+ - Added a sidebar panel when the Otter's Enclave is unlocked, to indicate that it can now be accessed.
+ - Made the Enclave entry orb more prominent with a one-time starry marker.
+ - Made the end-game gift clearer with silhouettes and art of the gift.
+ - Added the ability to toggle VFX and Compendium while editing and placing decorations, via keybind.
+
+Bug fixes
+ - New and polished art i.e., loading screen art, game icon, "new game" sticker, etc.
+ - Small UI input fixes i.e., with buttons obscuring one another, button clicks not behaving as intendet, etc.
+ - Improved the appearance and brightness of characters in dialogues.
+ - Fixed the decoration pane not refreshing properly on reopen.
+ - Fixed a bug that could cause the game to overload and crash when changing the size of the window.
+ - Fixed collisions in the Otter's Enclave.
+ - Fixed an issue which would cause the settings pane break upon returning to the main menu.
+ - Fixed some design template UI issues when using Action Camera.
+ - Improvements to 3D rendering of characters in the dialogue pane.
+ - Fixed issue where Enclave music would keep playing after exiting it.
+ - Improved blossom foliage.
+

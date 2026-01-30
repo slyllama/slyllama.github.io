@@ -1,0 +1,39 @@
+<style>
+li {
+	margin-bottom: 0;
+}
+</style>
+
+
+<h1>Jade Spring: 1.0 Release</h1>
+
+<h2>Release changelog</h2>
+
+<h3>Performance improvements</h3>
+<ul>
+	<li>The loading of decorations is now streamed and threaded. They are added to the game in parallel after the map has loaded, reducing (sometimes substantially) the game&rsquo;s load time. If multiple copies of a decoration exist on the map, the game only needs to load each &lsquo;type&rsquo; once.
+	<li>Increased performance and reduced memory usage&mdash;especially VRAM&mdash;by optimising the size and compression of textures in-game.</li>
+	<li>UI panes now load asynchronously, reducing their memory overhead and increasing performance.
+</ul>
+
+<h3>Added decorations</h3>
+
+<ul>
+	<li>Added Ventari&rsquo;s Tablet</li>
+	<li>Added Railroad Bridge</li>
+	<li>Added Drizzlewood Platform</li>
+	<li>Added Drizzlewood Scaffold</li>
+	<li>Added Orrian Arch.</li>
+	<li>Added Rata Sum portal.</li>
+	<li>Added Kaineng Stairs.</li>
+	<li>Added Jeb&rsquo;s Windmill.</li>
+</li>
+
+<h3>Changes and additions</h3>
+
+<ul>
+	<li>Completed story and added additional dialogue.</li>
+	<li>Added a shadow quality setting (including the ability to disable shadows entirely). This changes the number of PSSM splits used in the shadow pass, resulting in a crisper shadow.</li>
+	<li>Added an option to invert the camera&rsquo;s Y-axis.</li>
+</ul>
+
