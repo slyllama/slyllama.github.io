@@ -127,7 +127,8 @@
         "hide-title": "false",
         "desc": "Woohoo, the release of Jade Spring is now live! Thank you so much everyone for your support. Let's go through everything that's been added and improved, and talk about what's next.",
         "date": "2.2026",
-        "status": "draft"
+        "status": "draft",
+        "smartypants": "true"
     }
 ]
 

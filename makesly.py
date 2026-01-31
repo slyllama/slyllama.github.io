@@ -5,6 +5,7 @@ JPATH = "journal/" # journal path
 TITLE = "$ &mdash; Slyllama"
 PROG_TITLE = "This is Slyllama CMS"
 URL = "https://slyllama.net"
+LOCALHOST_URL = "http://localhost:8080"
 DESC = "Illustrative graphics for a modern age."
 INDENT = "    "
 VIEWER_PATTERN = r'src=\"[^\"]*\"'
@@ -49,6 +50,11 @@ if len(sys.argv) != 2:
 if sys.argv[1] == "-local" or sys.argv[1] == "--local":
     print(PROG_TITLE + " (working locally).")
     root_prefix = "file:///" + os.path.abspath(".").replace("\\", "/")
+elif sys.argv[1] == "-localhost" or sys.argv[1] == "--localhost":
+    print(PROG_TITLE + " (working locally).")
+    root_prefix = LOCALHOST_URL
+    URL = LOCALHOST_URL
+
 elif sys.argv[1] == "-live" or sys.argv[1] == "--live":
     print(PROG_TITLE + " (working live).")
     root_prefix = URL
