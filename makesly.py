@@ -170,7 +170,7 @@ for entry in journal_list:
     if not entry_path.exists():
         continue
     
-    if "2025" in entry["date"] or "2026" in entry["date"]:
+    if "2026" in entry["date"]:
         master_content += "<a href=\"" + page_root + "\">\n"
         master_content += ind(1) + "<p class=\"date\">" + entry["date"] + "</p>\n"
         master_content += "</a>"
@@ -185,7 +185,7 @@ for entry in journal_list:
             older_separator_entered = True
             master_content += "<h3>(Older journal entries)</h3>\n<ul>\n"
 
-        master_content += ind(1) + "<li style='margin-bottom: 0;'>\n"
+        master_content += ind(1) + "<li style='margin-bottom: .15em;'>\n"
         master_content += "<a href=\"" + page_root + "\">(" + entry["date"] + ") " + entry["title"] + "</a>\n"
         master_content += "</li>\n"
 
