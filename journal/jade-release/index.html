@@ -95,6 +95,21 @@
                 li {
                 	margin-bottom: 0;
                 }
+                .videoWrapper {
+                        position: relative;
+                        padding-bottom: 56.25%;
+                        /* 16:9 */
+                        padding-top: 25px;
+                        height: 0;
+                        margin: 40px 0;
+                }
+                .videoWrapper iframe {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
                 </style>
                 
                 
@@ -102,10 +117,22 @@
                 
                 <img alt="A painting of the GW2 asura Raiqqo, the mysterious steward of the Jade Spring. Here he is fixing the jade bot in a dimly-lit workshop." src="https://slyllama.net/journal/jade-1-0doc/raiqqo.jpg" onclick="viewImg('https://slyllama.net/journal/jade-1-0doc/raiqqo.jpg', 'A painting of the GW2 asura Raiqqo, the mysterious steward of the Jade Spring. Here he is fixing the jade bot in a dimly-lit workshop.');" tabindex="-1" style="cursor: zoom-in;" />
                 
-                <p>Is it a plane? Is it a Principal Biomancer? No, it&#8217;s the full release of the<i>Guild Wars 2</i> homesteading and decorating fan-game, <i>Jade Spring</i>, which I&#8217;ve been working on over the past year! This update brings new decorations and a bunch of changes which maes the game much more performant and faster to load. I&#8217;m very keen to keep adding decoration packs every now and then, but I&#8217;m considering the game to now be in a stable state to add on to!</p>
+                <p>Is it a plane? Is it a Principal Biomancer? No, it&#8217;s the full release of the<i>Guild Wars 2</i> homesteading and decorating fan-game, <i>Jade Spring</i>, which I&#8217;ve been working on over the past year! This update brings new decorations and a bunch of changes which maes the game much more performant and faster to load. I&#8217;m very keen to keep adding decoration packs every now and then, but I&#8217;m considering the game to now be in a stable state to add on to! That being said, you can expect a patch in the next week or two with some small immediate additions I wanna make, alongside the inevitable emergency bug-fixes, xD.</p>
                 
-                <div class="warning">
-                    <p>((Note about beta players with an existing save file.))</p>
+                <div class="warning" style="margin-bottom: 2em;">
+                    <p>For all beta players who have an existing save file: I&#8217;ve done my absolute best to make sure that this new version is fully compatible! But a couple of testers have reported some weird bugs which only disappeared when they reset their local cache, so you might need to do the same if you run into something really weird. You can find this location by clicking on the folder icon in the main menu. Do be sure to make copies of your settings, save, and decoration files - you will be able to put these back just fine.</p>
+                </div>
+                
+                <ul>
+                	<li>((Ticket reporting))</li>
+                	<li>((Thank-you, etc))</li>
+                </ul>
+                
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3561310/98e2432fee6d3315078a0fe800ca0b72967d55b0/ss_98e2432fee6d3315078a0fe800ca0b72967d55b0.1920x1080.jpg" loading="lazy" />
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3561310/d93765ea08a9bd8c84079cc96802f7a66d019fd1/ss_d93765ea08a9bd8c84079cc96802f7a66d019fd1.1920x1080.jpg" loading="lazy" />
+                
+                <div class="videoWrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ehs1BZtD87E?si=ssA206JbM3Dp-7Z8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 
                 <h2>Release changelog</h2>
@@ -126,7 +153,6 @@
                 	<li>Added Drizzlewood Scaffold</li>
                 	<li>Added Orrian Arch.</li>
                 	<li>Added Rata Sum portal.</li>
-                	<li>Added Kaineng Stairs.</li>
                 	<li>Added Jeb&rsquo;s Windmill.</li>
                 </li>
                 
@@ -136,8 +162,12 @@
                 	<li>Completed story and added additional dialogue.</li>
                 	<li>Added a shadow quality setting (including the ability to disable shadows entirely). This changes the number of PSSM splits used in the shadow pass, resulting in a crisper shadow.</li>
                 	<li>Added an option to invert the camera&rsquo;s Y-axis.</li>
+                	<li>You can now hold 3 Fish Food at once.</li>
+                	<li>Added a sidebar panel when the Otter&#8217;s Enclave is unlocked which indicates that it can now be accessed.</li>
+                	<li>Made the Enclave orb more prominent with a one-time starry marker.</li>
+                	<li>Made the end-game gift clearer with silhouettes and art of that gift.</li>
+                	<li>Added a keybind to toggle VFX and Compendium while editing and placing decorations.</li>
                 </ul>
-                
                 
             </div>
 
