@@ -1,10 +1,11 @@
 {
-    "ver-release": "1.3b",
-    "ver-prerelease": "1.0",
+    "ver-release": "1.0",
+    "ver-prerelease": "1.1b",
     "versions": [
         "1.3b",
         "1.2b",
         "1.1b",
-        "1.0b"
+        "1.0b",
+        "1.0"
     ]
 }
