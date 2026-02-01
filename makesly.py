@@ -156,6 +156,9 @@ master_content += "<div class='sep'></div>"
 
 journal_list.reverse()
 
+older_separator_entered = False
+adding_older_entries = False
+
 for entry in journal_list:
     if "status" in entry:
         if entry["status"] == "draft" or entry["status"] == "unlisted":
@@ -167,14 +170,27 @@ for entry in journal_list:
     if not entry_path.exists():
         continue
     
-    master_content += "<a href=\"" + page_root + "\">\n"
-    master_content += ind(1) + "<p class=\"date\">" + entry["date"] + "</p>\n"
-    master_content += "</a>"
-    master_content += "<h2 class=\"journal-list-title\">\n"
-    master_content += ind(1) + "<a href=\"" + page_root + "\">" + entry["title"] + "</a>\n"
-    master_content += "</h2>\n"
-    master_content += "<p>" + entry["desc"] + "</p>\n"
-    master_content += "<div class=\"journal-list-pad\"></div>"
+    if "2025" in entry["date"] or "2026" in entry["date"]:
+        master_content += "<a href=\"" + page_root + "\">\n"
+        master_content += ind(1) + "<p class=\"date\">" + entry["date"] + "</p>\n"
+        master_content += "</a>"
+        master_content += "<h2 class=\"journal-list-title\">\n"
+        master_content += ind(1) + "<a href=\"" + page_root + "\">" + entry["title"] + "</a>\n"
+        master_content += "</h2>\n"
+        master_content += "<p>" + entry["desc"] + "</p>\n"
+        master_content += "<div class=\"journal-list-pad\"></div>\n"
+    else:
+        adding_older_entries = True
+        if older_separator_entered == False:
+            older_separator_entered = True
+            master_content += "<h3>(Older journal entries)</h3>\n<ul>\n"
+
+        master_content += ind(1) + "<li style='margin-bottom: 0;'>\n"
+        master_content += "<a href=\"" + page_root + "\">(" + entry["date"] + ") " + entry["title"] + "</a>\n"
+        master_content += "</li>\n"
+
+if adding_older_entries:
+    master_content += "</ul>\n"
 
 fmt_master_content = indent_content(master_content)
 em = template
