@@ -13,6 +13,8 @@ VIEWER_ALT_PATTERN = r'alt=\"[^\"]*\"'
 ISSUE_PATTERN = r'\$\#([0-9]*)'
 ISSUE_SUB = r'<a class="issue-href" href="https://github.com/slyllama/jade-spring/issues/\1" target="_tab"><span class="issue">#\1</span></a>'
 
+is_live = False
+
 import json
 import os
 import re
@@ -56,6 +58,7 @@ elif sys.argv[1] == "-localhost" or sys.argv[1] == "--localhost":
     URL = LOCALHOST_URL
 
 elif sys.argv[1] == "-live" or sys.argv[1] == "--live":
+    is_live = True
     print(PROG_TITLE + " (working live).")
     root_prefix = URL
 else:
@@ -162,7 +165,8 @@ adding_older_entries = False
 for entry in journal_list:
     if "status" in entry:
         if entry["status"] == "draft" or entry["status"] == "unlisted":
-            continue
+            if is_live == True: # if not live, publish anyway, even if it is a draft article
+                continue
     
     name = entry["name"]
     entry_path = Path(JPATH + name + "/source.html")
@@ -236,8 +240,6 @@ for entry in journal_list:
         else:
             content += ind(1) + "<p class=\"date\">" + entry["date"] + "</p>\n"
         content += "</a>"
-        if "hide-title" in entry == False:
-            content += "<h2>"+ entry["title"] + "</h2>\n"
 
         with open(output_path + "/source.html") as file:
             if "smartypants" in entry: # format with Smartypants if that option is specified in the journal metadata

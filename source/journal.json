@@ -10,7 +10,6 @@
     {
         "name": "seitung-nov24",
         "title": "Jade Spring: Development Notes #1",
-        "hide-title": "true",
         "desc": "Clear Dragonvoid blights, pick weeds, and utilise your jade bot technologies to decorate a house and garden in this cozy Guild Wars 2 fan game, set in the vibrant landscape of Seitung Province!",
         "thumb": "$PAGEROOT/thumb.jpg",
         "date": "11.2024",
@@ -27,7 +26,6 @@
     {
         "name": "2025",
         "title": "Onward to 2025!",
-        "hide-title": "true",
         "desc": "Plans and thoughts for this coming year.",
         "thumb": "$PAGEROOT/cori.jpg",
         "date": "1.2025",
@@ -36,7 +34,6 @@
     {
         "name": "jade-jan25",
         "title": "Jade Spring: Development Notes #2",
-        "hide-title": "true",
         "desc": "Clear Dragonvoid blights, pick weeds, and utilise your jade bot technologies to decorate a house and garden in this cozy Guild Wars 2 fan game, set in the vibrant landscape of Seitung Province!",
         "thumb": "$PAGEROOT/thumb.jpg",
         "date": "1.2025",
@@ -45,7 +42,6 @@
     {
         "name": "jade-mar25",
         "title": "Jade Spring: Development Notes #3",
-        "hide-title": "false",
         "desc": "Jade Spring progress continues! Read about the tour video, improvements to the game, and the Steam page coming soon!",
         "date": "3.2025",
         "status": "published"
@@ -53,7 +49,6 @@
     {
         "name": "jade-apr25",
         "title": "Jade Spring: Development Notes #4",
-        "hide-title": "false",
         "desc": "A freshly-baked development update for Jade Spring! Let's talk Steam, graphical performance and settings, outlines for the next couple of months, and more.",
         "date": "4.2025",
         "status": "published"
@@ -61,7 +56,6 @@
     {
         "name": "jade-may25",
         "title": "Jade Spring: Development Notes #5",
-        "hide-title": "false",
         "desc": "The Jade Spring beta has been released! Here are a couple of quick notes on its release and progress on the game.",
         "date": "5.2025",
         "status": "published"
@@ -69,7 +63,6 @@
     {
         "name": "jade-v1-1b",
         "title": "Jade Spring: v1.1b Update",
-        "hide-title": "false",
         "thumb": "$PAGEROOT/thumb.jpg",
         "desc": "Check out new noodle decorations, decoration set duplication, bug fixes, and more in this Jade Spring beta update!",
         "date": "6.2025",
@@ -78,7 +71,6 @@
     {
         "name": "jade-v1-2b",
         "title": "Jade Spring: v1.2b Update (and Steam Launch!)",
-        "hide-title": "false",
         "thumb": "$PAGEROOT/thumb.jpg",
         "desc": "Check out decoration categories, bug fixes, a Steam launch, and more in this Jade Spring beta update!",
         "date": "6.2025",
@@ -87,7 +79,6 @@
     {
         "name": "jul25",
         "title": "August Thoughts",
-        "hide-title": "false",
         "thumb": "$PAGEROOT/thumb.jpg",
         "desc": "Life, Jade Spring, video games, and more. Woohoo!",
         "date": "8.2025",
@@ -96,7 +87,6 @@
     {
         "name": "jade-sep25",
         "title": "Jade Spring: Development Notes #6",
-        "hide-title": "false",
         "desc": "Design templates, decorations, and more are coming to Jade Spring on the 27th September.",
         "date": "9.2025",
         "status": "published"
@@ -104,7 +94,6 @@
     {
         "name": "jade-v1-3b",
         "title": "Jade Spring: v1.3b Update",
-        "hide-title": "false",
         "thumb": "$PAGEROOT/thumb.jpg",
         "desc": "Design templates, decorations, bug fixes, and more improvements are now available in Jade Spring!",
         "date": "10.2025",
@@ -114,7 +103,6 @@
         "name": "jade-1-0doc",
         "title": "Jade Spring: v1.0 Development Document",
         "desc": "Let's get into detail about what's going to go into Jade Spring for its 1.0 release!",
-        "hide-title": "false",
         "thumb": "$PAGEROOT/thumb.jpg",
         "date": "12.2025",
         "status": "published",
@@ -124,12 +112,19 @@
     {
         "name": "jade-release",
         "title": "Jade Spring: v1.0 Release",
-        "hide-title": "false",
         "thumb": "$PAGEROOT/thumb.jpg",
-        "desc": "Woohoo, the full version of Jade Spring is now live! Thank you so much everyone for your support. Let's go through everything that's been added and improved.",
+        "desc": "The full version of Jade Spring is now live! Thank you so much everyone for your support. Let's go through everything that's been added and improved.",
         "date": "2.2026",
         "status": "published",
         "smartypants": "true"
+    },
+    {
+        "name": "endless-summer",
+        "title": "Endless Summer: Starting Off 2026",
+        "thumb": "$PAGEROOT/thumb.jpg",
+        "desc": "With Jade Spring released, here are some thoughts and ideas for my next game.",
+        "date": "2.2026",
+        "status": "draft",
+        "smartypants": "true"
     }
 ]
-
