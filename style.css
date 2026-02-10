@@ -372,6 +372,7 @@ tr:first-child {
 #copy ul li {
   list-style-type: disc;
   padding-left: 1em;
+  margin-bottom: 0.1em;
 }
 #copy ol {
   margin-left: 2.5em;
