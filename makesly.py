@@ -103,6 +103,7 @@ def generate_page(name, data, custom_path = "!", custom_thumb = False):
     with open("source/" + name + ".html") as file:
         cnt = file.read()
     fmt_cnt = indent_content(cnt)
+    fmt_cnt = smartypants.smartypants(fmt_cnt)
 
     t = template
 

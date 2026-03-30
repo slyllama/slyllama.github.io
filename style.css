@@ -143,25 +143,17 @@
   src: url("assets/cabin-regular.ttf");
 }
 @font-face {
-  font-family: "Sitelen";
-  src: url("assets/sitelen.ttf");
-}
-@font-face {
   font-family: "Cabin";
   font-weight: bold;
   src: url("assets/cabin-semibold.ttf");
 }
 @font-face {
+  font-family: "Sitelen";
+  src: url("assets/sitelen.ttf");
+}
+@font-face {
   font-family: "Intel One Mono";
   src: url("assets/intel-one-mono.ttf");
-}
-@font-face {
-  font-family: "Joffi";
-  src: url("assets/joffi.ttf");
-}
-@font-face {
-  font-family: "Futura";
-  src: url("assets/futura.ttf");
 }
 .toki-pona {
   font-family: "Sitelen";
@@ -252,7 +244,7 @@ i {
 
 p, #copy > ul, ol, li, h3 {
   color: #555;
-  line-height: 1.33em;
+  line-height: 1.27em;
   hyphens: auto;
   margin-bottom: 16px;
 }
@@ -275,7 +267,7 @@ table {
   color: #555;
   display: inline-table;
   font-size: 12.5pt;
-  line-height: 1.197em;
+  line-height: 1.143em;
   hyphens: auto;
   margin-top: 26px !important;
   width: 100%;
@@ -298,7 +290,7 @@ td > ul {
 
 td > ul > li {
   color: #555;
-  line-height: 1.197em;
+  line-height: 1.143em;
   margin-bottom: 0;
   padding-left: 0.75em !important;
 }
@@ -375,7 +367,7 @@ tr:first-child {
 #copy ul li {
   list-style-type: disc;
   padding-left: 1em;
-  margin-bottom: 0.1em;
+  margin-bottom: 0.4em;
 }
 #copy ol {
   margin-left: 2.5em;
@@ -383,6 +375,14 @@ tr:first-child {
 #copy ol > li {
   list-style-type: decimal;
   padding-left: 1em;
+}
+@media (max-width: 910px) {
+  #copy ul, #copy ol {
+    margin-left: 1.2em !important;
+  }
+  #copy ul > li, #copy ol > li {
+    padding-left: 0.25em !important;
+  }
 }
 
 .caption {
