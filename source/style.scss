@@ -28,6 +28,11 @@
     src: url('assets/joffi.ttf');
 }
 
+@font-face {
+    font-family: 'Futura';
+    src: url('assets/futura.ttf');
+}
+
 .toki-pona {
     font-family: "Sitelen";
     text-transform: lowercase;
@@ -73,13 +78,12 @@ code, pre {
 }
 
 h1 {
-    font-family: "Joffi", "Georgia", sans-serif;
-    font-size: $copy-title-size + 12pt;
+    font-family: 'Cabin', 'Trebuchet MS', sans-serif;
+    font-size: $copy-title-size + 9pt;
     font-weight: 500;
     letter-spacing: -0.02em;
-    text-transform: uppercase;
     color: $accent-blue;
-    margin-bottom: 12px;
+    margin-bottom: 24px;
     min-width: 300px;
     max-width: 90%;
     width: fit-content;
