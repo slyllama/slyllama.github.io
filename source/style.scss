@@ -223,27 +223,28 @@ tr:first-child { border-top: 1px solid $separator-color; }
     }
 
     ul {
-        margin-left: 2.5em;
+        margin-left: 2.0em;
         li {
             list-style-type: disc;
-            padding-left: 1em;
+            padding-left: 0.7em;
             margin-bottom: 0.4em;
         }
     }
 
     ol {
-        margin-left: 2.5em;
+        margin-left: 2.0em;
     }
 
     ol > li {
         list-style-type: decimal;
-        padding-left: 1em;
+        padding-left: 0.7em;
     }
 
     @media (max-width: $desktop-width) {
         ul, ol {
             margin-left: 1.2em !important;
         }
+
         ul > li, ol > li {
             padding-left: 0.25em !important;
         }
