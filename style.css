@@ -113,8 +113,8 @@
   border-radius: 3px;
   padding: 6px;
   position: absolute;
-  right: 14px;
-  top: 14px;
+  right: 8px;
+  top: 8px;
   text-align: center;
 }
 #img-view-container .close-button img {
@@ -514,12 +514,12 @@ tr:first-child {
 .header-link {
   float: left;
   margin-left: 10px;
-  padding: 14px 28px;
+  padding: 8px 16px;
 }
 @media (max-width: 910px) {
   .header-link {
     margin-left: 0px;
-    padding: 14px 20px;
+    padding: 8px 20px;
   }
 }
 .header-link a:hover {
