@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+    <head>
+        <meta name="viewport" content="width=300, initial-scale=1.0">
+        <meta charset="utf-8" />
+
+        <title>Sly's Status Update For July 2026 &mdash; Slyllama</title>
+        <meta name="description" content="Some ramblings on the first half of this year: work, video games, music, books, plans, and more!">
+        <meta property="og:title" content="Sly's Status Update For July 2026 &mdash; Slyllama" />
+        <meta property="og:description" content="Some ramblings on the first half of this year: work, video games, music, books, plans, and more!" />
+        <meta property="og:url" content="https://slyllama.net/journal/status-jul26" />
+        <meta property="og:image" content="https://slyllama.net/journal/status-jul26/thumb.jpg" />
+        <meta property="og:type" content="website" />
+        <meta name="theme-color" content="#1C3C83" data-react-helmet="true" />
+        <link rel="apple-touch-icon" sizes="180x180" href="https://slyllama.net/assets/apple-icon-180px.png?ver=2">
+
+        <meta name="twitter:site" content="@slyllama">
+        <meta name="twitter:title" content="Sly's Status Update For July 2026 &mdash; Slyllama">
+        <meta name="twitter:description" content="Some ramblings on the first half of this year: work, video games, music, books, plans, and more!">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:image:src" content="https://slyllama.net/journal/status-jul26/thumb.jpg">
+
+        <link rel="icon" type="image/png" href="https://slyllama.net/assets/favicon.png" />
+        <link rel="stylesheet" type="text/css" href="https://slyllama.net/reset.css" />
+        <link rel="stylesheet" type="text/css" href="https://slyllama.net/style.css" />
+
+        <script src="https://slyllama.net/scripts.js" type="text/javascript"></script>
+    </head>
+    
+    <body onload="loadDOM();">
+        <img id="bg" src="https://slyllama.net/assets/bg.jpg" />
+
+        <div id="img-view-container" onclick="closeImg();">
+            <div class="close-button" onclick="closeImg();"><img src="https://slyllama.net/assets/icon-close.svg" /></div>
+            <div id="img-view-inner">
+                <img id="img-view-img" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" />
+            </div>
+        </div>
+        
+        <div id="container">
+            <div id="header">
+                <div id="header-logo-container">
+                    <a href="https://slyllama.net">
+                        <img id="header-logo" src="https://slyllama.net/assets/logo.svg" alt="Slyllama." />
+                    </a>
+                </div>
+                
+                <span id="header-menu-btn" class="header-link focus-outline">
+                    <a id="mobile-menu-btn" onclick="toggleMobileMenu();" tabindex="0" style="display: block;">
+                        <img id="header-menu-btn-img" src="https://slyllama.net/assets/mobile-menu-btn.svg" alt="Mobile menu." />
+                    </a>
+                </span>
+                <ul id="header-desktop-links">
+                    <li class="header-link">
+                        <a href="https://slyllama.net/dwelt">
+                            Dwelt <span class="toki-pona">lon</span>
+                        </a>
+                    </li>
+                    <li class="header-link">
+                        <a href="https://www.artstation.com/slyllama" target="_tab">
+                            Art <span class="toki-pona">lukin musi</span>
+                        </a>
+                    </li>
+                    <li class="header-link"><a href="https://slyllama.net/journal">
+                        Journal <span class="toki-pona">lipu mi</span></a></li>
+                    <li class="header-btn-container">
+                        <a href="https://bsky.app/profile/slyllama.net" target="_tab" title="Slyllama on Bluesky.">
+                            <span class="header-btn header-btn-bsky">
+                                <img style="height: 28px;" src="https://slyllama.net/assets/logo-bluesky.svg" alt="Slyllama on Bluesky."/>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="header-btn-container">
+                        <a href="mailto:slyllama@outlook.com" title="Email - slyllama@outlook.com.">
+                            <span class="header-btn">
+                                <img style="height: 26px;" src="https://slyllama.net/assets/logo-email.svg" alt="Email - slyllama@outlook.com." />
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <div style="clear: both;"></div>
+
+                <ul id="mobile-menu">
+                    <!--<li><a href="https://www.artstation.com/slyllama" target="_tab">
+                        <div class="mobile-menu-link">Art <span class="toki-pona">lukin musi</span> <img src="https://slyllama.net/assets/icon-external.svg" class="external-icon" alt="External link." /></div>
+                    </a></li>-->
+                    <li><a href="https://slyllama.net/journal"><div class="mobile-menu-link">Journal <span class="toki-pona">lipu mi</span></div></a></li>
+                    <li><a href="https://slyllama.net/jade-spring"><div class="mobile-menu-link">Jade Spring</div></a></li>
+                    <li><a href="https://slyllama.net/dwelt"><div class="mobile-menu-link">Dwelt</div></a></li>
+                    <li><a href="mailto:slyllama@outlook.com"><div class="mobile-menu-link">Email</div></a></li>
+                    <li><a href="https://bsky.app/profile/slyllama.net" target="_tab">
+                        <div class="mobile-menu-link">Follow (Bluesky) <img src="https://slyllama.net/assets/icon-external.svg" class="external-icon" alt="External link." /></div>
+                    </a></li>
+                </ul>
+            </div>
+
+            <div id="copy">
+                <a href="https://slyllama.net/journal/status-jul26">
+                    <p class="date draft-tag">DRAFT</p>
+                </a><h1>Sly&#8217;s Status Update For July 2026</h1>
+                
+                <p>Hello, friends! It&#8217;s been a <a href="https://www.slyllama.net/journal/endless-summer/">while</a> since I&#8217;ve written here, and I&#8217;ve been a bit neglectful of the website in general, so I wanted to type out some ramblings on how the year has gone so far. And what a strange year it&#8217;s been. 2025 was more hectic for me (moving house, and undergoing excitements and changes at work); and yet I felt more focused, and was able to finish <a href="https://store.steampowered.com/app/3561310/Jade_Spring/"><i>Jade Spring</i></a>. Now in 2026 I&#8217;ve become physically settled, but mentally (and emotionally) all over the place! But we just celebrated <a href="https://teara.govt.nz/en/matariki-maori-new-year">Matariki</a> here in NZ, a mid-year chance to renew and replenish, and so I&#8217;m grateful to you all for reading as I ramble and make sense of things for the six months ahead.</p>
+                
+                <h3>Dwelt: Iron Solstice</h3>
+                
+                <p>My second (and original) game <i>Dwelt</i> went on an untentional hiatus, after I had a bit of a mid-life crisis about it! It&#8217;s only in the past week or so that I&#8217;ve come back to it feeling more refreshed. The broad conceit has remained <a href="https://www.slyllama.net/journal/endless-summer/">relatively unchanged</a>, and I delivered a more formal <a href="https://bsky.app/profile/slyllama.net/post/3mgjjlqluk22j">pitch</a> to friends a few months ago, which went well. My crisis really boiled down to cutting back the scope creep that had accumulated since then, and I&#8217;m excited to have a much simpler and clearer picture of the game in my head now (as well as <a href="https://bsky.app/profile/slyllama.net/post/3mktsar7jyc2p">some music</a> I&#8217;m happy with). <i>Dwelt</i> updates will get their own journal entry, coming soon!</p>
+                
+                <p>I&#8217;m not very confident that I can have a working demo by the end of the year as I&#8217;d originally hoped, but I&#8217;m more optimistic that I can keep up a more sustained (if still gentle) pace of game development. I love making games so much; the struggles I feel come from the fears and doubts associated with working on an <i>original</i> game (i.e. not being able to rely on someone else&#8217;s concepts and mechanics, like in <i>Jade Spring</i>). I wrote in <a href="https://www.slyllama.net/journal/endless-summer/">February</a> that I felt &#8220;emotionally disconnected from [the game]&#8221;, and I&#8217;m happy and relieved that I don&#8217;t feel that way anymore.</p>
+                
+                <h3>Extra-Curricular Activities</h3>
+                
+                <p>First of all, I really wanna congratulate areyoshi for their amazing Kattabolt comic book crowdfunding project, which deservedly passed its funding goal very quickly.</p>
+                
+            </div>
+
+            <div id="footer-container">
+                <p>
+                    &copy; Slyllama 2026.
+                    <span style="width: 0.5em; display: inline-block;"></span>
+                    <a href="https://slyllama.net/alec">Personal site.</a>
+                </p>
+            </div>
+            <img src="https://slyllama.net/assets/no-gen-ai.svg" id="no-gen-ai" />
+        </div>
+    </body>
+</html>
+

@@ -126,5 +126,14 @@
         "date": "2.2026",
         "status": "published",
         "smartypants": "true"
+    },
+    {
+        "name": "status-jul26",
+        "title": "Sly's Status Update For July 2026",
+        "thumb": "$PAGEROOT/thumb.jpg",
+        "desc": "Some ramblings on the first half of this year: work, video games, music, books, plans, and more!",
+        "date": "7.2026",
+        "smartypants": "true",
+        "status": "draft"
     }
 ]
