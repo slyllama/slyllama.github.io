@@ -146,7 +146,7 @@ generate_page("jade-spring", {
 
 generate_page("dwelt", {
     "$TITLE": "Dwelt: Iron Solstice",
-    "$DESC": "((Dwelt))" 
+    "$DESC": "Design, build and garden in Dwelt: Iron Solstice, a steampunk game set in an overgrown post-apocalyptic world, featuring diverse environments to cultivate, and robust construction features." 
 }, "!", True)
 
 generate_page("ticket", {

@@ -136,4 +136,14 @@
         "smartypants": "true",
         "status": "published"
     }
+    ,
+    {
+        "name": "dwelt-aug26",
+        "title": "Dwelt: Development Notes #1",
+        "thumb": "$PAGEROOT/thumb.jpg",
+        "desc": "((Dwelt: Development Notes #1))",
+        "date": "8.2026",
+        "smartypants": "true",
+        "status": "draft"
+    }
 ]
