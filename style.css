@@ -220,7 +220,8 @@ h2 {
   font-size: 24pt;
   color: #1C3C83;
   line-height: 1.1em;
-  margin-bottom: 24pt;
+  margin-bottom: 0.5em;
+  margin-top: 0.7em;
 }
 
 h3 {
