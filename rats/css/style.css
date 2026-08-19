@@ -1,0 +1,8 @@
+body {
+    background: url("/assets/stars.png") repeat;
+    color: white;
+}
+
+a {
+    color: pink;
+}
