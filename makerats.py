@@ -6,11 +6,11 @@ import os
 import shutil
 
 INDENT = "        "
-PAGES_FILE = "pages.json"
-OUTPUT_ROOT_PATH = "page/"
-SOURCE_PATH = "source/"
+PAGES_FILE = "rats/pages.json"
+OUTPUT_ROOT_PATH = "rats/page/"
+SOURCE_PATH = "rats/source/"
 TEMPLATE = ""
-TEMPLATE_FILE = "template.html"
+TEMPLATE_FILE = "rats/template.html"
 
 # Check if pages file exists
 if os.path.isfile(PAGES_FILE) == False:
@@ -49,7 +49,7 @@ with open(PAGES_FILE) as pages_file:
         output = output.replace("$TITLE", pages_data[entry]["title"])
 
         # Exception for the index file
-        if entry == "index": output_path = "index.html"
+        if entry == "index": output_path = "rats/index.html"
         else: output_path = output_folder + "/index.html"
         with open(output_path, "w") as output_file:
             output_file.write(output)
