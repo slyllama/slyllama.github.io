@@ -381,15 +381,19 @@ tr:first-child { border-top: 1px solid $separator-color; }
 .header-link {
     float: left;
     margin-left: $headlink-margin;
-    padding: $headlink-padding $headlink-padding * 2;
+    padding: $headlink-padding $headlink-padding * 1.5;
 
     @media (max-width: $desktop-width) {
         margin-left: 0px;
-        padding: $headlink-padding 20px;
+        padding: $headlink-padding 10px;
+    }
+
+    a {
+        border-bottom: none !important;
     }
 
     a:hover {
-        border-bottom: 1px solid $accent-ochre;
+        border-bottom: 1px solid $accent-blue !important;
     }
 }
 

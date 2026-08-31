@@ -515,16 +515,19 @@ tr:first-child {
 .header-link {
   float: left;
   margin-left: 10px;
-  padding: 8px 16px;
+  padding: 8px 12px;
 }
 @media (max-width: 910px) {
   .header-link {
     margin-left: 0px;
-    padding: 8px 20px;
+    padding: 8px 10px;
   }
 }
+.header-link a {
+  border-bottom: none !important;
+}
 .header-link a:hover {
-  border-bottom: 1px solid #C93E30;
+  border-bottom: 1px solid #1C3C83 !important;
 }
 
 #header-logo {
