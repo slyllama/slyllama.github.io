@@ -152,7 +152,7 @@ generate_page("dwelt", {
 generate_page("terms", {
     "$TITLE": "Terms and Privacy",
     "$DESC": "Terms, conditions, and privacy notices for Slyllama." 
-}, "!", True)
+}, "!")
 
 generate_page("ticket", {
     "$TITLE": "Jade Spring Ticket",
