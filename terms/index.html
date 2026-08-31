@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+    <head>
+        <meta name="viewport" content="width=300, initial-scale=1.0">
+        <meta charset="utf-8" />
+
+        <title>Terms and Privacy</title>
+        <meta name="description" content="Terms, conditions, and privacy notices for Slyllama.">
+        <meta property="og:title" content="Terms and Privacy" />
+        <meta property="og:description" content="Terms, conditions, and privacy notices for Slyllama." />
+        <meta property="og:site_name" content="Slyllama" />
+        <meta property="og:url" content="https://slyllama.net/terms" />
+        <meta property="og:image" content="https://slyllama.net/terms/thumb.jpg" />
+        <meta property="og:type" content="website" />
+        <meta name="theme-color" content="#1C3C83" data-react-helmet="true" />
+        <link rel="apple-touch-icon" sizes="180x180" href="https://slyllama.net/assets/apple-icon-180px.png?ver=2">
+
+        <meta name="twitter:site" content="@slyllama">
+        <meta name="twitter:title" content="Terms and Privacy">
+        <meta name="twitter:description" content="Terms, conditions, and privacy notices for Slyllama.">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:image:src" content="https://slyllama.net/terms/thumb.jpg">
+
+        <link rel="icon" type="image/png" href="https://slyllama.net/assets/favicon.png" />
+        <link rel="stylesheet" type="text/css" href="https://slyllama.net/reset.css" />
+        <link rel="stylesheet" type="text/css" href="https://slyllama.net/style.css" />
+
+        <script src="https://slyllama.net/scripts.js" type="text/javascript"></script>
+    </head>
+    
+    <body onload="loadDOM();">
+        <img id="bg" src="https://slyllama.net/assets/bg.jpg" />
+
+        <div id="img-view-container" onclick="closeImg();">
+            <div class="close-button" onclick="closeImg();"><img src="https://slyllama.net/assets/icon-close.svg" /></div>
+            <div id="img-view-inner">
+                <img id="img-view-img" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" />
+            </div>
+        </div>
+        
+        <div id="container">
+            <div id="header">
+                <div id="header-logo-container">
+                    <a href="https://slyllama.net">
+                        <img id="header-logo" src="https://slyllama.net/assets/logo.svg" alt="Slyllama." />
+                    </a>
+                </div>
+                
+                <span id="header-menu-btn" class="header-link focus-outline">
+                    <a id="mobile-menu-btn" onclick="toggleMobileMenu();" tabindex="0" style="display: block;">
+                        <img id="header-menu-btn-img" src="https://slyllama.net/assets/mobile-menu-btn.svg" alt="Mobile menu." />
+                    </a>
+                </span>
+                <ul id="header-desktop-links">
+                    <li class="header-link">
+                        <a href="https://slyllama.net/dwelt">
+                            Dwelt&ensp;<span class="toki-pona">lon</span>
+                        </a>
+                    </li>
+                    <li class="header-link">
+                        <a href="https://www.artstation.com/slyllama" target="_tab">
+                            Art&ensp;<span class="toki-pona">lukin musi</span>
+                        </a>
+                    </li>
+                    <li class="header-link"><a href="https://slyllama.net/journal">
+                        Journal&ensp;<span class="toki-pona">lipu mi</span></a></li>
+                    <li class="header-btn-container">
+                        <a href="https://bsky.app/profile/slyllama.net" target="_tab" title="Slyllama on Bluesky.">
+                            <span class="header-btn header-btn-bsky">
+                                <img style="height: 28px;" src="https://slyllama.net/assets/logo-bluesky.svg" alt="Slyllama on Bluesky."/>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="header-btn-container">
+                        <a href="mailto:slyllama@outlook.com" title="Email - slyllama@outlook.com.">
+                            <span class="header-btn">
+                                <img style="height: 26px;" src="https://slyllama.net/assets/logo-email.svg" alt="Email - slyllama@outlook.com." />
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <div style="clear: both;"></div>
+
+                <ul id="mobile-menu">
+                    <li><a href="https://slyllama.net/journal"><div class="mobile-menu-link">Journal&ensp;<span class="toki-pona">lipu mi</span></div></a></li>
+                    <li><a href="https://slyllama.net/jade-spring"><div class="mobile-menu-link">Jade Spring&ensp;<span class="toki-pona">ma kasi</span></div></a></li>
+                    <li><a href="https://slyllama.net/dwelt"><div class="mobile-menu-link">Dwelt&ensp;<span class="toki-pona">lon</span></div></a></li>
+                    <li><a href="mailto:slyllama@outlook.com"><div class="mobile-menu-link">Email&ensp;<span class="toki-pona">o toki</span></div></a></li>
+                    <li><a href="https://bsky.app/profile/slyllama.net" target="_tab">
+                        <div class="mobile-menu-link">Follow (Bluesky)&ensp;<img src="https://slyllama.net/assets/icon-external.svg" class="external-icon" alt="External link." /></div>
+                    </a></li>
+                </ul>
+            </div>
+
+            <div id="copy">
+                <h1>Terms and Privacy</h1>
+                
+                <p>In general, we do not collect, nor ask for, any of your personal information. The one exception to this is our <a href="https://slyllama.net/ticket">support ticketing system</a>, where you can <b>optionally</b> provide a return email address so that we can follow up your ticket with more clarifying questions or updates. You have the right to ask for a copy of any personal information we hold about you, and to ask for it to be corrected if you think it is wrong. If you&#8217;d like to ask for a copy of your information, or to have it corrected, please contact us at <a href="mailto:slyllama@outlook.com">slyllama@outlook.com</a>.</p>
+                
+            </div>
+
+            <div id="footer-container">
+                <p>
+                    &copy; Slyllama 2026.
+                    <span style="width: 0.5em; display: inline-block;"></span>
+                    <a href="https://slyllama.net/alec">Personal site.</a>
+                </p>
+            </div>
+            <img src="https://slyllama.net/assets/no-gen-ai.svg" id="no-gen-ai" />
+        </div>
+    </body>
+</html>
+

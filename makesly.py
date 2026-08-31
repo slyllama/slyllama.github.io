@@ -149,6 +149,11 @@ generate_page("dwelt", {
     "$DESC": "A cozy building and gardening game, where hope and melancholy co-exist in rich steampunk environments that are yours to explore and heal." 
 }, "!", True)
 
+generate_page("terms", {
+    "$TITLE": "Terms and Privacy",
+    "$DESC": "Terms, conditions, and privacy notices for Slyllama." 
+}, "!", True)
+
 generate_page("ticket", {
     "$TITLE": "Jade Spring Ticket",
     "$DESC": "Hey there! Use this form to send a Jade Spring bug report or feature request, or any questions and comments you have! Thank you so much for taking the time to do so." 
