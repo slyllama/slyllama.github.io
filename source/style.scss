@@ -19,6 +19,11 @@
 }
 
 @font-face {
+    font-family: 'Boldonse';
+    src: url('assets/boldonse.ttf');
+}
+
+@font-face {
     font-family: 'Intel One Mono';
     src: url('assets/intel-one-mono.ttf');
 }
@@ -68,14 +73,13 @@ code, pre {
 }
 
 h1 {
-    font-family: 'Cabin', 'Trebuchet MS', sans-serif;
-    font-size: $copy-title-size + 9pt;
-    font-weight: 500;
-    letter-spacing: -0.02em;
+    font-family: 'Boldonse', 'Trebuchet MS', sans-serif;
+    font-size: $copy-title-size;
     color: $accent-blue;
     margin-bottom: 24px;
     min-width: 300px;
     max-width: 90%;
+    line-height: 1.7em;
     width: fit-content;
     word-wrap: break-word;
 
