@@ -146,7 +146,7 @@ generate_page("jade-spring", {
 
 generate_page("dwelt", {
     "$TITLE": "Dwelt: Iron Solstice",
-    "$DESC": "A cozy building and gardening game, where hope and melancholy co-exist in rich steampunk environments that are yours to explore and heal." 
+    "$DESC": "A cozy building, cleansing, and gardening game, where hope and melancholy co-exist in rich steampunk environments that are yours to explore and heal." 
 }, "!", True)
 
 generate_page("terms", {
