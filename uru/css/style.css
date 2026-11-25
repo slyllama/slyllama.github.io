@@ -36,6 +36,13 @@ ul {
     margin-bottom: 4px;
     padding-left: 24px;
 }
+.body-img {
+    border: 4px solid transparent;
+    border-image: url(/uru/assets/wood.gif) 2 round;
+    display: block;
+    margin: 1em auto;
+    width: 80%;
+}
 .box {
     background: darkslategray;
     border: 1px solid mediumspringgreen;
@@ -46,19 +53,16 @@ ul {
     margin-left: 16px;
     margin-right: 16px;
 }
-.box img {
-    border: 4px solid transparent;
-    border-image: url(/uru/assets/wood.gif) 2 round;
-    display: block;
-    margin: 1em auto;
-    width: 80%;
-}
 .caption {
     font-style: italic;
     margin-left: 20%;
     margin-right: 20%;
     margin-top: -0.5em;
     text-align: center;
+}
+.emoji {
+    display: inline-block;
+    vertical-align: center;
 }
 .footer {
     font-size: 11pt;

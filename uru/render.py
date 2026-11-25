@@ -1,5 +1,13 @@
 import json
 import os.path
+import re
+
+def convert_emoji(text: str) -> str:
+    return re.sub(
+        rf"{re.escape(T_EMOJI)}=([\w-]+)",
+        r'<img class="emoji" src="/uru/emoji/\1.png" />',
+        text,
+    )
 
 INDENT = "                    "
 URL_ROOT = "https://slyllama.net/uru/"
@@ -10,6 +18,7 @@ SOURCE_PATH = "source/"
 TEMPLATE_FILE_PATH = "_template.html"
 
 # Tokens
+T_EMOJI = "$EM"
 T_TITLE = "$TITLE"
 T_CONTENT = "$CONTENT"
 T_URL = "$URL"
@@ -48,6 +57,7 @@ for entry in index_json:
         source_indented += line + "\n"
         c += 1
     source_indented = source_indented.rstrip("\n")
+    source_indented = convert_emoji(source_indented)
 
     # Compose the output file
     output = template
