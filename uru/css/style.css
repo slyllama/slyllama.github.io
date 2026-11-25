@@ -1,0 +1,91 @@
+a {
+    color: mediumspringgreen;
+}
+blockquote {
+    border-left: 1px dotted lightsteelblue;
+    padding-left: 24px;
+}
+blockquote * {
+    color: lightsteelblue;
+}
+body {
+    background: url("/uru/assets/bg.gif") repeat;
+    color: honeydew;
+    margin: 12px;
+}
+h1 {
+    border-bottom: 1px solid honeydew;
+    font-size: 24pt;
+    margin-bottom: 14px;
+    margin-top: 8px;
+    padding-bottom: 4px;
+}
+h2 {
+    font-size: 14pt;
+    font-weight: bold;
+    margin-bottom: 6px;
+    margin-top: 10px;
+}
+li {
+    list-style-type: disc;
+}
+p {
+    margin-bottom: 0.5em;
+}
+ul {
+    margin-bottom: 4px;
+    padding-left: 24px;
+}
+.box {
+    background: darkslategray;
+    border: 1px solid mediumspringgreen;
+    padding-bottom: 32px;
+    padding-top: 24px;
+}
+.box > * {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+.box img {
+    border: 4px solid transparent;
+    border-image: url(/uru/assets/wood.gif) 2 round;
+    display: block;
+    margin: 1em auto;
+    width: 80%;
+}
+.caption {
+    font-style: italic;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: -0.5em;
+    text-align: center;
+}
+.footer {
+    font-size: 11pt;
+    text-align: center;
+}
+#grid-wrapper {
+    display: grid;
+    gap: 4px;
+    grid-template-columns: 200px 1fr;
+    margin-bottom: 1em;
+    max-width: 100%;
+    width: 1000px;
+}
+#sidebar {
+    display: block;
+}
+#wrapper {
+    max-width: 100%;
+    width: fit-content;
+}
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+    #grid-wrapper {
+        display: block;
+    }
+    #sidebar {
+        display: none;
+    }
+}
