@@ -11,6 +11,7 @@ def convert_emoji(text: str) -> str:
 INDENT = "                    "
 LIVE = "https://slyllama.net"
 URL = LIVE + "/uru/"
+IMAGE_PLACEHOLDER = "<img class=\"cons\" src=\"/uru/assets/cons.gif\" />"
 
 # File and folder paths
 INDEX_FILE_PATH = "index.json"
@@ -56,12 +57,13 @@ for entry in index_json:
 
     # Compose the output file
     output = template
+    output = output.replace("$CONTENT", source_indented)
     output = output.replace("$TITLE", data["title"])
     output = output.replace("$DESC", data["desc"])
     output = output.replace("$DATE", data["date"])
     output = output.replace("$URL", url)
     output = output.replace("$LIVE", LIVE)
-    output = output.replace("$CONTENT", source_indented)
+    output = output.replace("$IMGP", IMAGE_PLACEHOLDER)
 
     # Write the output file
     output_file = open(file_name, "w")
