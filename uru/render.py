@@ -4,25 +4,19 @@ import re
 
 def convert_emoji(text: str) -> str:
     return re.sub(
-        rf"{re.escape(T_EMOJI)}=([\w-]+)",
+        r"\$EM=([\w-]+)",
         r'<img class="emoji" src="/uru/emoji/\1.png" />',
         text,
     )
 
 INDENT = "                    "
-URL_ROOT = "https://slyllama.net/uru/"
+LIVE = "https://slyllama.net"
+URL = LIVE + "/uru/"
 
 # File and folder paths
 INDEX_FILE_PATH = "index.json"
 SOURCE_PATH = "source/"
 TEMPLATE_FILE_PATH = "_template.html"
-
-# Tokens
-T_EMOJI = "$EM"
-T_TITLE = "$TITLE"
-T_CONTENT = "$CONTENT"
-T_DESC = "$DESC"
-T_URL = "$URL"
 
 # Get indexing data
 index_file = open(INDEX_FILE_PATH, "r")
@@ -42,7 +36,7 @@ for entry in index_json:
 
     # Data and URL links
     data = index_json[entry]
-    url = URL_ROOT + file_name
+    url = URL + file_name
 
     # Read source file
     print(" * " + source_file_path)
@@ -63,10 +57,11 @@ for entry in index_json:
 
     # Compose the output file
     output = template
-    output = output.replace(T_TITLE, data["title"])
-    output = output.replace(T_DESC, data["desc"])
-    output = output.replace(T_URL, url)
-    output = output.replace(T_CONTENT, source_indented)
+    output = output.replace("$TITLE", data["title"])
+    output = output.replace("$DESC", data["desc"])
+    output = output.replace("$URL", url)
+    output = output.replace("$LIVE", LIVE)
+    output = output.replace("$CONTENT", source_indented)
 
     # Write the output file
     output_file = open(file_name, "w")
