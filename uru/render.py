@@ -21,6 +21,7 @@ TEMPLATE_FILE_PATH = "_template.html"
 T_EMOJI = "$EM"
 T_TITLE = "$TITLE"
 T_CONTENT = "$CONTENT"
+T_DESC = "$DESC"
 T_URL = "$URL"
 
 # Get indexing data
@@ -47,6 +48,7 @@ for entry in index_json:
     print(" * " + source_file_path)
     source_file = open(source_file_path, "r")
     source = source_file.read()
+    source = source.rstrip("\n")
     source_file.close()
 
     # Indent source file
@@ -62,6 +64,7 @@ for entry in index_json:
     # Compose the output file
     output = template
     output = output.replace(T_TITLE, data["title"])
+    output = output.replace(T_DESC, data["desc"])
     output = output.replace(T_URL, url)
     output = output.replace(T_CONTENT, source_indented)
 

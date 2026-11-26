@@ -49,7 +49,7 @@ ul {
     padding-bottom: 32px;
     padding-top: 24px;
 }
-.box > * {
+.box > :not(img) {
     margin-left: 16px;
     margin-right: 16px;
 }
